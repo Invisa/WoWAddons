@@ -1,0 +1,61 @@
+VER 3 0100000000000012 "." "INV_MISC_QUESTIONMARK"
+#showtooltip Sap
+/cleartarget
+/targetenemy
+/cast [stance:1/3, harm, nodead] Sap
+END
+VER 3 0100000000000013 "." "INV_MISC_QUESTIONMARK"
+#showtooltip Sap
+/cleartarget
+/targetenemyplayer
+/cast [stance:1/3, harm, nodead] Sap
+END
+VER 3 0100000000000002 "." "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [talent:6/2] Toxic Blade; [talent:6/3] Exsanguinate
+END
+VER 3 0100000000000003 "." "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [nomod:shift, @mouseover] Kick
+/cast [mod:shift] Kick
+END
+VER 3 0100000000000014 "." "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [nomod:shift, @mouseover] Blind
+/cast [mod:shift] Blind
+END
+VER 3 0100000000000011 "." "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [nomod:shift, @mouseover] Kidney Shot
+/cast [mod:shift] Kidney Shot
+END
+VER 3 0100000000000015 "." "INV_MISC_QUESTIONMARK"
+/cast [@party1] Tricks of the Trade
+END
+VER 3 0100000000000018 "." "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [talent:7/2] Blade Rush; [talent:7/3] Killing Spree
+END
+VER 3 0100000000000017 "." "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [nomod:shift, @mouseover] Gouge
+/cast [mod:shift] Gouge
+END
+VER 3 0100000000000016 "." "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [nomod:shift, @mouseover] Between the Eyes
+/cast [mod:shift] Between the Eyes
+END
+VER 3 0100000000000019 "." "INV_MISC_QUESTIONMARK"
+/cast [@Cursor] Grappling Hook
+END
+VER 3 0100000000000001 "...." "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [talent:7/2] Marked for Death
+/cast [talent:7/3] Death from Above
+END
+VER 3 0100000000000010 "step" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [mod:shift, @mouseover] Shadowstep
+/cast [nomod:shift] Shadowstep
+END

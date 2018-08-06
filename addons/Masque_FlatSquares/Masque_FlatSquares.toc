@@ -1,0 +1,8 @@
+## Interface: 70300
+## Title: Masque: |cffffffffFlatSquares|r
+## Version: 1.0.7
+## Author: ccfreak
+## Notes: FlatSquares skin for Masque.
+## Dependencies: Masque
+
+FlatSquares.lua

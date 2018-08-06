@@ -1,0 +1,9 @@
+## Interface: 80000
+## Author: Sunn (DraenorEU)
+## Title: Sunn - Art Pack 9
+## Notes: Textures for Sunn - Viewport Art (SunnArt)
+## Version: 1.22
+## DefaultState: Enabled
+## Dependencies: SunnArt
+## X-eMail: sunn@uksf.com
+SunnArtPack9.lua

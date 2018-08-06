@@ -1,0 +1,16 @@
+lightweight tag 96b0cfc2f3c87ff2072bf164eb5b4691968502a8 8.0
+Author:	Mikeprod <mikeprod.tm@gmail.com>
+Date:	Thu Jul 19 20:52:09 2018 +0200
+
+commit 96b0cfc2f3c87ff2072bf164eb5b4691968502a8
+Author: Mikeprod <mikeprod.tm@gmail.com>
+Date:   Thu Jul 19 20:52:09 2018 +0200
+
+    fix version toc
+
+commit d7e5bf4d1d737bef10f253d7d652bc68f2c4fbe9
+Author: Mikeprod <mikeprod.tm@gmail.com>
+Date:   Thu Jul 19 20:50:18 2018 +0200
+
+    Update for 8.0.1
+

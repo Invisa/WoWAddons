@@ -1,0 +1,61 @@
+VER 3 0100000000000024 "." "INV_MISC_QUESTIONMARK"
+#showtooltip Dispersion
+/cast Shadow Word: Death
+/cancelaura Dispersion
+END
+VER 3 0100000000000016 "." "INV_MISC_QUESTIONMARK"
+#showtooltip Shadowfiend
+/cast Shadowfiend
+/cast Mindbender
+/petattack
+END
+VER 3 0100000000000017 "." "INV_MISC_QUESTIONMARK"
+#showtooltip Shackle Undead
+/cast [target=mouseover, exists] Shackle Undead
+END
+VER 3 0100000000000029 "." "INV_MISC_QUESTIONMARK"
+/cast [@mouseover] Leap of Faith
+END
+VER 3 010000000000002B "." "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover] dark void
+END
+VER 3 010000000000002A "." "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [talent:5/2] Shadow Word: Death
+/cast [@cursor][talent:5/3] Shadow Crash
+END
+VER 3 0100000000000025 "." "INV_MISC_QUESTIONMARK"
+#showtooltip Dispel Magic
+/cast [mod:shift, @focus] Dispel Magic
+/cast [nomod] Dispel Magic
+END
+VER 3 010000000000002C "." "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [talent:7/2] Dark Ascension; [talent:7/3] Surrender to Madness
+END
+VER 3 010000000000000C "." "INV_MISC_QUESTIONMARK"
+#showtooltip Psychic Horror
+/cast [mod:shift, @focus] Psychic Horror
+/cast [nomod] Psychic Horror
+END
+VER 3 0100000000000008 "1" "PRIEST_SPELL_LEAPOFFAITH_A"
+/cast [@party2] Leap of Faith
+END
+VER 3 0100000000000006 "1" "INV_MISC_QUESTIONMARK"
+/cast [@Ralphi] Power Word: Shield
+END
+VER 3 0100000000000007 "2" "INV_MISC_QUESTIONMARK"
+/cast [@Zavanahx] Power Word: Shield
+END
+VER 3 010000000000000E "2" "PRIEST_SPELL_LEAPOFFAITH_A"
+/cast [@party3] Leap of Faith
+END
+VER 3 010000000000001E "R" "ABILITY_PRIEST_SILENCE"
+#showtooltip
+/cast [mod:Shift, @focus] Silence
+/cast [nomod] Silence
+END
+VER 3 0100000000000026 "R" "SPELL_HOLY_CHASTISE"
+/cast [@focus] Holy Word: Chastise
+END

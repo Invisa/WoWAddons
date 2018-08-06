@@ -1,0 +1,86 @@
+VER 3 0000000000000079 "." "237585"
+#showtooltip Healthstone
+/use Healthstone
+/use Astral Healing Potion
+END
+VER 3 000000000000007B "." "INV_MISC_QUESTIONMARK"
+/use 14
+END
+VER 3 0000000000000086 "." "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopcasting
+/cast Ice Block
+END
+VER 3 000000000000007C "." "INV_MISC_QUESTIONMARK"
+/cast [nochanneling:Arcane Missiles] Arcane Blast
+END
+VER 3 000000000000007D "." "132119"
+#showtooltip Conjured Mana Fritter
+/use Conjured Mana Pudding
+/use Conjured Mana Fritter
+/use Conjured Mana Bun
+/cancelaura Ice block
+/cast dismiss pet
+END
+VER 3 000000000000007E "." "INV_MISC_QUESTIONMARK"
+/cast [nochanneling:Arcane Missiles] Arcane Missiles
+END
+VER 3 000000000000007F "." "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast Arcane Power
+/cast Combustion
+/cast Icy Veins
+/cast Frozen Orb
+/use 14
+/cast Presence of Mind
+/cast Arcane Blast
+/cast Frostbolt
+END
+VER 3 0000000000000081 "." "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@cursor] Flamestrike
+END
+VER 3 0000000000000082 "." "INV_MISC_QUESTIONMARK"
+#showtooltip Presence of Mind
+/cancelaura Presence of Mind
+END
+VER 3 000000000000008D "." "INV_MISC_QUESTIONMARK"
+/equipslot 14 Terminus Signaling Beacon
+/equipslot 13 Norgannon's Prowess
+END
+VER 3 000000000000008E "." "INV_MISC_QUESTIONMARK"
+/equipslot 13 Spectral Thurible
+/equipslot 14 Prototype Personnel Decimator
+END
+VER 3 0000000000000088 "dbm3" "132097"
+/pull 3
+END
+VER 3 000000000000008B "DebuffHealing" "134231"
+/cancelaura Power Word: Shield
+/cancelaura Atonement
+/cancelaura Renew
+END
+VER 3 000000000000007A "dnd" "INV_MISC_QUESTIONMARK"
+/dnd Heroic ML Antorus, The Burning Throne prices range from 500k-1000k scheduled for Wed.@6:30PST. Dungeon services range from 250k-350k. Please add my discord Arcblood#8873 and DM me your char info/questions for a purchase.
+END
+VER 3 0000000000000076 "flood" "134231"
+/flood
+END
+VER 3 000000000000008F "hide" "135731"
+/run ChatFrame1ButtonFrame:Hide()
+/run ChatFrameMenuButton:Hide()
+/run QuickJoinToastButton:Hide()
+/run ChatFrameChannelButton:Hide()
+END
+VER 3 0000000000000078 "logout" "134231"
+/logout
+END
+VER 3 000000000000008A "Rcheck" "INV_MISC_QUESTIONMARK"
+/readycheck
+END
+VER 3 0000000000000091 "WA" "INV_MISC_QUESTIONMARK"
+/wa
+END
+VER 3 0000000000000056 "zsnow" "SPELL_FROST_ARCTICWINDS"
+/console weatherDensity 0 
+END

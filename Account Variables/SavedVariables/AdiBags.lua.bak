@@ -1,0 +1,87 @@
+
+AdiBagsDB = {
+	["namespaces"] = {
+		["ItemLevel"] = {
+		},
+		["FilterOverride"] = {
+			["profiles"] = {
+				["Default"] = {
+					["version"] = 3,
+				},
+			},
+		},
+		["ItemCategory"] = {
+		},
+		["NewItem"] = {
+		},
+		["AdiBags_TooltipInfo"] = {
+		},
+		["MoneyFrame"] = {
+		},
+		["CurrencyFrame"] = {
+		},
+		["DataSource"] = {
+		},
+		["ItemSets"] = {
+			["profiles"] = {
+				["Default"] = {
+					["oneSectionPerSet"] = false,
+				},
+			},
+		},
+		["Junk"] = {
+		},
+		["Equipment"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Mfgob - Bleeding Hollow"] = "Default",
+		["Blisskiss - Tichondrius"] = "Default",
+		["Mfgob - Magtheridon"] = "Default",
+		["Tiehb - Crushridge"] = "Default",
+		["Jugarmitico - Ragnaros"] = "Default",
+		["Dsfsdfs - Magtheridon"] = "Default",
+		["Mfgob - Mal'Ganis"] = "Default",
+		["Peaceit - Tichondrius"] = "Default",
+		["Bloodz - Runetotem"] = "Default",
+		["Arcblood - Runetotem"] = "Default",
+		["Binky - Runetotem"] = "Default",
+		["Emmzz - Hyjal"] = "Default",
+		["Arcblood - Tichondrius"] = "Default",
+		["Sandtoes - Kil'jaeden"] = "Default",
+		["Mfgob - Illidan"] = "Default",
+		["Soothìngraìn - Hyjal"] = "Default",
+		["Popitlockit - Tichondrius"] = "Default",
+		["Felbloodx - Illidan"] = "Default",
+		["Playmythic - Aerie Peak"] = "Default",
+		["Lightblood - Runetotem"] = "Default",
+		["Dethnitsrgay - Crushridge"] = "Default",
+		["Invisa - Tichondrius"] = "Default",
+		["Arcblood - Zul'jin"] = "Default",
+		["Purple - Runetotem"] = "Default",
+		["Moxil - Runetotem"] = "Default",
+		["Veil - Tichondrius"] = "Default",
+		["Samsara - Runetotem"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["positions"] = {
+				["Backpack"] = {
+					["xOffset"] = -17.512455501841,
+					["yOffset"] = 82.1325329621513,
+				},
+				["Bank"] = {
+					["xOffset"] = 26.3109470473371,
+					["yOffset"] = -56.1110245482778,
+				},
+			},
+			["filters"] = {
+				["Junk"] = false,
+			},
+			["compactLayout"] = true,
+			["rightClickConfig"] = false,
+			["positionMode"] = "manual",
+			["hideAnchor"] = true,
+		},
+	},
+}

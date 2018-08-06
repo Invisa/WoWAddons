@@ -1,0 +1,8 @@
+
+BADBOY_BLACKLIST = {
+	["dayFromCal"] = 5,
+	["Player-11-0ABA7BDD"] = true,
+	["Player-11-0A87B664"] = true,
+}
+BADBOY_OPTIONS = {
+}

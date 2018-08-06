@@ -1,0 +1,6 @@
+## Interface: 80000
+## Title: Dampening Display
+## Author: pas06 @ curseforge
+## Version: 8.0
+## Notes: Shows the actual dampenig value under the remaining time in arena
+Dampening_Display.lua

@@ -1,0 +1,36 @@
+
+ErrorFilterDB = {
+	["profileKeys"] = {
+		["Mfgob - Bleeding Hollow"] = "Default",
+		["Mfgob - Magtheridon"] = "Default",
+		["Tiehb - Crushridge"] = "Default",
+		["Jugarmitico - Ragnaros"] = "Default",
+		["Dsfsdfs - Magtheridon"] = "Default",
+		["Mfgob - Mal'Ganis"] = "Default",
+		["Samsara - Runetotem"] = "Default",
+		["Bloodz - Runetotem"] = "Default",
+		["Arcblood - Runetotem"] = "Default",
+		["Binky - Runetotem"] = "Default",
+		["Emmzz - Hyjal"] = "Default",
+		["Purple - Runetotem"] = "Default",
+		["Arcblood - Zul'jin"] = "Default",
+		["Mfgob - Illidan"] = "Default",
+		["Felbloodx - Illidan"] = "Default",
+		["Sandtoes - Kil'jaeden"] = "Default",
+		["Soothìngraìn - Hyjal"] = "Default",
+		["Dethnitsrgay - Crushridge"] = "Default",
+		["Lightblood - Runetotem"] = "Default",
+		["Playmythic - Aerie Peak"] = "Default",
+		["Invisa - Tichondrius"] = "Default",
+		["Popitlockit - Tichondrius"] = "Default",
+		["Arcblood - Tichondrius"] = "Default",
+		["Moxil - Runetotem"] = "Default",
+		["Veil - Tichondrius"] = "Default",
+		["Peaceit - Tichondrius"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["removeFrame"] = true,
+		},
+	},
+}

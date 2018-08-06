@@ -1,0 +1,16 @@
+SunnArt.options.args.theme.values["SunnArtPack9\\frostrock"]="Frostrock"
+SunnArt.overlap["SunnArtPack9\\frostrock"]=57.81
+SunnArt.options.args.theme.values["SunnArtPack9\\Wrath"]="Wrath"
+SunnArt.overlap["SunnArtPack9\\Wrath"]=66.60
+SunnArt.options.args.theme.values["SunnArtPack9\\blacktemple"]="Black Temple"
+SunnArt.overlap["SunnArtPack9\\blacktemple"]=4.6875
+SunnArt.options.args.theme.values["SunnArtPack9\\arthas"]="Arthas"
+SunnArt.overlap["SunnArtPack9\\arthas"]=4.6875
+SunnArt.options.args.theme.values["SunnArtPack9\\deathknight"]="Deathknight"
+SunnArt.overlap["SunnArtPack9\\deathknight"]=4.6875
+SunnArt.options.args.theme.values["SunnArtPack9\\utgarde"]="Utgarde"
+SunnArt.overlap["SunnArtPack9\\utgarde"]=4.6875
+SunnArt.options.args.theme.values["SunnArtPack9\\naaru"]="Naaru"
+SunnArt.overlap["SunnArtPack9\\naaru"]=4.6875
+SunnArt.options.args.theme.values["SunnArtPack9\\sunwell"]="Sunwell"
+SunnArt.overlap["SunnArtPack9\\sunwell"]=4.6875

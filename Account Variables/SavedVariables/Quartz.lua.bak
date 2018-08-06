@@ -1,0 +1,346 @@
+
+Quartz3DB = {
+	["namespaces"] = {
+		["Swing"] = {
+		},
+		["Buff"] = {
+		},
+		["Interrupt"] = {
+		},
+		["Flight"] = {
+		},
+		["Pet"] = {
+			["profiles"] = {
+				["Default"] = {
+					["x"] = 582.666687011719,
+				},
+				["Veil"] = {
+					["x"] = 582.666687011719,
+				},
+				["Invisa - Tichondrius"] = {
+					["x"] = 582.666687011719,
+				},
+			},
+		},
+		["Player"] = {
+			["profiles"] = {
+				["Default"] = {
+					["w"] = 210,
+					["y"] = 221,
+					["hideicon"] = true,
+					["font"] = "Liberation Sans",
+					["fontsize"] = 13,
+					["hidetimetext"] = true,
+					["texture"] = "Flat",
+					["x"] = 573,
+					["border"] = "None",
+					["nametextposition"] = "centerback",
+				},
+				["Veil"] = {
+					["w"] = 210,
+					["nametextposition"] = "centerback",
+					["hideicon"] = true,
+					["font"] = "Liberation Sans",
+					["fontsize"] = 13,
+					["border"] = "None",
+					["x"] = 573,
+					["hidetimetext"] = true,
+					["y"] = 221,
+					["texture"] = "Flat",
+				},
+				["Invisa - Tichondrius"] = {
+					["w"] = 211,
+					["hideicon"] = true,
+					["x"] = 572.5,
+					["border"] = "None",
+					["fontsize"] = 13,
+					["texture"] = "Flat",
+					["font"] = "Liberation Sans",
+					["hidetimetext"] = true,
+					["nametextposition"] = "centerback",
+					["y"] = 115,
+				},
+			},
+		},
+		["EnemyCasts"] = {
+		},
+		["GCD"] = {
+			["profiles"] = {
+				["Default"] = {
+					["gcdgap"] = 0,
+					["gcdposition"] = "top",
+					["gcdalpha"] = 1,
+					["gcdheight"] = 5,
+					["sparkcolor"] = {
+						nil, -- [1]
+						0.0666666666666667, -- [2]
+						0.0901960784313726, -- [3]
+						1, -- [4]
+					},
+				},
+				["Veil"] = {
+					["gcdgap"] = 0,
+					["gcdposition"] = "top",
+					["gcdalpha"] = 1,
+					["gcdheight"] = 5,
+					["sparkcolor"] = {
+						nil, -- [1]
+						0.0666666666666667, -- [2]
+						0.0901960784313726, -- [3]
+						1, -- [4]
+					},
+				},
+				["Invisa - Tichondrius"] = {
+					["gcdgap"] = 0,
+					["gcdposition"] = "top",
+					["gcdalpha"] = 1,
+					["gcdheight"] = 5,
+					["sparkcolor"] = {
+						nil, -- [1]
+						0.0666666666666667, -- [2]
+						0.0901960784313726, -- [3]
+						1, -- [4]
+					},
+				},
+			},
+		},
+		["Focus"] = {
+			["profiles"] = {
+				["Default"] = {
+					["x"] = 582.666687011719,
+				},
+				["Veil"] = {
+					["x"] = 582.666687011719,
+				},
+				["Invisa - Tichondrius"] = {
+					["x"] = 582.666687011719,
+				},
+			},
+		},
+		["Target"] = {
+			["profiles"] = {
+				["Default"] = {
+					["x"] = 582.666687011719,
+				},
+				["Veil"] = {
+					["x"] = 582.666687011719,
+				},
+				["Invisa - Tichondrius"] = {
+					["x"] = 582.666687011719,
+				},
+			},
+		},
+		["Mirror"] = {
+		},
+		["Range"] = {
+			["profiles"] = {
+				["Default"] = {
+					["rangecolor"] = {
+						nil, -- [1]
+						0.0666666666666667, -- [2]
+						0.0823529411764706, -- [3]
+						1, -- [4]
+					},
+				},
+				["Veil"] = {
+					["rangecolor"] = {
+						nil, -- [1]
+						0.0666666666666667, -- [2]
+						0.0823529411764706, -- [3]
+						1, -- [4]
+					},
+				},
+				["Invisa - Tichondrius"] = {
+					["rangecolor"] = {
+						nil, -- [1]
+						0.0666666666666667, -- [2]
+						0.0823529411764706, -- [3]
+						1, -- [4]
+					},
+				},
+			},
+		},
+		["Latency"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Mfgob - Bleeding Hollow"] = "Default",
+		["Blisskiss - Tichondrius"] = "Default",
+		["Mfgob - Magtheridon"] = "Default",
+		["Tiehb - Crushridge"] = "Default",
+		["Jugarmitico - Ragnaros"] = "Default",
+		["Dsfsdfs - Magtheridon"] = "Default",
+		["Mfgob - Mal'Ganis"] = "Default",
+		["Peaceit - Tichondrius"] = "Default",
+		["Bloodz - Runetotem"] = "Default",
+		["Arcblood - Runetotem"] = "Default",
+		["Binky - Runetotem"] = "Default",
+		["Emmzz - Hyjal"] = "Default",
+		["Arcblood - Tichondrius"] = "Default",
+		["Sandtoes - Kil'jaeden"] = "Default",
+		["Mfgob - Illidan"] = "Default",
+		["Soothìngraìn - Hyjal"] = "Default",
+		["Popitlockit - Tichondrius"] = "Default",
+		["Felbloodx - Illidan"] = "Default",
+		["Playmythic - Aerie Peak"] = "Default",
+		["Lightblood - Runetotem"] = "Default",
+		["Dethnitsrgay - Crushridge"] = "Default",
+		["Invisa - Tichondrius"] = "Invisa - Tichondrius",
+		["Arcblood - Zul'jin"] = "Default",
+		["Purple - Runetotem"] = "Default",
+		["Moxil - Runetotem"] = "Default",
+		["Veil - Tichondrius"] = "Veil",
+		["Samsara - Runetotem"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["channelingcolor"] = {
+				0.341176470588235, -- [1]
+				0.325490196078431, -- [2]
+				0.341176470588235, -- [3]
+				1, -- [4]
+			},
+			["borderalpha"] = 0,
+			["bordercolor"] = {
+				0.00392156862745098, -- [1]
+				0.00392156862745098, -- [2]
+				0.00392156862745098, -- [3]
+				1, -- [4]
+			},
+			["backgroundcolor"] = {
+				0.247058823529412, -- [1]
+				0.247058823529412, -- [2]
+				0.247058823529412, -- [3]
+				1, -- [4]
+			},
+			["failcolor"] = {
+				0.752941176470588, -- [1]
+				0.0666666666666667, -- [2]
+				nil, -- [3]
+				1, -- [4]
+			},
+			["modules"] = {
+				["Focus"] = false,
+				["Swing"] = false,
+				["Mirror"] = false,
+				["Buff"] = false,
+				["Interrupt"] = false,
+				["Target"] = false,
+				["Pet"] = false,
+				["Latency"] = false,
+			},
+			["castingcolor"] = {
+				0, -- [1]
+				0, -- [2]
+				nil, -- [3]
+				1, -- [4]
+			},
+			["sparkcolor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["backgroundalpha"] = 0,
+		},
+		["Veil"] = {
+			["channelingcolor"] = {
+				0.341176470588235, -- [1]
+				0.325490196078431, -- [2]
+				0.341176470588235, -- [3]
+				1, -- [4]
+			},
+			["borderalpha"] = 0,
+			["bordercolor"] = {
+				0.00392156862745098, -- [1]
+				0.00392156862745098, -- [2]
+				0.00392156862745098, -- [3]
+				1, -- [4]
+			},
+			["backgroundcolor"] = {
+				0.247058823529412, -- [1]
+				0.247058823529412, -- [2]
+				0.247058823529412, -- [3]
+				1, -- [4]
+			},
+			["failcolor"] = {
+				0.752941176470588, -- [1]
+				0.0666666666666667, -- [2]
+				nil, -- [3]
+				1, -- [4]
+			},
+			["modules"] = {
+				["Buff"] = false,
+				["Swing"] = false,
+				["Mirror"] = false,
+				["Focus"] = false,
+				["Interrupt"] = false,
+				["Target"] = false,
+				["Pet"] = false,
+				["Latency"] = false,
+			},
+			["castingcolor"] = {
+				0, -- [1]
+				0, -- [2]
+				nil, -- [3]
+				1, -- [4]
+			},
+			["sparkcolor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["backgroundalpha"] = 0,
+		},
+		["Invisa - Tichondrius"] = {
+			["channelingcolor"] = {
+				0.341176470588235, -- [1]
+				0.325490196078431, -- [2]
+				0.341176470588235, -- [3]
+				1, -- [4]
+			},
+			["borderalpha"] = 0.8,
+			["backgroundalpha"] = 0,
+			["bordercolor"] = {
+				0.172549019607843, -- [1]
+				0.172549019607843, -- [2]
+				0.172549019607843, -- [3]
+				1, -- [4]
+			},
+			["backgroundcolor"] = {
+				nil, -- [1]
+				nil, -- [2]
+				nil, -- [3]
+				1, -- [4]
+			},
+			["failcolor"] = {
+				0.752941176470588, -- [1]
+				0.0666666666666667, -- [2]
+				nil, -- [3]
+				1, -- [4]
+			},
+			["modules"] = {
+				["Swing"] = false,
+				["Focus"] = false,
+				["Buff"] = false,
+				["Target"] = false,
+				["Mirror"] = false,
+				["Pet"] = false,
+				["Latency"] = false,
+			},
+			["castingcolor"] = {
+				0, -- [1]
+				0, -- [2]
+				nil, -- [3]
+				1, -- [4]
+			},
+			["sparkcolor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+		},
+	},
+}
