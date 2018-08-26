@@ -96,6 +96,7 @@ do
             check.label = parent:CreateFontString(nil,'ARTWORK','GameFontHighlight')
         end
 
+        check.label:SetJustifyH('LEFT')
         check.label:SetText(L.titles[name] or name or 'Checkbox')
         check.label:SetPoint('LEFT', check, 'RIGHT')
 
@@ -284,8 +285,6 @@ do
         slider:SetThumbTexture('interface/buttons/ui-sliderbar-button-horizontal')
         slider:SetObeyStepOnDrag(true)
         slider:EnableMouseWheel(true)
-
-        -- TODO inc/dec buttons
 
         local label = slider:CreateFontString(slider:GetName()..'Label','ARTWORK','GameFontNormal')
         label:SetText(L.titles[name] or name or 'Slider')

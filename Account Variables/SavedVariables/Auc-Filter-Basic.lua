@@ -1,5 +1,9 @@
 
 AucAdvancedFilterBasic_IgnoreList = {
+	["Moon Guard"] = {
+		["List"] = {
+		},
+	},
 	["Mal'Ganis"] = {
 		["List"] = {
 		},

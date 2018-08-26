@@ -61,7 +61,6 @@ MADB = {
 						["area"] = "left",
 					},
 					["scale"] = 1.19999992847443,
-					["orgScale"] = 1,
 					["pos"] = {
 						"BOTTOMLEFT", -- [1]
 						"UIParent", -- [2]
@@ -69,6 +68,7 @@ MADB = {
 						597.555419921875, -- [4]
 						215.85188293457, -- [5]
 					},
+					["orgScale"] = 1,
 				},
 				["PlayerBuffsMover"] = {
 					["orgPos"] = {
@@ -80,8 +80,8 @@ MADB = {
 					},
 					["orgAlpha"] = 1,
 					["name"] = "PlayerBuffsMover",
-					["alpha"] = 0.799999952316284,
 					["hidden"] = true,
+					["alpha"] = 0.799999952316284,
 					["pos"] = {
 						"TOPRIGHT", -- [1]
 						"UIParent", -- [2]
@@ -206,10 +206,6 @@ MADB = {
 						0, -- [5]
 					},
 				},
-				["ArtifactFrame"] = {
-					["scale"] = 0.899999976158142,
-					["name"] = "ArtifactFrame",
-				},
 				["SpellBookFrame"] = {
 					["orgPos"] = {
 						"LEFT", -- [1]
@@ -254,7 +250,6 @@ MADB = {
 					},
 					["name"] = "GarrisonLandingPageMinimapButton",
 					["scale"] = 0.699999988079071,
-					["orgScale"] = 1,
 					["pos"] = {
 						"TOPLEFT", -- [1]
 						"MinimapBackdrop", -- [2]
@@ -262,9 +257,12 @@ MADB = {
 						42.8936606967019, -- [4]
 						-157.945623625974, -- [5]
 					},
+					["orgScale"] = 1,
 				},
 				["ChallengesKeystoneFrame"] = {
 					["name"] = "ChallengesKeystoneFrame",
+					["orgFrameStrata"] = "MEDIUM",
+					["frameStrata"] = "LOW",
 					["pos"] = {
 						"BOTTOMLEFT", -- [1]
 						"UIParent", -- [2]
@@ -272,8 +270,6 @@ MADB = {
 						481.533416748047, -- [4]
 						221.822158813477, -- [5]
 					},
-					["frameStrata"] = "LOW",
-					["orgFrameStrata"] = "MEDIUM",
 				},
 				["VehicleSeatIndicator"] = {
 					["orgPos"] = {
@@ -285,7 +281,6 @@ MADB = {
 					},
 					["name"] = "VehicleSeatIndicator",
 					["scale"] = 0.499999970197678,
-					["orgScale"] = 1,
 					["pos"] = {
 						"TOPRIGHT", -- [1]
 						"UIParent", -- [2]
@@ -293,6 +288,7 @@ MADB = {
 						-315.377848307306, -- [4]
 						560.489135742188, -- [5]
 					},
+					["orgScale"] = 1,
 				},
 				["InspectFrame"] = {
 					["scale"] = 1.10000002384186,
@@ -316,24 +312,8 @@ MADB = {
 					["orgScale"] = 1,
 				},
 				["OrderHallCommandBar"] = {
-					["orgPos"] = {
-						{
-							"TOPLEFT", -- [1]
-							"UIParent", -- [2]
-							"TOPLEFT", -- [3]
-							0, -- [4]
-							0, -- [5]
-						}, -- [1]
-						{
-							"TOPRIGHT", -- [1]
-							"UIParent", -- [2]
-							"TOPRIGHT", -- [3]
-							0, -- [4]
-							0, -- [5]
-						}, -- [2]
-					},
-					["name"] = "OrderHallCommandBar",
 					["hidden"] = true,
+					["name"] = "OrderHallCommandBar",
 					["pos"] = {
 						"TOPLEFT", -- [1]
 						"UIParent", -- [2]
@@ -352,8 +332,8 @@ MADB = {
 					},
 					["orgAlpha"] = 1,
 					["name"] = "PlayerDebuffsMover",
-					["hidden"] = true,
 					["alpha"] = 0.799999952316284,
+					["hidden"] = true,
 					["pos"] = {
 						"BOTTOMLEFT", -- [1]
 						"UIParent", -- [2]
@@ -377,7 +357,6 @@ MADB = {
 						["area"] = "left",
 					},
 					["scale"] = 1.19999992847443,
-					["orgScale"] = 1,
 					["pos"] = {
 						"BOTTOMLEFT", -- [1]
 						"UIParent", -- [2]
@@ -385,6 +364,7 @@ MADB = {
 						1.77775228023529, -- [4]
 						215.555709838867, -- [5]
 					},
+					["orgScale"] = 1,
 				},
 				["ObjectiveTrackerFrameScaleMover"] = {
 					["orgPos"] = {
@@ -395,15 +375,15 @@ MADB = {
 						0, -- [5]
 					},
 					["name"] = "ObjectiveTrackerFrameScaleMover",
-					["scale"] = 0.899999976158142,
-					["orgScale"] = 1,
+					["scale"] = 1,
 					["pos"] = {
 						"TOPRIGHT", -- [1]
 						"MinimapCluster", -- [2]
 						"BOTTOMRIGHT", -- [3]
-						-2.88905114696085, -- [4]
-						57.0368482801645, -- [5]
+						-45.2668050130283, -- [4]
+						43.5109519958477, -- [5]
 					},
+					["orgScale"] = 1,
 				},
 				["FramerateLabelMover"] = {
 					["orgPos"] = {
@@ -418,13 +398,27 @@ MADB = {
 						"BOTTOM", -- [1]
 						"UIParent", -- [2]
 						"BOTTOM", -- [3]
-						666.180541992188, -- [4]
-						643.6689453125, -- [5]
+						0, -- [4]
+						748.935241699219, -- [5]
 					},
 				},
-				["GuildFrame"] = {
-					["scale"] = 1.19999992847443,
-					["name"] = "GuildFrame",
+				["GroupLootFrame1"] = {
+					["orgPos"] = {
+						"TOP", -- [1]
+						"UIParent", -- [2]
+						"TOP", -- [3]
+						0, -- [4]
+						-135, -- [5]
+					},
+					["name"] = "GroupLootFrame1",
+					["hidden"] = true,
+					["pos"] = {
+						"TOP", -- [1]
+						"UIParent", -- [2]
+						"TOP", -- [3]
+						0, -- [4]
+						0, -- [5]
+					},
 				},
 				["ItemRefTooltip"] = {
 					["orgPos"] = {
@@ -442,24 +436,6 @@ MADB = {
 						"BOTTOM", -- [3]
 						9.15527343750e-005, -- [4]
 						80, -- [5]
-					},
-				},
-				["GroupLootFrame2"] = {
-					["orgPos"] = {
-						"TOP", -- [1]
-						"UIParent", -- [2]
-						"TOP", -- [3]
-						0, -- [4]
-						-135, -- [5]
-					},
-					["name"] = "GroupLootFrame2",
-					["hidden"] = true,
-					["pos"] = {
-						"TOP", -- [1]
-						"UIParent", -- [2]
-						"TOP", -- [3]
-						0, -- [4]
-						0, -- [5]
 					},
 				},
 				["UIErrorsFrame"] = {
@@ -497,6 +473,80 @@ MADB = {
 						-5.70886373519898, -- [5]
 					},
 				},
+				["BonusRollFrame"] = {
+					["orgPos"] = {
+						"TOP", -- [1]
+						"UIParent", -- [2]
+						"TOP", -- [3]
+						0, -- [4]
+						-135, -- [5]
+					},
+					["name"] = "BonusRollFrame",
+					["pos"] = {
+						"CENTER", -- [1]
+						"GroupLootContainer", -- [2]
+						"BOTTOM", -- [3]
+						-409.59992980957, -- [4]
+						126.089080810547, -- [5]
+					},
+				},
+				["BonusRollMoneyWonFrame"] = {
+					["orgPos"] = {
+						"TOP", -- [1]
+						"UIParent", -- [2]
+						"TOP", -- [3]
+						0, -- [4]
+						-135, -- [5]
+					},
+					["name"] = "BonusRollMoneyWonFrame",
+					["hidden"] = true,
+					["pos"] = {
+						"TOP", -- [1]
+						"UIParent", -- [2]
+						"TOP", -- [3]
+						0, -- [4]
+						0, -- [5]
+					},
+				},
+				["TooltipMover"] = {
+					["orgPos"] = {
+						"TOP", -- [1]
+						"UIParent", -- [2]
+						0, -- [3]
+						0, -- [4]
+					},
+					["name"] = "TooltipMover",
+					["orgScale"] = 1,
+					["scale"] = 0.799999952316284,
+					["orgAlpha"] = 1,
+					["alpha"] = 0.5,
+					["pos"] = {
+						"TOP", -- [1]
+						"UIParent", -- [2]
+						"TOP", -- [3]
+						779.055628458654, -- [4]
+						-879.499179840091, -- [5]
+					},
+				},
+				["CastingBarFrame"] = {
+					["orgPos"] = {
+						"BOTTOM", -- [1]
+						"UIParent", -- [2]
+						"BOTTOM", -- [3]
+						0, -- [4]
+						160, -- [5]
+					},
+					["name"] = "CastingBarFrame",
+					["scale"] = 1.10000002384186,
+					["pos"] = {
+						"BOTTOM", -- [1]
+						"UIParent", -- [2]
+						"BOTTOM", -- [3]
+						-1.706630391098610e-005, -- [4]
+						107.272735595703, -- [5]
+					},
+					["orgScale"] = 1,
+				},
 				["LootFrame"] = {
 					["orgPos"] = {
 						"TOPLEFT", -- [1]
@@ -519,50 +569,7 @@ MADB = {
 						412, -- [5]
 					},
 				},
-				["WardrobeFrame"] = {
-					["scale"] = 1.10000002384186,
-					["name"] = "WardrobeFrame",
-				},
-				["CastingBarFrame"] = {
-					["orgPos"] = {
-						"BOTTOM", -- [1]
-						"UIParent", -- [2]
-						"BOTTOM", -- [3]
-						0, -- [4]
-						160, -- [5]
-					},
-					["name"] = "CastingBarFrame",
-					["scale"] = 1.10000002384186,
-					["orgScale"] = 1,
-					["pos"] = {
-						"BOTTOM", -- [1]
-						"UIParent", -- [2]
-						"BOTTOM", -- [3]
-						-1.706630391098610e-005, -- [4]
-						107.272735595703, -- [5]
-					},
-				},
-				["TooltipMover"] = {
-					["orgPos"] = {
-						"TOP", -- [1]
-						"UIParent", -- [2]
-						0, -- [3]
-						0, -- [4]
-					},
-					["orgAlpha"] = 1,
-					["orgScale"] = 1,
-					["scale"] = 0.799999952316284,
-					["name"] = "TooltipMover",
-					["alpha"] = 0.5,
-					["pos"] = {
-						"TOP", -- [1]
-						"UIParent", -- [2]
-						"TOP", -- [3]
-						779.055628458654, -- [4]
-						-879.499179840091, -- [5]
-					},
-				},
-				["BonusRollMoneyWonFrame"] = {
+				["GroupLootFrame2"] = {
 					["orgPos"] = {
 						"TOP", -- [1]
 						"UIParent", -- [2]
@@ -570,7 +577,7 @@ MADB = {
 						0, -- [4]
 						-135, -- [5]
 					},
-					["name"] = "BonusRollMoneyWonFrame",
+					["name"] = "GroupLootFrame2",
 					["hidden"] = true,
 					["pos"] = {
 						"TOP", -- [1]
@@ -578,23 +585,6 @@ MADB = {
 						"TOP", -- [3]
 						0, -- [4]
 						0, -- [5]
-					},
-				},
-				["BonusRollFrame"] = {
-					["orgPos"] = {
-						"TOP", -- [1]
-						"UIParent", -- [2]
-						"TOP", -- [3]
-						0, -- [4]
-						-135, -- [5]
-					},
-					["name"] = "BonusRollFrame",
-					["pos"] = {
-						"CENTER", -- [1]
-						"GroupLootContainer", -- [2]
-						"BOTTOM", -- [3]
-						-409.59992980957, -- [4]
-						126.089080810547, -- [5]
 					},
 				},
 				["AlertFrame"] = {
@@ -615,23 +605,9 @@ MADB = {
 						128, -- [5]
 					},
 				},
-				["GroupLootFrame1"] = {
-					["orgPos"] = {
-						"TOP", -- [1]
-						"UIParent", -- [2]
-						"TOP", -- [3]
-						0, -- [4]
-						-135, -- [5]
-					},
-					["name"] = "GroupLootFrame1",
-					["hidden"] = true,
-					["pos"] = {
-						"TOP", -- [1]
-						"UIParent", -- [2]
-						"TOP", -- [3]
-						0, -- [4]
-						0, -- [5]
-					},
+				["GuildFrame"] = {
+					["scale"] = 1.19999992847443,
+					["name"] = "GuildFrame",
 				},
 			},
 		},
@@ -641,8 +617,8 @@ MADB = {
 			},
 		},
 	},
-	["closeGUIOnEscape"] = false,
-	["playSound"] = false,
-	["noBags"] = false,
 	["frameListRows"] = 18,
+	["noBags"] = false,
+	["playSound"] = false,
+	["closeGUIOnEscape"] = false,
 }

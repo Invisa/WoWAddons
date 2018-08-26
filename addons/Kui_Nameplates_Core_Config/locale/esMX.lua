@@ -22,6 +22,12 @@ L["titles"] = {
 	["absorb_enable"] = "Mostrar absorciones",
 	["absorb_striped"] = "Barra de absorción con rayas",
 	["auras_centre"] = "Iconos centrados",
+--[[Translation missing --]]
+	["auras_colour_long"] = "Long timer",
+--[[Translation missing --]]
+	["auras_colour_medium"] = "Medium timer",
+--[[Translation missing --]]
+	["auras_colour_short"] = "Short timer",
 	["auras_enabled"] = "Mostrar auras",
 	["auras_filtering_sep"] = "Filtración",
 	["auras_hide_all_other"] = "Esconder todas otras auras",
@@ -49,6 +55,10 @@ L["titles"] = {
 	["bossmod_y_offset"] = "Desplaz. vertical",
 --[[Translation missing --]]
 	["bot_vertical_offset"] = "Level/health v.offset",
+--[[Translation missing --]]
+	["castbar_animate"] = "Animate",
+--[[Translation missing --]]
+	["castbar_animate_change_colour"] = "Change colour",
 	["castbar_colour"] = "Color de barra de lanzamiento",
 	["castbar_enable"] = "Activar",
 	["castbar_height"] = "Alto de barra de lanzamiento",
@@ -57,7 +67,7 @@ L["titles"] = {
 --[[Translation missing --]]
 	["castbar_name_vertical_offset"] = "Spell name v.offset",
 	["castbar_shield"] = "Icono ininterrumpido",
-	["castbar_showall"] = "Barras de lanzamientos en todas placas de nombre",
+	["castbar_showall"] = "Barras de lanzamientos en|ntodas placas de nombre",
 	["castbar_showenemy"] = "Barras de lanzamiento de enemigos",
 	["castbar_showfriend"] = "Barras de lanzamiento de amigos",
 	["castbar_showpersonal"] = "Barra de lanzamiento personal",
@@ -96,6 +106,8 @@ L["titles"] = {
 --[[Translation missing --]]
 	["cvar_clamp_bottom"] = "Bottom clamp distance",
 	["cvar_clamp_top"] = "Distancia restringida arriba",
+--[[Translation missing --]]
+	["cvar_disable_scale"] = "Disable default scaling",
 	["cvar_enable"] = "Permitir que Kui Nameplaes cambie los CVars",
 	["cvar_max_distance"] = "Distancia máx. para mostrar",
 	["cvar_name_only"] = "Ocultar la barra de salud por defecto",
@@ -132,7 +144,6 @@ L["titles"] = {
 	["execute_percent"] = "Rango de Ejecutar",
 	["execute_sep"] = "Rango de Ejecutar",
 	["fade_all"] = "Apagar por defecto",
-	["fade_alpha"] = "Opacidad apagado",
 --[[Translation missing --]]
 	["fade_avoid_casting_friendly"] = "Avoid casting (friendly)",
 --[[Translation missing --]]
@@ -154,7 +165,6 @@ L["titles"] = {
 	["fade_neutral_enemy"] = "Apagar enemigos neutrales",
 --[[Translation missing --]]
 	["fade_non_target_alpha"] = "Non-target alpha",
-	["fade_rules_sep"] = "Apagamiento de placas",
 	["fade_speed"] = "Velocidad de apagamiento",
 	["fade_untracked"] = "Apagar unidades no rastreadas",
 	["font_face"] = "Tipo de letra",
@@ -199,7 +209,6 @@ L["titles"] = {
 	["nameonly_in_combat"] = "Unidades en combate contigo",
 	["nameonly_neutral"] = "Enemigos neutrales",
 	["nameonly_no_font_style"] = "Sin contorno",
-	["nameonly_on_default"] = "Ocultar barra de salud por defecto",
 	["nameonly_target"] = "Para objetivo",
 --[[Translation missing --]]
 	["nameonly_text_sep"] = "Text",
@@ -256,13 +265,19 @@ L["tooltips"] = {
 	["bar_texture"] = "La textura para usar para barras de estado (proporcionado por LibSharedMedia)",
 	["bossmod_clickthrough"] = "Permitir hacer click a traves de las placas de nombe que se muestran automaticamente.",
 --[[Translation missing --]]
-	["bossmod_control_visibility"] = "Boss mod addons can send a message to nameplate addons informing them to keep nameplates enabled during an encounter, ignoring other settings like automatic combat toggling, so that extra information can be displayed on them.|n|n|cffff6666If you disable this option and you do not usually have nameplates enabled, boss mods will not be able to show you this data.",
+	["bossmod_control_visibility"] = "Boss mod addons can send a message to nameplate addons informing them to keep nameplates enabled during an encounter, ignoring other settings like automatic combat toggling, so that extra information can be displayed on them.|n|n|cffff6666If you disable this option and you do not usually have nameplates enabled, boss mods will not be able to show you this information.",
 --[[Translation missing --]]
 	["bossmod_enable"] = "Boss mod addons can communicate with nameplate addons to display extra information on nameplates in relevant encounters, such as important buffs or debuffs cast by bosses.",
 	["bossmod_icon_size"] = "El tamaño de los iconos de las auras de jefe",
 	["bossmod_x_offset"] = "El desplazamiento horizontal de los iconos de las auras de jefe",
 	["bossmod_y_offset"] = "El desplazamiento vertical de los iconos de las auras de jefe",
 	["bot_vertical_offset"] = "El desplazamiento vertical de los textos de nivel y salud.",
+--[[Translation missing --]]
+	["castbar_animate"] = "Fade out the cast bar when a cast ends.",
+--[[Translation missing --]]
+	["castbar_animate_change_colour"] = "Change the colour of the cast bar when a cast ends, making it easier to tell the difference between successful, stopped, and interrupted casts.",
+--[[Translation missing --]]
+	["castbar_colour"] = "Colour of the cast bar.|n|nAlso used to indicate a successful cast if animation is enabled.",
 	["castbar_enable"] = "Activar la función de las barras de lanzamienta",
 --[[Translation missing --]]
 	["castbar_name_vertical_offset"] = "Vertical offset of the spell name text",
@@ -294,6 +309,8 @@ L["tooltips"] = {
 --[[Translation missing --]]
 	["cvar_clamp_bottom"] = "|cffffcc00nameplate{Other,Large}BottomInset|r",
 	["cvar_clamp_top"] = "|cffffcc00nameplate{Other,Large}TopInset|r|n|nLa distancia máxima desde el borde de la pantalla a la que se pueden mostrar las placas de nombre, cuando 0 es en el borde. Establece en 0 para desactivar la restricción y permitir que las placas aparezcan fuera de la pantalla.|n|nEsto solo afecto la placa de tu objetivo actual.",
+--[[Translation missing --]]
+	["cvar_disable_scale"] = "|cffffcc00nameplate{Min,Max}Scale|r|n|nDisable the nameplate distance scaling CVars which would otherwise only be affecting the clickbox.",
 	["cvar_enable"] = "Permitir Kui Namplates para tratar d bloquear los CVars en esta pagina al valores establecidos aquí.|n|nDesactivar esta opción, KNP, o eliminar KNP no restablecerá estes CVars a sus valores predeterminados.",
 	["cvar_max_distance"] = "|cffffcc00nameplateMaxDistance|r|n|nLa distancia máxima a la que mostrar las placas de nombre, sin incluir la placa de tu objetivo actual.",
 	["cvar_name_only"] = "|cffffcc00nameplateShowOnlyNames|r|n|nOcultar la barra de salud de las placas de nombre por defecto en situaciones donde no es posible que los addons las modifiquen de otras maneras.",
@@ -308,7 +325,6 @@ L["tooltips"] = {
 	["execute_enabled"] = "Cambiar el color de las barras de salud para unidades cuya salud está dentro del rango de Ejecutar.",
 	["execute_percent"] = "Cambiar manualmente el rango de Ejecutar",
 	["fade_all"] = "Apagar las placas por defecto",
-	["fade_alpha"] = "La opacidad de las placas apagadas. Si está configurado a 0, entonces las placas serán invisibles, pero aún se puede hacer clic. No es posible que un addon las oculte por completo.",
 --[[Translation missing --]]
 	["fade_avoid_casting_friendly"] = "Don't fade friendly nameplates when they are casting",
 --[[Translation missing --]]
@@ -357,7 +373,6 @@ L["tooltips"] = {
 	["nameonly_in_combat"] = "Usar el modo \"solo nombre\" incluso en unidades en combate contigo. Esto también permitir que el modo \"solo nombre\" se aplique al jugadores enemigos.|n|nTenga en cuenta que este no se aplica a los muñecos de práctica y otros unidades que no tienen tablas de amenaza.",
 	["nameonly_neutral"] = "Usar el modo \"solo nombre\" para unidades neutrales a los que puedes atacar",
 	["nameonly_no_font_style"] = "Ocultar el contorno del texto en el modo \"solo nombre\"",
-	["nameonly_on_default"] = "Ocultar la barra de salud de las placas de nombre por defecto en situaciones donde no es posible que los addons las modifiquen de otras maneras.|n|nEsto modifica el CVar |cffffff88nameplateShowOnlyNames|r.",
 	["nameonly_target"] = "También usar el modo \"solo nombre\" para tu objetivo.",
 	["powerbar_height"] = "La altura de la barra de poder. No aumentará más allá de la altura de la placa.",
 	["state_icons"] = "Mostar un icono en jefes y unidades poco comunes (está oculto cuando se muestra el texto del nivel).",

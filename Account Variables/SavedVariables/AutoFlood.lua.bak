@@ -63,7 +63,21 @@ AF_config = {
 		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
-	["Illidan-Felbloodx"] = {
+	["Runetotem-Bloodz"] = {
+		["message"] = "AutoFlood 1.2",
+		["channel"] = "1",
+		["idChannel"] = "1",
+		["rate"] = 60,
+		["system"] = "CHANNEL",
+	},
+	["Tichondrius-Arcblood"] = {
+		["message"] = "AutoFlood 1.2",
+		["channel"] = "1",
+		["idChannel"] = "1",
+		["rate"] = 60,
+		["system"] = "CHANNEL",
+	},
+	["Runetotem-Samsara"] = {
 		["message"] = "AutoFlood 1.2",
 		["channel"] = "1",
 		["idChannel"] = "1",
@@ -84,21 +98,21 @@ AF_config = {
 		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
-	["Runetotem-Samsara"] = {
+	["Tichondrius-Peaceit"] = {
 		["message"] = "AutoFlood 1.2",
 		["channel"] = "1",
 		["idChannel"] = "1",
 		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
-	["Tichondrius-Blisskiss"] = {
+	["Illidan-Felbloodx"] = {
 		["message"] = "AutoFlood 1.2",
 		["channel"] = "1",
 		["idChannel"] = "1",
 		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
-	["Tichondrius-Arcblood"] = {
+	["Tichondrius-Blisslife"] = {
 		["message"] = "AutoFlood 1.2",
 		["channel"] = "1",
 		["idChannel"] = "1",
@@ -119,11 +133,11 @@ AF_config = {
 		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
-	["Tichondrius-Veil"] = {
-		["message"] = "<> 11/11M + 4.8-5k raiderio players WTS M+15 for GOLD @cost of AH WoWToken |||| WTS Heroic/Mythic ABT (400k for bosses 1-5) @ 6:30-10:30pm PST. Serious inquiries pst. Hablamos esp. <>",
-		["channel"] = "2",
-		["idChannel"] = "2",
-		["rate"] = 200,
+	["Crushridge-Tiehb"] = {
+		["message"] = "AutoFlood 1.2",
+		["channel"] = "1",
+		["idChannel"] = "1",
+		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
 	["Runetotem-Arcblood"] = {
@@ -133,7 +147,14 @@ AF_config = {
 		["rate"] = 300,
 		["system"] = "CHANNEL",
 	},
-	["Crushridge-Tiehb"] = {
+	["Tichondrius-Veil"] = {
+		["message"] = "<> 11/11M + 4.8-5k raiderio players WTS M+15 for GOLD @cost of AH WoWToken |||| WTS Heroic/Mythic ABT (400k for bosses 1-5) @ 6:30-10:30pm PST. Serious inquiries pst. Hablamos esp. <>",
+		["channel"] = "2",
+		["idChannel"] = "2",
+		["rate"] = 200,
+		["system"] = "CHANNEL",
+	},
+	["Zul'jin-Arcblood"] = {
 		["message"] = "AutoFlood 1.2",
 		["channel"] = "1",
 		["idChannel"] = "1",
@@ -141,13 +162,6 @@ AF_config = {
 		["system"] = "CHANNEL",
 	},
 	["Magtheridon-Dsfsdfs"] = {
-		["message"] = "AutoFlood 1.2",
-		["channel"] = "1",
-		["idChannel"] = "1",
-		["rate"] = 60,
-		["system"] = "CHANNEL",
-	},
-	["Zul'jin-Arcblood"] = {
 		["message"] = "AutoFlood 1.2",
 		["channel"] = "1",
 		["idChannel"] = "1",
@@ -168,11 +182,11 @@ AF_config = {
 		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
-	["Runetotem-Bloodz"] = {
-		["message"] = "AutoFlood 1.2",
+	["Tichondrius-Blisskiss"] = {
+		["message"] = "<Criterion> Our core roster is 11/11M and looking for 2-3 trials (WW). Idealistically applicants are 11/11M and in the top 10% of their class. Raidtimes: 7-10PM PST T/W/Th. Our aim is to achieve Cutting Edge: Uldir and High Warlords.",
 		["channel"] = "1",
 		["idChannel"] = "1",
-		["rate"] = 60,
+		["rate"] = 250,
 		["system"] = "CHANNEL",
 	},
 	["Hyjal-Emmzz"] = {
@@ -182,7 +196,7 @@ AF_config = {
 		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
-	["Tichondrius-Peaceit"] = {
+	["Moon Guard-Gizelmardyth"] = {
 		["message"] = "AutoFlood 1.2",
 		["channel"] = "1",
 		["idChannel"] = "1",

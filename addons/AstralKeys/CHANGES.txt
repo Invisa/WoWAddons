@@ -1,13 +1,10 @@
-lightweight tag 20c9cdae005e5452b2857ca72d3f5361c5ac4baa 2.2.03
+lightweight tag 5207d3db1a17e6a04a90aca45cbcb3955006b5d0 2.2.04
 Author:	Phrike <phriked@gmail.com>
-Date:	Wed Jul 18 23:37:37 2018 -0700
+Date:	Wed Aug 15 21:31:56 2018 -0700
 
-commit 20c9cdae005e5452b2857ca72d3f5361c5ac4baa
+commit 5207d3db1a17e6a04a90aca45cbcb3955006b5d0
 Author: Phrike <phriked@gmail.com>
-Date:   Wed Jul 18 23:37:37 2018 -0700
+Date:   Wed Aug 15 21:31:56 2018 -0700
 
-    Bug Fix
-    
-    -Increase interface number
-    -Fix bug where character frame was not updating weekly best key level upon completion of mythic plus
+    Version increase
 

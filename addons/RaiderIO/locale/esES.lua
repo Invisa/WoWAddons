@@ -16,6 +16,8 @@ L["BEST_RUN"] = "Mejor M+"
 L["CHANGES_REQUIRES_UI_RELOAD"] = [=[Se han guardado los cambios, pero se necesita reiniciar la interfaz para que surtan efecto.
 
 ¿Quieres reiniciarla ahora?]=]
+--[[Translation missing --]]
+--[[ L["CHECKBOX_DISPLAY_WEEKLY"] = ""--]] 
 L["COPY_RAIDERIO_PROFILE_URL"] = "Copiar dirección de Raider.IO"
 L["COPY_RAIDERIO_URL"] = "Copiar dirección de Raider.IO"
 L["DPS"] = "DPS"
@@ -49,6 +51,10 @@ L["ENABLE_NO_SCORE_COLORS_DESC"] = "Desactiva los colores de las puntuaciones. T
 --[[ L["ENABLE_RAIDERIO_CLIENT_ENHANCEMENTS_DESC"] = ""--]] 
 L["ENABLE_SIMPLE_SCORE_COLORS"] = "Usar colores de puntuación simples"
 L["ENABLE_SIMPLE_SCORE_COLORS_DESC"] = "Muestra las puntuaciones usando solo los colores estándar de calidad de objeto. Facilita la distinción de puntuaciones para personas con defectos de visión cromática."
+--[[Translation missing --]]
+--[[ L["GUILD_BEST_SEASON"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["GUILD_BEST_WEEKLY"] = ""--]] 
 L["HEALER"] = "Sanador"
 L["HEALER_SCORE"] = "Puntuación de sanador"
 L["INVERSE_PROFILE_MODIFIER"] = "Invertir modificador de marco de perfil"
@@ -66,6 +72,8 @@ L["MODULE_TAIWAN"] = "Taiwan"
 L["MY_PROFILE_TITLE"] = "Perfil personal de M+"
 L["MYTHIC_PLUS_DB_MODULES"] = "Módulos de la base de datos"
 L["MYTHIC_PLUS_SCORES"] = "Puntuaciones de M+"
+--[[Translation missing --]]
+--[[ L["NO_GUILD_RECORD"] = ""--]] 
 L["OPEN_CONFIG"] = "Abrir configuración"
 --[[Translation missing --]]
 --[[ L["OUT_OF_SYNC_DATABASE_S"] = ""--]] 
@@ -86,6 +94,10 @@ L["RELOAD_LATER"] = "La reiniciaré más tarde"
 L["RELOAD_NOW"] = "Reiniciarla ahora"
 L["SHOW_AVERAGE_PLAYER_SCORE_INFO"] = "Mostrar puntuación media de M+ en tiempo"
 L["SHOW_AVERAGE_PLAYER_SCORE_INFO_DESC"] = "Muestra la puntuación media de M+ en tiempo de los miembros de un grupo. Aparece en las descripciones emergentes de piedras angulares y jugadores en el buscador de grupos."
+--[[Translation missing --]]
+--[[ L["SHOW_CLIENT_GUILD_BEST"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["SHOW_CLIENT_GUILD_BEST_DESC"] = ""--]] 
 L["SHOW_IN_FRIENDS"] = "Mostrar en la lista de amigos"
 L["SHOW_IN_FRIENDS_DESC"] = "Muestra la puntuación de M+ de tus amigos cuando pasas el ratón por encima."
 L["SHOW_IN_LFD"] = "Mostrar en el buscador de grupos"

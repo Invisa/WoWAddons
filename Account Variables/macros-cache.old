@@ -1,5 +1,5 @@
-VER 3 0000000000000079 "." "237585"
-#showtooltip Healthstone
+VER 3 0000000000000079 "." "INV_MISC_QUESTIONMARK"
+#showtooltip
 /use Healthstone
 /use Astral Healing Potion
 END
@@ -51,6 +51,10 @@ END
 VER 3 000000000000008E "." "INV_MISC_QUESTIONMARK"
 /equipslot 13 Spectral Thurible
 /equipslot 14 Prototype Personnel Decimator
+END
+VER 3 0000000000000092 "AAP_MACRO" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use Sur'jan's Ritual Dagger
 END
 VER 3 0000000000000088 "dbm3" "132097"
 /pull 3

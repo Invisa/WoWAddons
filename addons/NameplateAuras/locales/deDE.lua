@@ -1,5 +1,6 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("NameplateAuras", "deDE");
 L = L or {}
+--@non-debug@
 L["< 1min"] = "< 1 Min."
 L["< 5sec"] = "< 5 Sek."
 L["> 1min"] = "> 1 Min."
@@ -59,6 +60,9 @@ L["None"] = "Keine"
 L["Only my auras"] = "Nur meine Auren"
 L["Open profiles dialog"] = "Profildialog öffnen"
 L["Options are not available in combat!"] = "Optionen sind im Kampf nicht verfügbar!"
+--[[Translation missing --]]
+L["options:apps:explosive-orbs:tooltip"] = [=[Show special aura above Fel Explosive's nameplates (M+ Explosive Affix)
+This aura have a bright glow and default size]=]
 L["options:aura-options:allow-multiple-instances"] = "Mehrere Exemplare dieser Aura erlauben"
 L["options:aura-options:allow-multiple-instances:tooltip"] = [=[Falls diese Option angehakt ist, wirst du alle Exemplare dieser Aura sehen, auch wenn diese sich auf derselben Namensplakette befinden.
 Anderenfalls wirst du nur ein Exemplar dieser Aura sehen (die mit der größten Restdauer)]=]
@@ -74,14 +78,15 @@ L["options:auras:enabled-state-mineonly"] = "Aktiviert, nur meine Auren zeigen"
 L["options:auras:pvp-state-dontshowinpvp"] = "Diese Aura während eines PvP-Kampfes nicht zeigen"
 L["options:auras:pvp-state-indefinite"] = "Diese Aura während eines PvP-Kampfes zeigen"
 L["options:auras:pvp-state-onlyduringpvpbattles"] = "Diese Aura nur während eines PvP-Kampfes zeigen"
+L["options:category:apps"] = "Erweiterungen"
 L["options:category:interrupts"] = "Unterbrechungen"
 L["options:general:always-show-my-auras:tooltip"] = [=[Dies ist ein Filter höchster Priorität. Falls du diese
  Funktion aktivierst, werden Auren, die du gewirkt hast,
  unabhängig von anderen Filtern gezeigt]=]
 L["options:general:error-omnicc-is-not-loaded"] = "Du kannst diese Option nicht auswählen, weil OmniCC nicht geladen ist!"
 L["options:general:use-dim-glow"] = "Schwaches Leuchten von Symbolen "
-L["options:general:use-dim-glow:tooltip"] = [=[Wenn diese Option aktiviert ist wird kein konstantes inneres und äußeres Leuchten des Symbols sichtbar sein.
-(Diese Option ist nur verfügbar für Zauber welche explizit für das Leuchten von Symbolen aktiviert wurden)]=]
+L["options:general:use-dim-glow:tooltip"] = [=[Wenn diese Option aktiviert ist, wird kein konstantes inneres und äußeres Leuchten der Symboles sichtbar sein.
+(Diese Option ist nur verfügbar für Zauber, welche explizit für das Leuchten von Symbolen aktiviert wurden)]=]
 L["options:interrupts:enable-interrupts"] = "Unterbrechungsverfolgung aktivieren"
 L["options:interrupts:enable-only-during-pvp-battles"] = "Nur während PvP-Kämpfen aktivieren"
 L["options:interrupts:glow"] = "Symbolleuchten"
@@ -89,12 +94,12 @@ L["options:interrupts:icon-size"] = "Symbolgröße"
 L["options:interrupts:use-shared-icon-texture"] = "Die gleiche Textur für alle Unterbrechungszauber verwenden"
 L["options:selector:search"] = "Suchen:"
 L["options:spells:appropriate-spell-ids"] = "Passende Zauber-IDs:"
-L["options:spells:icon-glow"] = "Zeige Leuchten"
-L["options:spells:icon-glow-always"] = "Zeige Leuchten immer aktiv"
-L["options:spells:icon-glow-threshold"] = "Zeige Leuchte wenn verbleibende Zeit der Aura kleiner ist als"
+L["options:spells:icon-glow"] = "Leuchten zeigen"
+L["options:spells:icon-glow-always"] = "Leuchten dauerhaft anzeigen"
+L["options:spells:icon-glow-threshold"] = "Leuchten anzeigen, wenn verbleibende Zeit der Aura kleiner ist als"
 L["options:spells:show-on-friends:warning0"] = [=[Achtung:
-Die Aura wird nicht bei Nameplates freundlicher Einhaten angezeigt bis folgende option aktiviert wird:
-<Allgemein> --> <Zeige Aura bei Nameplates von freundlichen Einheiten>]=]
+Die Aura wird nicht bei Nameplates freundlicher Einheiten angezeigt bis folgende Option aktiviert wird:
+<Allgemein> --> <Auren auf Namensplaketten verbündeter Einheiten anzeigen>]=]
 L["options:timer-text:min-duration-to-display-tenths-of-seconds"] = "Minimale Dauer zur Anzeige von Zehntelsekunden"
 L["options:timer-text:scale-font-size"] = [=[Schriftgröße an
 Symbolgröße
@@ -130,3 +135,5 @@ L["Value must be a number"] = "Wert muss eine Zahl sein"
 L["X offset"] = "X-Verschiebung"
 L["Y offset"] = "Y-Verschiebung"
 L["Yes"] = "Ja"
+
+--@end-non-debug@

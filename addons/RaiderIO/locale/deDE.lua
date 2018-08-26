@@ -16,6 +16,8 @@ L["BEST_RUN"] = "Bester Run"
 L["CHANGES_REQUIRES_UI_RELOAD"] = [=[Ihre Änderungen wurden gespeichert, du musst jedoch die Benutzeroberfläche neu laden, damit diese wirksam werden.
 
 Möchtest du das jetzt tun?]=]
+--[[Translation missing --]]
+--[[ L["CHECKBOX_DISPLAY_WEEKLY"] = ""--]] 
 L["COPY_RAIDERIO_PROFILE_URL"] = "Kopiere Raider.IO Link"
 L["COPY_RAIDERIO_URL"] = "Kopiere Raider.IO Link"
 L["DPS"] = "DPS"
@@ -60,6 +62,10 @@ L["ENABLE_NO_SCORE_COLORS_DESC"] = "Deaktiviere Farben der Wertungen. Alle Wertu
 --[[ L["ENABLE_RAIDERIO_CLIENT_ENHANCEMENTS_DESC"] = ""--]] 
 L["ENABLE_SIMPLE_SCORE_COLORS"] = "Verwende einfache Farben"
 L["ENABLE_SIMPLE_SCORE_COLORS_DESC"] = "Zeigt nur Wertungen mit Standardfarben für Itemqualität an. Dies kann es für Personen mit Farbsehschwächen leichter machen, die Bewertungsstufen zu unterscheiden."
+--[[Translation missing --]]
+--[[ L["GUILD_BEST_SEASON"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["GUILD_BEST_WEEKLY"] = ""--]] 
 L["HEALER"] = "Heiler"
 L["HEALER_SCORE"] = "Heiler Wertung"
 L["INVERSE_PROFILE_MODIFIER"] = "Invertiere den Profil Tooltip Umschalter"
@@ -77,6 +83,8 @@ L["MODULE_TAIWAN"] = "Taiwan"
 L["MY_PROFILE_TITLE"] = "Mein M+ Profil"
 L["MYTHIC_PLUS_DB_MODULES"] = "Mythic Plus Datenbank Module"
 L["MYTHIC_PLUS_SCORES"] = "Mythic Plus Wertung"
+--[[Translation missing --]]
+--[[ L["NO_GUILD_RECORD"] = ""--]] 
 L["OPEN_CONFIG"] = "Öffne Konfigutration"
 L["OUT_OF_SYNC_DATABASE_S"] = "|cffFFFFFF%s|r hat keine synchronen Horde/Allianz Fraktionsdaten.Bitte aktualisiert eure RaiderIO Client-Einstellungen um beide Fraktionen zu synchronisieren."
 L["OUTDATED_DATABASE"] = "Wertungen sind %d Tag(e) alt"
@@ -95,6 +103,10 @@ L["RELOAD_LATER"] = "Aktualisiere später"
 L["RELOAD_NOW"] = "Aktualisiere jetzt"
 L["SHOW_AVERAGE_PLAYER_SCORE_INFO"] = "Zeige durchschn. Wertungen für Durchgänge"
 L["SHOW_AVERAGE_PLAYER_SCORE_INFO_DESC"] = "Zeigt die durchschnittliche Raider.IO-Wertung an, welche von Mitspielern in in-time Durchgängen angezeigt wird. Dies ist in den SchlüsselsteinTooltips und Spieler Tooltips im Dungeon Finder sichtbar."
+--[[Translation missing --]]
+--[[ L["SHOW_CLIENT_GUILD_BEST"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["SHOW_CLIENT_GUILD_BEST_DESC"] = ""--]] 
 L["SHOW_IN_FRIENDS"] = "Zeige Freundesliste"
 L["SHOW_IN_FRIENDS_DESC"] = "Zeige Mythic+ Wertung wenn du mit der Maus über deine Freunde fährst."
 L["SHOW_IN_LFD"] = "Zeige im Dungeon Finder"

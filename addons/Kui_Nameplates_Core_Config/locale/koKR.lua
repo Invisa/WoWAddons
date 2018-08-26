@@ -22,6 +22,12 @@ L["titles"] = {
 	["absorb_enable"] = "흡수 표시",
 	["absorb_striped"] = "줄무늬 흡수 텍스쳐",
 	["auras_centre"] = "아이콘 가운데 정렬",
+--[[Translation missing --]]
+	["auras_colour_long"] = "Long timer",
+--[[Translation missing --]]
+	["auras_colour_medium"] = "Medium timer",
+--[[Translation missing --]]
+	["auras_colour_short"] = "Short timer",
 	["auras_enabled"] = "효과 표시",
 	["auras_filtering_sep"] = "필터링",
 	["auras_hide_all_other"] = "다른 모든 효과 차단",
@@ -46,6 +52,10 @@ L["titles"] = {
 	["bossmod_x_offset"] = "수평 위치",
 	["bossmod_y_offset"] = "수직 위치",
 	["bot_vertical_offset"] = "레벨/생명력 수직 위치",
+--[[Translation missing --]]
+	["castbar_animate"] = "Animate",
+--[[Translation missing --]]
+	["castbar_animate_change_colour"] = "Change colour",
 	["castbar_colour"] = "시전 바 색상",
 	["castbar_enable"] = "활성화",
 	["castbar_height"] = "시전 바 높이",
@@ -95,6 +105,8 @@ L["titles"] = {
 --[[Translation missing --]]
 	["cvar_clamp_top"] = "Top clamp distance",
 --[[Translation missing --]]
+	["cvar_disable_scale"] = "Disable default scaling",
+--[[Translation missing --]]
 	["cvar_enable"] = "Allow Kui Nameplates to modify CVars",
 --[[Translation missing --]]
 	["cvar_max_distance"] = "Max render distance",
@@ -139,7 +151,6 @@ L["titles"] = {
 	["execute_percent"] = "마무리 일격 범위",
 	["execute_sep"] = "마무리 일격 범위",
 	["fade_all"] = "기본으로 페이드",
-	["fade_alpha"] = "페이드 투명도",
 --[[Translation missing --]]
 	["fade_avoid_casting_friendly"] = "Avoid casting (friendly)",
 --[[Translation missing --]]
@@ -161,7 +172,6 @@ L["titles"] = {
 	["fade_neutral_enemy"] = "중립 적 페이드",
 --[[Translation missing --]]
 	["fade_non_target_alpha"] = "Non-target alpha",
-	["fade_rules_sep"] = "프레임 페이딩",
 	["fade_speed"] = "페이드 애니메이션 속도",
 	["fade_untracked"] = "추적하지 않은 유닛 페이드",
 	["font_face"] = "글꼴",
@@ -212,8 +222,6 @@ L["titles"] = {
 	["nameonly_in_combat"] = "당신과 전투 중인 유닛",
 	["nameonly_neutral"] = "중립 적",
 	["nameonly_no_font_style"] = "문자 외곽선 없음",
---[[Translation missing --]]
-	["nameonly_on_default"] = "Hide default health bar",
 	["nameonly_target"] = "대상",
 --[[Translation missing --]]
 	["nameonly_text_sep"] = "Text",
@@ -273,6 +281,12 @@ L["tooltips"] = {
 	["bossmod_x_offset"] = "우두머리 효과 아이콘의 수평 위치",
 	["bossmod_y_offset"] = "우두머리 효과 아이콘의 수직 위치",
 	["bot_vertical_offset"] = "레벨과 생명력 문자열의 수직 위치",
+--[[Translation missing --]]
+	["castbar_animate"] = "Fade out the cast bar when a cast ends.",
+--[[Translation missing --]]
+	["castbar_animate_change_colour"] = "Change the colour of the cast bar when a cast ends, making it easier to tell the difference between successful, stopped, and interrupted casts.",
+--[[Translation missing --]]
+	["castbar_colour"] = "Colour of the cast bar.|n|nAlso used to indicate a successful cast if animation is enabled.",
 	["castbar_enable"] = "시전바 요소를 활성화합니다",
 --[[Translation missing --]]
 	["castbar_name_vertical_offset"] = "Vertical offset of the spell name text",
@@ -306,6 +320,8 @@ L["tooltips"] = {
 --[[Translation missing --]]
 	["cvar_clamp_top"] = "|cffffcc00nameplate{Other,Large}TopInset|r|n|nHow close nameplates will be rendered to the top edge of the screen, where 0 means on the edge. Set to -0.1 to disable clamping on the top of the screen.|n|nClamping only affects your current target.",
 --[[Translation missing --]]
+	["cvar_disable_scale"] = "|cffffcc00nameplate{Min,Max}Scale|r|n|nDisable the nameplate distance scaling CVars which would otherwise only be affecting the clickbox.",
+--[[Translation missing --]]
 	["cvar_enable"] = "When enabled, Kui Nameplates will attempt to lock the CVars on this page to the values set here.|n|nIf this option is disabled, KNP will not modify CVars, even to return them to defaults.",
 --[[Translation missing --]]
 	["cvar_max_distance"] = "|cffffcc00nameplateMaxDistance|r|n|nMaximum distance at which to render nameplates (not including your current target).",
@@ -326,7 +342,6 @@ L["tooltips"] = {
 	["execute_enabled"] = "유닛이 마무리 일격 범위 내에 있을 때 생명력 바의 색상을 변경합니다",
 	["execute_percent"] = "마무리 일격 범위 직접 설정",
 	["fade_all"] = "페이드 인 대신 기본으로 모든 프레임을 패이드 아웃시킵니다",
-	["fade_alpha"] = "페이드 프레임의 불투명도입니다. 0으로 설정하면 (즉. 프레임이 보이지 않음), 보이지 않는 이름표는 계속 클릭이 가능합니다. 애드온은 임의로 이름표 클릭 영역을 비활성할 수 없습니다",
 --[[Translation missing --]]
 	["fade_avoid_casting_friendly"] = "Don't fade friendly nameplates when they are casting",
 --[[Translation missing --]]
@@ -376,8 +391,6 @@ L["tooltips"] = {
 	["nameonly_in_combat"] = "유닛이 당신과 전투 중일 때도 이름만 표시 모드를 사용합니다 (이름만 표시 모드를 적 플레이어에도 활성화 합니다).|n|n훈련용 허수아비나 위협 수준을 가지지 않는 다른 유닛에 적용할 수 없습니다.",
 	["nameonly_neutral"] = "공격할 수 있는 중립 유닛에 이름만 표시 모드를 사용합니다",
 	["nameonly_no_font_style"] = "이름만 표시 모드일 때 문자 외곽선을 숨깁니다 (글꼴 스타일을 nil로 설정하여)",
---[[Translation missing --]]
-	["nameonly_on_default"] = "Hide the health bar of the default nameplates in situations where friendly nameplates cannot be otherwise modified by addons.|n|nThis modifies the CVar |cffffff88nameplateShowOnlyNames|r.",
 	["nameonly_target"] = "당신의 대상에도 이름만 표시 모드를 사용합니다",
 	["powerbar_height"] = "자원 바의 높이입니다. 프레임 높이를 넘어서 증가하지 않습니다",
 	["state_icons"] = "우두머리와 희귀 유닛에 아이콘을 표시합니다 (레벨 문자가 표시되면 숨겨집니다)",

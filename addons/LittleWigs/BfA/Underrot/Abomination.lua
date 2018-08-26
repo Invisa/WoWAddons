@@ -12,7 +12,8 @@ mod.engageId = 2123
 -- Locals
 --
 
-local visageRemaining = 10
+local putridBloodList = {}
+local visageRemaining = 6
 
 --------------------------------------------------------------------------------
 -- Initialization
@@ -21,33 +22,34 @@ local visageRemaining = 10
 function mod:GetOptions()
 	return {
 		"stages",
-		-- 269301, -- Putrid Blood
+		{269301, "INFOBOX"}, -- Putrid Blood
 		269843, -- Vile Expulsion
-		269310, -- Cleansing Light
+		{269310, "SAY", "ICON", "PROXIMITY"}, -- Cleansing Light
 	}
 end
 
 function mod:OnBossEnable()
-	-- self:Log("SPELL_CAST_SUCCESS", "PutridBlood", 269301) -- XXX Every 5 seconds, do we need anything for it?
 	self:Log("SPELL_CAST_START", "VileExpulsion", 269843)
 	self:Log("SPELL_CAST_START", "CleansingLight", 269310)
+	self:Log("SPELL_CAST_SUCCESS", "CleansingLightSuccess", 269310)
+
+	self:Log("SPELL_AURA_APPLIED", "PutridBloodApplied", 269301)
+	self:Log("SPELL_AURA_APPLIED_DOSE", "PutridBloodAppliedDose", 269301)
+	self:Log("SPELL_AURA_REMOVED", "PutridBloodRemoved", 269301)
+
 	self:Death("VisageDeath", 137103)
 end
 
 function mod:OnEngage()
-	visageRemaining = 10
-	self:Bar(269310, 7.2) -- Cleansing Light
+	putridBloodList = {}
+	visageRemaining = 6
 	self:Bar(269843, 8.5) -- Vile Expulsion
+	self:Bar(269310, 18) -- Cleansing Light
 end
 
 --------------------------------------------------------------------------------
 -- Event Handlers
 --
-
--- function mod:PutridBlood(args)
-	-- self:Message(args.spellId, "yellow")
-	-- self:PlaySound(args.spellId, "alert")
--- end
 
 function mod:VileExpulsion(args)
 	self:Message(args.spellId, "red")
@@ -55,10 +57,58 @@ function mod:VileExpulsion(args)
 	self:Bar(args.spellId, 15.5)
 end
 
-function mod:CleansingLight(args)
-	self:Message(args.spellId, "green")
-	self:PlaySound(args.spellId, "long", "runin")
-	self:CDBar(args.spellId, 32) -- pull:7.2, 32.8, 24.3, 37.6, 32.7
+do
+	local function printTarget(self, player, guid)
+		self:TargetMessage2(269310, "green", player)
+		self:PlaySound(269310, "long", "runin")
+		self:SecondaryIcon(269310, player)
+		if self:Me(guid) then
+			self:Say(269310)
+			self:OpenProximity(269310, 10, nil, true)
+		else
+			self:OpenProximity(269310, 10, player, true)
+		end
+	end
+	function mod:CleansingLight(args)
+		self:GetBossTarget(printTarget, 0.4, args.sourceGUID)
+		self:CDBar(args.spellId, 26) -- 18.0, 26.7, 36.5 & 18.3, 28.0, 32.4
+	end
+	function mod:CleansingLightSuccess(args)
+		self:SecondaryIcon(args.spellId)
+		self:CloseProximity(args.spellId)
+	end
+end
+
+function mod:PutridBloodApplied(args)
+	if not next(putridBloodList) then
+		self:OpenInfo(args.spellId, args.spellName)
+	end
+	putridBloodList[args.destName] = 1
+	self:SetInfoByTable(args.spellId, putridBloodList)
+end
+
+function mod:PutridBloodAppliedDose(args)
+	putridBloodList[args.destName] = args.amount
+	self:SetInfoByTable(args.spellId, putridBloodList)
+
+	-- 1 stack is applied every 8 seconds
+	if self:Me(args.destGUID) and args.amount >= 4 and args.amount % 2 == 0 then
+		self:StackMessage(args.spellId, args.destName, args.amount, "orange")
+		if args.amount < 9 then
+			self:PlaySound(args.spellId, "alarm")
+		else
+			self:PlaySound(args.spellId, "warning")
+		end
+	end
+end
+
+function mod:PutridBloodRemoved(args)
+	putridBloodList[args.destName] = nil
+	if not next(putridBloodList) then
+		self:CloseInfo(args.spellId)
+	else
+		self:SetInfoByTable(args.spellId, putridBloodList)
+	end
 end
 
 function mod:VisageDeath(args)

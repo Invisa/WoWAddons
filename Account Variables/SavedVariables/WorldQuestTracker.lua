@@ -2,27 +2,29 @@
 WQTrackerDB = {
 	["profileKeys"] = {
 		["Mfgob - Bleeding Hollow"] = "Default",
+		["Samsara - Runetotem"] = "Default",
 		["Mfgob - Magtheridon"] = "Default",
 		["Tiehb - Crushridge"] = "Default",
 		["Jugarmitico - Ragnaros"] = "Default",
 		["Dsfsdfs - Magtheridon"] = "Default",
 		["Mfgob - Mal'Ganis"] = "Default",
-		["Samsara - Runetotem"] = "Default",
-		["Bloodz - Runetotem"] = "Default",
 		["Arcblood - Runetotem"] = "Default",
 		["Binky - Runetotem"] = "Default",
-		["Emmzz - Hyjal"] = "Default",
+		["Bloodz - Runetotem"] = "Default",
 		["Purple - Runetotem"] = "Default",
-		["Felbloodx - Illidan"] = "Default",
-		["Mfgob - Illidan"] = "Default",
 		["Arcblood - Zul'jin"] = "Default",
+		["Emmzz - Hyjal"] = "Default",
 		["Popitlockit - Tichondrius"] = "Default",
-		["Soothìngraìn - Hyjal"] = "Default",
 		["Dethnitsrgay - Crushridge"] = "Default",
+		["Mfgob - Illidan"] = "Default",
+		["Soothìngraìn - Hyjal"] = "Default",
+		["Sandtoes - Kil'jaeden"] = "Default",
+		["Felbloodx - Illidan"] = "Default",
 		["Lightblood - Runetotem"] = "Default",
+		["Gizelmardyth - Moon Guard"] = "Default",
 		["Playmythic - Aerie Peak"] = "Default",
 		["Invisa - Tichondrius"] = "Default",
-		["Sandtoes - Kil'jaeden"] = "Default",
+		["Blisslife - Tichondrius"] = "Default",
 		["Arcblood - Tichondrius"] = "Default",
 		["Moxil - Runetotem"] = "Default",
 		["Veil - Tichondrius"] = "Default",
@@ -32,6 +34,7 @@ WQTrackerDB = {
 		["Default"] = {
 			["TutorialTaxyMap"] = true,
 			["groupfinder"] = {
+				["tutorial"] = 1,
 				["askleave_delayed"] = false,
 				["autoleave_delayed"] = true,
 				["frame"] = {
@@ -40,13 +43,14 @@ WQTrackerDB = {
 					["point"] = "TOPRIGHT",
 					["scale"] = 1,
 				},
-				["tutorial"] = 1,
 			},
 			["low_level_tutorial"] = true,
 			["AlertTutorialStep"] = 5,
 			["TutorialPopupID"] = 4,
 			["quests_tracked"] = {
 				["Player-151-07DDDC87"] = {
+				},
+				["Player-3675-08382879"] = {
 				},
 				["Player-61-0B9F6E15"] = {
 				},
@@ -60,11 +64,13 @@ WQTrackerDB = {
 				},
 				["Player-1138-0648B886"] = {
 				},
+				["Player-78-0B6D977C"] = {
+				},
 				["Player-11-0B2AA7BB"] = {
 				},
 				["Player-151-07CF99C1"] = {
 				},
-				["Player-78-0B6D977C"] = {
+				["Player-3684-09AA4EAD"] = {
 				},
 				["Player-3661-06D8EF48"] = {
 				},
@@ -78,21 +84,21 @@ WQTrackerDB = {
 				},
 				["Player-1138-0647397D"] = {
 				},
-				["Player-3684-09AA4EAD"] = {
+				["Player-151-07D75F74"] = {
 				},
 				["Player-3661-06D64E32"] = {
 				},
 				["Player-151-07E1EE80"] = {
 				},
-				["Player-151-07D75F74"] = {
+				["Player-78-0B6D975A"] = {
 				},
-				["Player-9-0ADC07B1"] = {
+				["Player-11-0B3342CB"] = {
 				},
 				["Player-151-07CF99B1"] = {
 				},
-				["Player-78-0B6D975A"] = {
-				},
 				["Player-11-078ACF84"] = {
+				},
+				["Player-9-0ADC07B1"] = {
 				},
 				["Player-1426-09C756B7"] = {
 				},
@@ -219,10 +225,10 @@ WQTrackerDB = {
 						["rewardAmount"] = "2",
 						["rewardTexture"] = 1417744,
 					},
-					[43771] = {
-						["expireAt"] = 1523113221,
-						["rewardAmount"] = 1200000000,
-						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
+					[42070] = {
+						["expireAt"] = 1522940464,
+						["rewardAmount"] = "|cffc557FF870",
+						["rewardTexture"] = "Interface\\ICONS\\INV_Belt_15",
 					},
 					[43710] = {
 						["expireAt"] = 1522923141,
@@ -249,10 +255,10 @@ WQTrackerDB = {
 						["rewardAmount"] = "|cffc557FF875",
 						["rewardTexture"] = "Interface\\ICONS\\INV_Jewelry_Ring_22",
 					},
-					[42070] = {
-						["expireAt"] = 1522940464,
-						["rewardAmount"] = "|cffc557FF870",
-						["rewardTexture"] = "Interface\\ICONS\\INV_Belt_15",
+					[41692] = {
+						["expireAt"] = 1522832427,
+						["rewardAmount"] = 1300000000,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
 					[43332] = {
 						["expireAt"] = 1522789227,
@@ -304,9 +310,9 @@ WQTrackerDB = {
 						["rewardAmount"] = 2000000000,
 						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
-					[41692] = {
-						["expireAt"] = 1522832427,
-						["rewardAmount"] = 1300000000,
+					[43771] = {
+						["expireAt"] = 1523113221,
+						["rewardAmount"] = 1200000000,
 						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
 					[43438] = {
@@ -466,15 +472,15 @@ WQTrackerDB = {
 						["rewardAmount"] = 2200000000,
 						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
-					[48833] = {
-						["expireAt"] = 1525575658,
-						["rewardAmount"] = "|cffc557FF895",
-						["rewardTexture"] = "Interface\\ICONS\\inv_misc_enchantedpearlE",
-					},
 					[42713] = {
 						["expireAt"] = 1526742063,
 						["rewardAmount"] = "|cffc557FF885",
 						["rewardTexture"] = "Interface\\ICONS\\INV_Shoulder_25",
+					},
+					[41948] = {
+						["expireAt"] = 1524841306,
+						["rewardAmount"] = "19",
+						["rewardTexture"] = 413584,
 					},
 					[42211] = {
 						["expireAt"] = 1523091635,
@@ -561,9 +567,9 @@ WQTrackerDB = {
 						["rewardAmount"] = "|cffc557FF870",
 						["rewardTexture"] = "Interface\\ICONS\\INV_Misc_Cape_19",
 					},
-					[45439] = {
-						["expireAt"] = 1523127625,
-						["rewardAmount"] = 1400000000,
+					[45694] = {
+						["expireAt"] = 1526137236,
+						["rewardAmount"] = 1600000000,
 						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
 					[46180] = {
@@ -581,9 +587,9 @@ WQTrackerDB = {
 						["rewardAmount"] = 1300000000,
 						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
-					[45694] = {
-						["expireAt"] = 1526137236,
-						["rewardAmount"] = 1600000000,
+					[42124] = {
+						["expireAt"] = 1526158836,
+						["rewardAmount"] = 1300000000,
 						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
 					[44937] = {
@@ -596,8 +602,8 @@ WQTrackerDB = {
 						["rewardAmount"] = 2200000000,
 						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
-					[43774] = {
-						["expireAt"] = 1525251709,
+					[45049] = {
+						["expireAt"] = 1525964496,
 						["rewardAmount"] = 1200000000,
 						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
@@ -626,10 +632,10 @@ WQTrackerDB = {
 						["rewardAmount"] = 4000000000,
 						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
-					[44029] = {
-						["expireAt"] = 1526482863,
-						["rewardAmount"] = "|cffc557FF880",
-						["rewardTexture"] = "Interface\\ICONS\\INV_Jewelry_Ring_22",
+					[43774] = {
+						["expireAt"] = 1525251709,
+						["rewardAmount"] = 1200000000,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
 					[42969] = {
 						["expireAt"] = 1524798046,
@@ -656,10 +662,10 @@ WQTrackerDB = {
 						["rewardAmount"] = 1300000000,
 						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
-					[45049] = {
-						["expireAt"] = 1525964496,
-						["rewardAmount"] = 1200000000,
-						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
+					[44029] = {
+						["expireAt"] = 1526482863,
+						["rewardAmount"] = "|cffc557FF880",
+						["rewardTexture"] = "Interface\\ICONS\\INV_Jewelry_Ring_22",
 					},
 					[44802] = {
 						["expireAt"] = 1525878036,
@@ -671,9 +677,9 @@ WQTrackerDB = {
 						["rewardAmount"] = "17",
 						["rewardTexture"] = 413584,
 					},
-					[41699] = {
-						["expireAt"] = 1526504463,
-						["rewardAmount"] = 1300000000,
+					[44759] = {
+						["expireAt"] = 1522994453,
+						["rewardAmount"] = 1400000000,
 						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
 					[42276] = {
@@ -706,9 +712,9 @@ WQTrackerDB = {
 						["rewardAmount"] = 945000000,
 						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
-					[42209] = {
-						["expireAt"] = 1526137236,
-						["rewardAmount"] = 2300000000,
+					[41699] = {
+						["expireAt"] = 1526504463,
+						["rewardAmount"] = 1300000000,
 						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
 					[48831] = {
@@ -1431,9 +1437,9 @@ WQTrackerDB = {
 						["rewardAmount"] = "2",
 						["rewardTexture"] = 1417744,
 					},
-					[44759] = {
-						["expireAt"] = 1522994453,
-						["rewardAmount"] = 1400000000,
+					[42209] = {
+						["expireAt"] = 1526137236,
+						["rewardAmount"] = 2300000000,
 						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
 					[45934] = {
@@ -1501,9 +1507,9 @@ WQTrackerDB = {
 						["rewardAmount"] = "5",
 						["rewardTexture"] = 1387619,
 					},
-					[42124] = {
-						["expireAt"] = 1526158836,
-						["rewardAmount"] = 1300000000,
+					[45439] = {
+						["expireAt"] = 1523127625,
+						["rewardAmount"] = 1400000000,
 						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
 					},
 					[41819] = {
@@ -1541,10 +1547,10 @@ WQTrackerDB = {
 						["rewardAmount"] = "17",
 						["rewardTexture"] = 413584,
 					},
-					[41948] = {
-						["expireAt"] = 1524841306,
-						["rewardAmount"] = "19",
-						["rewardTexture"] = 413584,
+					[48833] = {
+						["expireAt"] = 1525575658,
+						["rewardAmount"] = "|cffc557FF895",
+						["rewardTexture"] = "Interface\\ICONS\\inv_misc_enchantedpearlE",
 					},
 					[44943] = {
 						["expireAt"] = 1523251487,
@@ -2447,6 +2453,11 @@ WQTrackerDB = {
 					["name"] = "Binky",
 					["realm"] = "Runetotem",
 				},
+				["Player-3675-08382879"] = {
+					["class"] = "MAGE",
+					["name"] = "Gizelmardyth",
+					["realm"] = "Moon Guard",
+				},
 				["Player-61-0B9F6E15"] = {
 					["class"] = "MAGE",
 					["name"] = "Arcblood",
@@ -2477,6 +2488,11 @@ WQTrackerDB = {
 					["name"] = "Dethnitsrgay",
 					["realm"] = "Crushridge",
 				},
+				["Player-78-0B6D977C"] = {
+					["class"] = "WARRIOR",
+					["name"] = "Dsfsdfs",
+					["realm"] = "Magtheridon",
+				},
 				["Player-11-0B2AA7BB"] = {
 					["class"] = "MAGE",
 					["name"] = "Arcblood",
@@ -2487,10 +2503,10 @@ WQTrackerDB = {
 					["name"] = "Bloodz",
 					["realm"] = "Runetotem",
 				},
-				["Player-78-0B6D977C"] = {
+				["Player-3684-09AA4EAD"] = {
 					["class"] = "WARRIOR",
-					["name"] = "Dsfsdfs",
-					["realm"] = "Magtheridon",
+					["name"] = "Mfgob",
+					["realm"] = "Mal'Ganis",
 				},
 				["Player-3661-06D8EF48"] = {
 					["class"] = "WARRIOR",
@@ -2522,10 +2538,10 @@ WQTrackerDB = {
 					["name"] = "Tiehb",
 					["realm"] = "Crushridge",
 				},
-				["Player-3684-09AA4EAD"] = {
-					["class"] = "WARRIOR",
-					["name"] = "Mfgob",
-					["realm"] = "Mal'Ganis",
+				["Player-151-07D75F74"] = {
+					["class"] = "HUNTER",
+					["name"] = "Purple",
+					["realm"] = "Runetotem",
 				},
 				["Player-3661-06D64E32"] = {
 					["class"] = "SHAMAN",
@@ -2537,30 +2553,30 @@ WQTrackerDB = {
 					["name"] = "Purple",
 					["realm"] = "Runetotem",
 				},
-				["Player-151-07D75F74"] = {
-					["class"] = "HUNTER",
-					["name"] = "Purple",
-					["realm"] = "Runetotem",
+				["Player-78-0B6D975A"] = {
+					["class"] = "ROGUE",
+					["name"] = "Mfgob",
+					["realm"] = "Magtheridon",
 				},
-				["Player-9-0ADC07B1"] = {
-					["class"] = "DEMONHUNTER",
-					["name"] = "Sandtoes",
-					["realm"] = "Kil'jaeden",
+				["Player-11-0B3342CB"] = {
+					["class"] = "DRUID",
+					["name"] = "Blisslife",
+					["realm"] = "Tichondrius",
 				},
 				["Player-151-07CF99B1"] = {
 					["class"] = "PALADIN",
 					["name"] = "Lightblood",
 					["realm"] = "Runetotem",
 				},
-				["Player-78-0B6D975A"] = {
-					["class"] = "ROGUE",
-					["name"] = "Mfgob",
-					["realm"] = "Magtheridon",
-				},
 				["Player-11-078ACF84"] = {
 					["class"] = "WARLOCK",
 					["name"] = "Popitlockit",
 					["realm"] = "Tichondrius",
+				},
+				["Player-9-0ADC07B1"] = {
+					["class"] = "DEMONHUNTER",
+					["name"] = "Sandtoes",
+					["realm"] = "Kil'jaeden",
 				},
 				["Player-1426-09C756B7"] = {
 					["class"] = "PRIEST",
@@ -3182,8 +3198,8 @@ WQTrackerDB = {
 						[41705] = 1,
 						[47833] = 1,
 						[48096] = 2,
-						[43777] = 2,
 						[41992] = 2,
+						[41227] = 1,
 						[43637] = 1,
 						[44813] = 2,
 						[42711] = 1,
@@ -3243,7 +3259,7 @@ WQTrackerDB = {
 						[41938] = 1,
 						[44751] = 1,
 						[41699] = 1,
-						[41227] = 1,
+						[43777] = 2,
 						[43755] = 1,
 						[42743] = 1,
 						[48106] = 3,
@@ -3555,6 +3571,18 @@ WQTrackerDB = {
 			},
 			["TutorialToggleButton"] = 6,
 			["rarescan"] = {
+				["recently_spotted"] = {
+					[122004] = {
+						1534826209, -- [1]
+						862, -- [2]
+						0.709640741348267, -- [3]
+						0.361038029193878, -- [4]
+						"Creature-0-0000-0000-00000-122004-0000000000", -- [5]
+						"Umbra'jin", -- [6]
+						"Arkwendris", -- [7]
+						1534826208, -- [8]
+					},
+				},
 				["recently_killed"] = {
 					["Player-151-07DDDC87"] = {
 					},
@@ -3569,6 +3597,8 @@ WQTrackerDB = {
 					["Player-151-07E1EE80"] = {
 					},
 					["Player-11-07702C62"] = {
+					},
+					["Player-11-0B3342CB"] = {
 					},
 					["Player-151-07CF99B1"] = {
 					},
@@ -3653,6 +3683,7 @@ WQTrackerDB = {
 					["最后的希里索恩"] = 126913,
 					["千面吞噬者"] = 127581,
 					["Captain Faruq"] = 126869,
+					["Golrakahn"] = 124185,
 					["Commander Sathrenael"] = 122912,
 					["乌伯拉利斯"] = 126885,
 					["Baruut, el sanguinario"] = 126862,
@@ -3666,6 +3697,7 @@ WQTrackerDB = {
 					["Faucellaga"] = 122958,
 					["Lieutenant Xakaar"] = 126254,
 					["Cospe-piche"] = 125479,
+					["疱喉"] = 122958,
 					["Commander Xethgar"] = 126910,
 					["指挥官安达西斯"] = 124775,
 					["加尔佐斯"] = 122999,
@@ -3686,9 +3718,9 @@ WQTrackerDB = {
 					["Turek el lúcido"] = 126868,
 					["Commander Endaxis"] = 124775,
 					["Sorolis the Ill-Fated"] = 126889,
-					["那洛亞"] = 126419,
 					["Mistress Il'thendra"] = 122947,
 					["Feasel, o Ladrão de Bolinhos"] = 126864,
+					["那洛亞"] = 126419,
 					["指挥官泰克拉兹"] = 127084,
 					["Tenente Xakaar"] = 126254,
 					["Varga"] = 126208,
@@ -3712,15 +3744,15 @@ WQTrackerDB = {
 					["Overseer Y'Beda"] = 124440,
 					["指挥官萨森纳尔"] = 122912,
 					["监视者伊比达"] = 124440,
-					["Commander Vecaya"] = 122911,
-					["Aletacielo Colaveneno"] = 126867,
+					["Hermana Subversia"] = 123464,
+					["阿塔克松"] = 126887,
 					["Squadron Commander Vishax"] = 127700,
 					["Mãe dos Diabretes Laglath"] = 125820,
-					["阿塔克松"] = 126887,
+					["Aletacielo Colaveneno"] = 126867,
 					["Feitora Y'Morna"] = 125498,
 					["Señor de cólera Yarez"] = 126338,
-					["审判官维斯洛兹"] = 126946,
 					["Feitora Y'Beda"] = 124440,
+					["审判官维斯洛兹"] = 126946,
 					["Senhor da Ira Yarez"] = 126338,
 					["普希拉"] = 126040,
 					["Sister Subversia"] = 123464,
@@ -3732,7 +3764,7 @@ WQTrackerDB = {
 					["All-Seer Xanarian"] = 127096,
 					["Tereck el Selector"] = 124804,
 					["Herald of Chaos"] = 126896,
-					["Hermana Subversia"] = 123464,
+					["Commander Vecaya"] = 122911,
 					["Sobrestante Y'Morna"] = 125498,
 					["Ataxon"] = 126887,
 					["Zul'tan the Numerous"] = 126908,
@@ -3743,7 +3775,7 @@ WQTrackerDB = {
 					["Sorolis el Desventurado"] = 126889,
 					["Chief Alchemist Munculus"] = 127376,
 					["Senhora Il'thendra"] = 122947,
-					["疱喉"] = 122958,
+					["Umbra'jin"] = 122004,
 					["혼돈의 전령"] = 126896,
 					["Señora Il'thendra"] = 122947,
 					["嗜血的巴鲁特"] = 126862,

@@ -7,7 +7,7 @@ AAP_panel.title = CreateFrame("SimpleHTML",nil,AAP.AAP_panel)
 AAP_panel.title:SetWidth(500)
 AAP_panel.title:SetHeight(20)
 AAP_panel.title:SetPoint("TOPLEFT", AAP.AAP_panel, 0,-30)
-AAP_panel.title:SetFont(AAP_Font, 18,"OUTLINE")
+AAP_panel.title:SetFontObject("GameFontHighlightLarge")
 AAP_panel.title:SetText("Azeroth Auto Pilot - v" .. AAP_Version)
 AAP_ImportI = 0
 
@@ -45,7 +45,7 @@ function LoadOptionsFrame()
 	AAP.OptionsFrame = {}
 	AAP.OptionsFrame.MainFrame = CreateFrame("frame", "AAP_OptionsMainFrame",  UIParent)
 	AAP.OptionsFrame.MainFrame:SetWidth(450)
-	AAP.OptionsFrame.MainFrame:SetHeight(320)
+	AAP.OptionsFrame.MainFrame:SetHeight(360)
 	AAP.OptionsFrame.MainFrame:SetFrameStrata("MEDIUM")
 	AAP.OptionsFrame.MainFrame:SetPoint("CENTER",  UIParent, "CENTER",0,0)
 	AAP.OptionsFrame.MainFrame:SetMovable(true)
@@ -80,7 +80,7 @@ function LoadOptionsFrame()
 	AAP.OptionsFrame.FontString1:SetPoint("TOP",AAP.OptionsFrame.MainFrame,"TOP",0,0)
 	AAP.OptionsFrame.FontString1:SetWidth(240)
 	AAP.OptionsFrame.FontString1:SetHeight(20)
-	AAP.OptionsFrame.FontString1:SetFont(AAP_Font, 16,"OUTLINE")
+	AAP.OptionsFrame.FontString1:SetFontObject("GameFontHighlightLarge")
 	AAP.OptionsFrame.FontString1:SetText("Azeroth Auto Pilot - v" .. AAP_Version)
 	AAP.OptionsFrame.FontString1:SetTextColor(1, 1, 0)
 
@@ -207,22 +207,6 @@ function LoadOptionsFrame()
 		end
 	end)
 
-	AAP.OptionsFrame.CheckButton6 = CreateFrame("CheckButton", "CLxCheckButton6", AAP.OptionsFrame.MainFrame, "ChatConfigCheckButtonTemplate");
-	AAP.OptionsFrame.CheckButton6:SetPoint("TOPLEFT", AAP.OptionsFrame.MainFrame, "TOPLEFT", 10, -190)
-	if (AAP1[AAP_Realm][AAP_Name]["Settings"]["AutoShareQ"] == 0) then
-		AAP.OptionsFrame.CheckButton6:SetChecked(false)
-	else
-		AAP.OptionsFrame.CheckButton6:SetChecked(true)
-	end
-	getglobal(AAP.OptionsFrame.CheckButton6:GetName() .. 'Text'):SetText(": "..AAP_Locals["AutoShareQ"])
-	getglobal(AAP.OptionsFrame.CheckButton6:GetName() .. 'Text'):SetTextColor(1, 1, 1)
-	AAP.OptionsFrame.CheckButton6:SetScript("OnClick", function()
-		if (AAP.OptionsFrame.CheckButton6:GetChecked() == true) then
-			AAP1[AAP_Realm][AAP_Name]["Settings"]["AutoShareQ"] = 1
-		else
-			AAP1[AAP_Realm][AAP_Name]["Settings"]["AutoShareQ"] = 0
-		end
-	end)
 	AAP.OptionsFrame.CheckButton7 = CreateFrame("CheckButton", "CLxCheckButton7", AAP.OptionsFrame.MainFrame, "ChatConfigCheckButtonTemplate");
 	AAP.OptionsFrame.CheckButton7:SetPoint("TOPLEFT", AAP.OptionsFrame.MainFrame, "TOPLEFT", 10, -210)
 	if (AAP1[AAP_Realm][AAP_Name]["Settings"]["BannerShow"] == 0) then
@@ -242,8 +226,73 @@ function LoadOptionsFrame()
 		end
 	end)
 
+	AAP.OptionsFrame.CheckButton8 = CreateFrame("CheckButton", "CLxCheckButton8", AAP.OptionsFrame.MainFrame, "ChatConfigCheckButtonTemplate");
+	AAP.OptionsFrame.CheckButton8:SetPoint("TOPLEFT", AAP.OptionsFrame.MainFrame, "TOPLEFT", 10, -230)
+	if (AAP1[AAP_Realm][AAP_Name]["Settings"]["Lock"] == 0) then
+		AAP.OptionsFrame.CheckButton8:SetChecked(false)
+	else
+		AAP.OptionsFrame.CheckButton8:SetChecked(true)
+	end
+	getglobal(AAP.OptionsFrame.CheckButton8:GetName() .. 'Text'):SetText(": "..AAP_Locals["Lock QuestList"])
+	getglobal(AAP.OptionsFrame.CheckButton8:GetName() .. 'Text'):SetTextColor(1, 1, 1)
+	AAP.OptionsFrame.CheckButton8:SetScript("OnClick", function()
+		if (AAP.OptionsFrame.CheckButton8:GetChecked() == true) then
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["Lock"] = 1
+		else
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["Lock"] = 0
+		end
+	end)
 
+	AAP.OptionsFrame.CheckButton9 = CreateFrame("CheckButton", "CLxCheckButton9", AAP.OptionsFrame.MainFrame, "ChatConfigCheckButtonTemplate");
+	AAP.OptionsFrame.CheckButton9:SetPoint("TOPLEFT", AAP.OptionsFrame.MainFrame, "TOPLEFT", 10, -250)
+	if (AAP1[AAP_Realm][AAP_Name]["Settings"]["LockArrow"] == 0) then
+		AAP.OptionsFrame.CheckButton9:SetChecked(false)
+	else
+		AAP.OptionsFrame.CheckButton9:SetChecked(true)
+	end
+	getglobal(AAP.OptionsFrame.CheckButton9:GetName() .. 'Text'):SetText(": "..AAP_Locals["Lock Arrow"])
+	getglobal(AAP.OptionsFrame.CheckButton9:GetName() .. 'Text'):SetTextColor(1, 1, 1)
+	AAP.OptionsFrame.CheckButton9:SetScript("OnClick", function()
+		if (AAP.OptionsFrame.CheckButton9:GetChecked() == true) then
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["LockArrow"] = 1
+		else
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["LockArrow"] = 0
+		end
+	end)
 
+	AAP.OptionsFrame.CheckButton13 = CreateFrame("CheckButton", "CLxCheckButton13", AAP.OptionsFrame.MainFrame, "ChatConfigCheckButtonTemplate");
+	AAP.OptionsFrame.CheckButton13:SetPoint("TOPLEFT", AAP.OptionsFrame.MainFrame, "TOPLEFT", 10, -275)
+	if (AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowArrow"] == 0) then
+		AAP.OptionsFrame.CheckButton13:SetChecked(false)
+	else
+		AAP.OptionsFrame.CheckButton13:SetChecked(true)
+	end
+	getglobal(AAP.OptionsFrame.CheckButton13:GetName() .. 'Text'):SetText(": "..AAP_Locals["Show Arrow"])
+	getglobal(AAP.OptionsFrame.CheckButton13:GetName() .. 'Text'):SetTextColor(1, 1, 1)
+	AAP.OptionsFrame.CheckButton13:SetScript("OnClick", function()
+		if (AAP.OptionsFrame.CheckButton13:GetChecked() == true) then
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowArrow"] = 1
+		else
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowArrow"] = 0
+		end
+	end)
+
+	AAP.OptionsFrame.CheckButton14 = CreateFrame("CheckButton", "CLxCheckButton14", AAP.OptionsFrame.MainFrame, "ChatConfigCheckButtonTemplate");
+	AAP.OptionsFrame.CheckButton14:SetPoint("TOPLEFT", AAP.OptionsFrame.MainFrame, "TOPLEFT", 10, -295)
+	if (AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowQList"] == 0) then
+		AAP.OptionsFrame.CheckButton14:SetChecked(false)
+	else
+		AAP.OptionsFrame.CheckButton14:SetChecked(true)
+	end
+	getglobal(AAP.OptionsFrame.CheckButton14:GetName() .. 'Text'):SetText(": "..AAP_Locals["Show QuestList"])
+	getglobal(AAP.OptionsFrame.CheckButton14:GetName() .. 'Text'):SetTextColor(1, 1, 1)
+	AAP.OptionsFrame.CheckButton14:SetScript("OnClick", function()
+		if (AAP.OptionsFrame.CheckButton14:GetChecked() == true) then
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowQList"] = 1
+		else
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowQList"] = 0
+		end
+	end)
 
 
 	AAP.OptionsFrame.Slider1 = CreateFrame("Slider", "AAP_SettingsSlider1",AAP.OptionsFrame.MainFrame, "OptionsSliderTemplate")

@@ -63,11 +63,25 @@ AF_config = {
 		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
-	["Tichondrius-Peaceit"] = {
+	["Moon Guard-Gizelmardyth"] = {
 		["message"] = "AutoFlood 1.2",
 		["channel"] = "1",
 		["idChannel"] = "1",
 		["rate"] = 60,
+		["system"] = "CHANNEL",
+	},
+	["Runetotem-Moxil"] = {
+		["message"] = "AutoFlood 1.2",
+		["channel"] = "1",
+		["idChannel"] = "1",
+		["rate"] = 60,
+		["system"] = "CHANNEL",
+	},
+	["Tichondrius-Blisskiss"] = {
+		["message"] = "<Criterion> Our core roster is 11/11M and looking for 2-3 trials (WW). Idealistically applicants are 11/11M and in the top 10% of their class. Raidtimes: 7-10PM PST T/W/Th. Our aim is to achieve Cutting Edge: Uldir and High Warlords.",
+		["channel"] = "1",
+		["idChannel"] = "1",
+		["rate"] = 250,
 		["system"] = "CHANNEL",
 	},
 	["Runetotem-Purple"] = {
@@ -77,7 +91,7 @@ AF_config = {
 		["rate"] = 200,
 		["system"] = "CHANNEL",
 	},
-	["Runetotem-Moxil"] = {
+	["Tichondrius-Arcblood"] = {
 		["message"] = "AutoFlood 1.2",
 		["channel"] = "1",
 		["idChannel"] = "1",
@@ -98,10 +112,10 @@ AF_config = {
 		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
-	["Tichondrius-Arcblood"] = {
-		["message"] = "AutoFlood 1.2",
-		["channel"] = "1",
-		["idChannel"] = "1",
+	["Ragnaros-Jugarmitico"] = {
+		["message"] = "<> 11/11M + 4.8-5k raiderio players |cffffff00|Hachievement:12111:Player-1427-09C75262:1:5:1:18:4294967295:4294967295:4294967295:4294967295|h[Cutting Edge: Argus the Unmaker]|h|r WTS M+15 for GOLD @cost of AH WoWToken |||| WTS Heroic/Mythic ABT (400k for bosses 1-5) @ 6:30-10:30pm PST. Serious inquiries pst. Hablamos esp. <>",
+		["channel"] = "2",
+		["idChannel"] = "2",
 		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
@@ -119,11 +133,11 @@ AF_config = {
 		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
-	["Runetotem-Bloodz"] = {
-		["message"] = "AutoFlood 1.2",
-		["channel"] = "1",
-		["idChannel"] = "1",
-		["rate"] = 60,
+	["Tichondrius-Veil"] = {
+		["message"] = "<> 11/11M + 4.8-5k raiderio players WTS M+15 for GOLD @cost of AH WoWToken |||| WTS Heroic/Mythic ABT (400k for bosses 1-5) @ 6:30-10:30pm PST. Serious inquiries pst. Hablamos esp. <>",
+		["channel"] = "2",
+		["idChannel"] = "2",
+		["rate"] = 200,
 		["system"] = "CHANNEL",
 	},
 	["Runetotem-Arcblood"] = {
@@ -133,11 +147,11 @@ AF_config = {
 		["rate"] = 300,
 		["system"] = "CHANNEL",
 	},
-	["Tichondrius-Veil"] = {
-		["message"] = "<> 11/11M + 4.8-5k raiderio players WTS M+15 for GOLD @cost of AH WoWToken |||| WTS Heroic/Mythic ABT (400k for bosses 1-5) @ 6:30-10:30pm PST. Serious inquiries pst. Hablamos esp. <>",
-		["channel"] = "2",
-		["idChannel"] = "2",
-		["rate"] = 200,
+	["Crushridge-Tiehb"] = {
+		["message"] = "AutoFlood 1.2",
+		["channel"] = "1",
+		["idChannel"] = "1",
+		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
 	["Magtheridon-Dsfsdfs"] = {
@@ -161,14 +175,14 @@ AF_config = {
 		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
-	["Ragnaros-Jugarmitico"] = {
-		["message"] = "<> 11/11M + 4.8-5k raiderio players |cffffff00|Hachievement:12111:Player-1427-09C75262:1:5:1:18:4294967295:4294967295:4294967295:4294967295|h[Cutting Edge: Argus the Unmaker]|h|r WTS M+15 for GOLD @cost of AH WoWToken |||| WTS Heroic/Mythic ABT (400k for bosses 1-5) @ 6:30-10:30pm PST. Serious inquiries pst. Hablamos esp. <>",
-		["channel"] = "2",
-		["idChannel"] = "2",
+	["Tichondrius-Blisslife"] = {
+		["message"] = "AutoFlood 1.2",
+		["channel"] = "1",
+		["idChannel"] = "1",
 		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
-	["Crushridge-Tiehb"] = {
+	["Tichondrius-Peaceit"] = {
 		["message"] = "AutoFlood 1.2",
 		["channel"] = "1",
 		["idChannel"] = "1",
@@ -182,7 +196,7 @@ AF_config = {
 		["rate"] = 60,
 		["system"] = "CHANNEL",
 	},
-	["Tichondrius-Blisskiss"] = {
+	["Runetotem-Bloodz"] = {
 		["message"] = "AutoFlood 1.2",
 		["channel"] = "1",
 		["idChannel"] = "1",

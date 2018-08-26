@@ -16,6 +16,8 @@ L["BEST_RUN"] = "최고 기록"
 L["CHANGES_REQUIRES_UI_RELOAD"] = [=[변경 사항이 저장되었지만 변경 사항을 적용하려면 UI를 다시 불러와야 합니다.
 
 지금 하시겠습니까?]=]
+--[[Translation missing --]]
+--[[ L["CHECKBOX_DISPLAY_WEEKLY"] = ""--]] 
 L["COPY_RAIDERIO_PROFILE_URL"] = "Raider.IO URL 복사"
 L["COPY_RAIDERIO_URL"] = "Raider.IO URL 복사"
 L["DPS"] = "|cffFF3636공격전담|r"
@@ -45,6 +47,10 @@ L["ENABLE_NO_SCORE_COLORS_DESC"] = "점수의 색상 표시를 사용하지 않�
 --[[ L["ENABLE_RAIDERIO_CLIENT_ENHANCEMENTS_DESC"] = ""--]] 
 L["ENABLE_SIMPLE_SCORE_COLORS"] = "표준 색상 사용"
 L["ENABLE_SIMPLE_SCORE_COLORS_DESC"] = "표준 아이템 품질의 색상만으로 점수를 표시합니다. 이렇게 하면 색각 보정이 필요한 사람들이 점수 등급을 쉽게 구분할 수 있습니다."
+--[[Translation missing --]]
+--[[ L["GUILD_BEST_SEASON"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["GUILD_BEST_WEEKLY"] = ""--]] 
 L["HEALER"] = "|cff41FF3A치유전담|r"
 L["HEALER_SCORE"] = "|cff41FF3A치유전담|r 점수"
 L["INVERSE_PROFILE_MODIFIER"] = "프로필 전환 사용"
@@ -61,6 +67,8 @@ L["MODULE_TAIWAN"] = "대만"
 L["MY_PROFILE_TITLE"] = "내 프로필"
 L["MYTHIC_PLUS_DB_MODULES"] = "Mythic Plus 데이터베이스 모듈"
 L["MYTHIC_PLUS_SCORES"] = "쐐기 점수"
+--[[Translation missing --]]
+--[[ L["NO_GUILD_RECORD"] = ""--]] 
 L["OPEN_CONFIG"] = "설정 열기"
 L["OUT_OF_SYNC_DATABASE_S"] = "|cffFFFFFF%s|r의 데이터가 호드나 얼라이언스 모두 동기화되지 않았습니다. 동기화하려면 RaiderIO 업데이트가 필요합니다."
 L["OUTDATED_DATABASE"] = "%d일 전 기록"
@@ -80,6 +88,10 @@ L["RELOAD_LATER"] = "나중에 다시 불러오겠습니다."
 L["RELOAD_NOW"] = "지금 다시 불러오기"
 L["SHOW_AVERAGE_PLAYER_SCORE_INFO"] = "시간내 평균 점수 표시"
 L["SHOW_AVERAGE_PLAYER_SCORE_INFO_DESC"] = "플레이어의 시간내 평균 점수를 표시합니다. 쐐기돌과 파티구성하기의 툴팁에 표시됩니다."
+--[[Translation missing --]]
+--[[ L["SHOW_CLIENT_GUILD_BEST"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["SHOW_CLIENT_GUILD_BEST_DESC"] = ""--]] 
 L["SHOW_IN_FRIENDS"] = "친구 목록 표시"
 L["SHOW_IN_FRIENDS_DESC"] = "친구에게 마우스를 올리면 Mythic+ 점수를 표시합니다."
 L["SHOW_IN_LFD"] = "던전 찾기 표시"

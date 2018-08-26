@@ -6,8 +6,9 @@ SunnArt3DB = {
 	},
 	["profileKeys"] = {
 		["Blisskiss - Tichondrius"] = "Default",
-		["Invisa - Tichondrius"] = "Default",
 		["Veil - Tichondrius"] = "Default",
+		["Gizelmardyth - Moon Guard"] = "Default",
+		["Invisa - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -25,6 +26,12 @@ SunnArt3DB = {
 				{
 					["enabled"] = false,
 				}, -- [2]
+				{
+					["resize"] = true,
+				}, -- [3]
+				{
+					["resize"] = true,
+				}, -- [4]
 			},
 		},
 	},

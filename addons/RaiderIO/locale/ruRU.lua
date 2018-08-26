@@ -16,6 +16,8 @@ L["BEST_RUN"] = "Лучшее прохождение"
 L["CHANGES_REQUIRES_UI_RELOAD"] = [=[Изменения были сохранены, но необходимо перезагрузить интерфейс, чтобы они вступили в силу.
 
 Сделать это сейчас?]=]
+--[[Translation missing --]]
+--[[ L["CHECKBOX_DISPLAY_WEEKLY"] = ""--]] 
 L["COPY_RAIDERIO_PROFILE_URL"] = "Копирование ссылки на профиль Raider.IO"
 L["COPY_RAIDERIO_URL"] = "Копировать ссылку на Raider.IO-профиль"
 L["DPS"] = "Боец"
@@ -45,6 +47,10 @@ L["ENABLE_NO_SCORE_COLORS_DESC"] = "Отключает раскраску очк
 --[[ L["ENABLE_RAIDERIO_CLIENT_ENHANCEMENTS_DESC"] = ""--]] 
 L["ENABLE_SIMPLE_SCORE_COLORS"] = "Использовать упрощенную окраску очков"
 L["ENABLE_SIMPLE_SCORE_COLORS_DESC"] = "Показывает очки только цветами качества предметов. Это упрощает визуальную оценку очков при беглом осмотре кандидатов."
+--[[Translation missing --]]
+--[[ L["GUILD_BEST_SEASON"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["GUILD_BEST_WEEKLY"] = ""--]] 
 L["HEALER"] = "Лекарь"
 L["HEALER_SCORE"] = "Очки лекаря"
 --[[Translation missing --]]
@@ -64,6 +70,8 @@ L["MODULE_TAIWAN"] = "Тайвань"
 L["MY_PROFILE_TITLE"] = "Мой M+ профиль"
 L["MYTHIC_PLUS_DB_MODULES"] = "Региональные модули базы данных очков"
 L["MYTHIC_PLUS_SCORES"] = "Очки эпохальных+ подземелий"
+--[[Translation missing --]]
+--[[ L["NO_GUILD_RECORD"] = ""--]] 
 L["OPEN_CONFIG"] = "Открыть настройки"
 --[[Translation missing --]]
 --[[ L["OUT_OF_SYNC_DATABASE_S"] = ""--]] 
@@ -89,6 +97,10 @@ L["RELOAD_NOW"] = "Перезагрузить сейчас"
 --[[ L["SHOW_AVERAGE_PLAYER_SCORE_INFO"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["SHOW_AVERAGE_PLAYER_SCORE_INFO_DESC"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["SHOW_CLIENT_GUILD_BEST"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["SHOW_CLIENT_GUILD_BEST_DESC"] = ""--]] 
 L["SHOW_IN_FRIENDS"] = "Показывать в списке друзей"
 L["SHOW_IN_FRIENDS_DESC"] = "Показывает очки при наведении курсора мыши в списке друзей."
 L["SHOW_IN_LFD"] = "Показывать в заранее собранных группах"

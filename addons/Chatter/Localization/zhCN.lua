@@ -9,14 +9,12 @@ if not L then return end
 L["$EMPTY$"] = "$EMPTY$"
 L["%s said '%s' in %s"] = "%s说“%s”(于%s)"
 L["(|HBNplayer.-|h) whispers:"] = "(|HBNplayer.-|h) 密语:"
---[[Translation missing --]]
---[[ L["(|HBNplayer.-|h): whispers:"] = "(|HBNplayer.-|h): whispers:"--]] 
+L["(|HBNplayer.-|h): whispers:"] = "(|HBNplayer.-|h): 密语:"
 L["(|Hplayer.-|h) whispers:"] = "(|Hplayer.-|h) 密语:"
 L["[%s] %s: %s"] = "[%s]%s：%s"
 L["^(.-|h) whispers:"] = "^(.-|h)悄悄地说："
 L["^To "] = "^发送给"
---[[Translation missing --]]
---[[ L["^To (.-|h):"] = "^To (.-|h):"--]] 
+L["^To (.-|h):"] = "^发送给(.-|h):"
 L["Add space after channels"] = "在频道名后加空格"
 L["Add surrounding brackets to own charname in messages."] = "在消息内为你自己的角色名添加尖括号"
 L["Add Word"] = "添加关键词"
@@ -24,17 +22,14 @@ L["Add word to your highlight list"] = "添加关键词到你的高亮列表里"
 L["Add word to your invite trigger list"] = "添加关键词到你的邀请触发列表"
 L["Adds timestamps to chat."] = "给聊天文字增加时间戳。"
 L["Alerts you when someone says a keyword or speaks in a specified channel."] = "当某人说了一个关键字或者指定的频道有人说话时发出警报。"
---[[Translation missing --]]
---[[ L["All Edge resizing"] = "All Edge resizing"--]] 
+L["All Edge resizing"] = "重置所有边框尺寸"
 L["Allows you to make the chat frames much smaller than usual."] = "允许你弄一个比平常小得多的聊天窗口。"
 L["Allows you to type messages longer than normal, and splits message that are too long."] = "允许你输入超长信息，并且自动进行分割。"
 L["Allows you to use the edge for resizing, instead of just the lower right corner."] = "允许你任意调整边框大小, 而不仅靠拖动右下角来调整"
 L["Alt Linking"] = "小号链接"
 L["Alt note fallback"] = "依照小号注释"
---[[Translation missing --]]
---[[ L["alt2"] = "alt2"--]] 
---[[Translation missing --]]
---[[ L["alt3"] = "alt3"--]] 
+L["alt2"] = "小号2"
+L["alt3"] = "小号3"
 L["Alt-click name to invite"] = "Alt+点击姓名邀请玩家"
 L["Are you sure you want to delete all your saved class/level data?"] = "你确定要清空这些数据么？"
 L["Attach edit box to..."] = "附着输入框到……"
@@ -151,28 +146,23 @@ L["Lets you set the scrollback length of your chat frames."] = "允许你设置�
 L["Lets you use the mousewheel to page up and down chat."] = "允许你使用鼠标滚轮进行聊天记录翻页"
 L["Level Options"] = "等级选项"
 L["Link Hover"] = "链接悬停"
---[[Translation missing --]]
---[[ L["Look in guildnotes for character names, unless a note is set manually"] = "Look in guildnotes for character names, unless a note is set manually"--]] 
+L["Look in guildnotes for character names, unless a note is set manually"] = "除非手动设置注释，否则请在寻找公会中查找字符名称"
 L["LookingForGroup"] = "寻求组队"
 L["Mage"] = "法师"
 L["Make %s sticky"] = "固定%s频道"
 L["Makes channels you select sticky."] = "使你所选择的频道成为固定的输入频道。"
 L["Makes link tooltips show when you hover them in chat."] = "当你将鼠标悬停在链接上时显示其提示信息框"
 L["Makes old text disappear rather than fade out"] = "使过期文字立刻消失而不是慢慢淡出"
---[[Translation missing --]]
---[[ L["Message Split"] = "Message Split"--]] 
+L["Message Split"] = "消息分段"
 L["MM:SS"] = "分:秒"
 L["Module"] = "模块"
 L["Modules"] = "模块"
 L["Mousewheel Scroll"] = "鼠标滚轮滚动"
---[[Translation missing --]]
---[[ L["Move the Toast X offset to ChatFrame1"] = "Move the Toast X offset to ChatFrame1"--]] 
---[[Translation missing --]]
---[[ L["Move the Toast Y offset, relative to ChatFrame1"] = "Move the Toast Y offset, relative to ChatFrame1"--]] 
+L["Move the Toast X offset to ChatFrame1"] = "聊天框架1移动欢迎词 X 偏移量"
+L["Move the Toast Y offset, relative to ChatFrame1"] = "相对于聊天框架1的移动欢迎词 Y 偏移量"
 L["Name"] = "名字"
 L["Name color"] = "名字颜色"
---[[Translation missing --]]
---[[ L["No RealNames"] = "No RealNames"--]] 
+L["No RealNames"] = "没有实名"
 L["None"] = "无"
 L["Officer"] = "官员"
 L["Open a standalone config window. You might consider installing |cffffff00BetterBlizzOptions|r to make the Blizzard UI options panel resizable."] = "打开一个独立的配置窗口。你也许希望使用|cffffff00BetterBlizzOptions|r插件使得暴雪的选项窗口可以调整大小。"
@@ -180,8 +170,7 @@ L["Options"] = "选项"
 L["Other Channels"] = "其他频道"
 L["Paladin"] = "圣骑士"
 L["Party"] = "小队"
---[[Translation missing --]]
---[[ L["Party Leader"] = "Party Leader"--]] 
+L["Party Leader"] = "队长"
 L["Per chat frame settings"] = "聊天窗口独立设置"
 L["Play a sound when a message is received in this channel"] = "当这个频道有新消息时播放一个声音"
 L["Play a soundfile when one of your keywords is said."] = "当有人说了你所设定的关键字时播放声音"
@@ -193,16 +182,11 @@ L["Provides options to color player names, add player levels, and add tab comple
 L["Raid"] = "团队"
 L["Raid Leader"] = "团队领袖"
 L["Raid Warning"] = "团队警报"
---[[Translation missing --]]
---[[ L["RealID Brackets"] = "RealID Brackets"--]] 
---[[Translation missing --]]
---[[ L["RealID Conversation"] = "RealID Conversation"--]] 
---[[Translation missing --]]
---[[ L["RealID Polish"] = "RealID Polish"--]] 
---[[Translation missing --]]
---[[ L["RealID Whisper"] = "RealID Whisper"--]] 
---[[Translation missing --]]
---[[ L["Remembers the history of the editbox across sessions."] = "Remembers the history of the editbox across sessions."--]] 
+L["RealID Brackets"] = "实名括号"
+L["RealID Conversation"] = "实名对话"
+L["RealID Polish"] = "实名美化"
+L["RealID Whisper"] = "实名密语"
+L["Remembers the history of the editbox across sessions."] = "记住跨会话的编辑框的历史记录。"
 L["Remove a word from your highlight list"] = "从你的高亮列表里面移除一个关键词"
 L["Remove a word from your invite trigger list"] = "从你的邀请触发列表移除关键词"
 L["Remove this word from your highlights?"] = "你确信要移除这个关键词么？"
@@ -219,8 +203,7 @@ L["Right Bracket"] = "右括号"
 L["Rogue"] = "潜行者"
 L["Save all /who data"] = "保存所有的 /who 数据"
 L["Save class data from /who queries between sessions."] = "在多次游戏间保存/who查询的职业数据"
---[[Translation missing --]]
---[[ L["Save class data from friends between sessions."] = "Save class data from friends between sessions."--]] 
+L["Save class data from friends between sessions."] = "在会话之间保存朋友的职业数据。"
 L["Save class data from groups between sessions."] = "在多次游戏间保存小队职业数据"
 L["Save class data from guild between sessions."] = "在多次游戏间保存公会职业数据"
 L["Save class data from target/mouseover between sessions."] = "在多次游戏间保存目标/鼠标悬停的职业数据"
@@ -233,14 +216,11 @@ L["Select a color for this channel"] = "为该频道选择一个颜色"
 L["Select a method for coloring player names"] = "选择为玩家名字着色的方式"
 L["Select the custom color to use for alt names"] = "为小号名字选择自定义颜色"
 L["Select the font to use for the edit box"] = "设置输入框里面的文字字体"
---[[Translation missing --]]
---[[ L["Separator"] = "Separator"--]] 
---[[Translation missing --]]
---[[ L["Server Positioning"] = "Server Positioning"--]] 
+L["Separator"] = "分割线"
+L["Server Positioning"] = "正在定位服务器"
 L["Set Main"] = "设置大号"
 L["Set the coloring mode for alt names"] = "设置小号名字的颜色模式"
---[[Translation missing --]]
---[[ L["Sets the alpha value for your chat tabs"] = "Sets the alpha value for your chat tabs"--]] 
+L["Sets the alpha value for your chat tabs"] = "设定聊天标签的透明度值"
 L["Sets the frame's border color to the color of your currently active channel"] = "根据你当前使用的频道来给框体边框上色"
 L["Settings"] = "设置"
 L["Shaman"] = "萨满祭司"
@@ -249,20 +229,15 @@ L["Show bottom when scrolled"] = "当滚动时显示底部"
 L["Show copy icon"] = "显示复制图标"
 L["Show highlights in your SCT mod"] = "在SCT插件里显示你的高亮信息"
 L["Show SCT message"] = "显示SCT信息"
---[[Translation missing --]]
---[[ L["Show Toast Icons"] = "Show Toast Icons"--]] 
---[[Translation missing --]]
---[[ L["Show toast icons in the chat frames"] = "Show toast icons in the chat frames"--]] 
---[[Translation missing --]]
---[[ L["Show toon names instead of real names"] = "Show toon names instead of real names"--]] 
+L["Show Toast Icons"] = "显示欢迎词图标"
+L["Show toast icons in the chat frames"] = "在聊天框架显示欢迎词图标"
+L["Show toon names instead of real names"] = "显示角色名称而不是实名"
 L["Sound File"] = "声音文件"
 L["Sound file to play"] = "要播放的声音文件"
 L["Standalone Config"] = "独立配置"
 L["Sticky Channels"] = "固定频道"
---[[Translation missing --]]
---[[ L["Strip RealID brackets"] = "Strip RealID brackets"--]] 
---[[Translation missing --]]
---[[ L["Tab Alpha"] = "Tab Alpha"--]] 
+L["Strip RealID brackets"] = "已出实名括号"
+L["Tab Alpha"] = "标签透明度"
 L["Target/Mouseover"] = "目标/鼠标悬停"
 L["Tell Target (/tt)"] = "密语目标(/tt)"
 L["Test"] = "测试"
@@ -276,12 +251,9 @@ L["To (|HBNplayer.-|h):"] = "发送给 (|HBNplayer.-|h):"
 L["To (|Hplayer.-|h):"] = "发送给 (|Hplayer.-|h):"
 L["To <Away>(|HBNplayer.-|h):"] = "发送给 <离开>(|HBNplayer.-|h): "
 L["To <Busy>(|HBNplayer.-|h):"] = "发送给 <忙碌>(|HBNplayer.-|h):"
---[[Translation missing --]]
---[[ L["Toast X offset"] = "Toast X offset"--]] 
---[[Translation missing --]]
---[[ L["Toast Y offset"] = "Toast Y offset"--]] 
---[[Translation missing --]]
---[[ L["Toggle the copy icon on the chat frame."] = "Toggle the copy icon on the chat frame."--]] 
+L["Toast X offset"] = "欢迎词 X 偏移量"
+L["Toast Y offset"] = "欢迎词 Y 偏移量"
+L["Toggle the copy icon on the chat frame."] = "切换聊天框架上复制图标。"
 L["Top"] = "上"
 L["Trade -"] = "交易 -"
 L["URL Copy"] = "网址复制"
@@ -299,7 +271,6 @@ L["Welcome to Chatter! Type /chatter to configure."] = "欢迎使用Chatter！�
 L["Whisper"] = "密语"
 L["Who"] = "查询"
 L["Who is %s's main?"] = "谁是%s的大号？"
---[[Translation missing --]]
---[[ L["Will save all data for large /who queries"] = "Will save all data for large /who queries"--]] 
+L["Will save all data for large /who queries"] = "将保存所有 /who 查询的大型数据"
 L["Yell"] = "大喊"
 

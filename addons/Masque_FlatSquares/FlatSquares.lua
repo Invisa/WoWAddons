@@ -5,7 +5,7 @@ MSQ:AddSkin("FlatSquares", {
 	Author = "ccfreak",
 	Version = "1.0.7",
 	Shape = "Square",
-	Masque_Version = 70300,
+	Masque_Version = 80000,
 	Backdrop = {
 		Width = 32,
 		Height = 32,

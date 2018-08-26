@@ -1,3 +1,4 @@
+AAP_TCount = 0
 AAP_Test_Var = 0
 if (AAP_Test_Var == 1) then
 	H3 = {
@@ -5,6 +6,7 @@ if (AAP_Test_Var == 1) then
 	}
 end
 local AAP_OldSLot
+AAP_5sec_thingy = 0
 AAP_DubbleMacro = {}
 AAP_Game_Ver, AAP_Game_Build, AAP_Game_Date, AAP_Game_tocversion = GetBuildInfo()
 AAP_DisableAddon = 0
@@ -17,9 +19,11 @@ end
 AAP_SettingsOpen = 0
 AAP_CombatTestVar = 0
 AAP = {}
+AAP_BlockShared = {}
 AAP_GossipOpen = 0
 AAP_NPCList = {}
-AAP_UPDQListV = 0
+AAP_UPDQListV = -1
+AAP_UPDQListV2 = 5
 AAP_UPDPlus = 0
 AAP_ArrowActive = 0
 AAP_HorseBuffDur = 0
@@ -44,8 +48,6 @@ AAP_GearIlvlList = {}
 AAP_ButtonCDCounter = {}
 AAP_AfkTable = {}
 AAP_CompletedQs = GetQuestsCompleted()
-AAP_FontUrl = "Interface\\AddOns\\Azeroth Auto Pilot\\Font\\"
-AAP_Font = AAP_FontUrl.."LiberationSans-Regular.TTF"
 AAP_img = "Interface\\AddOns\\Azeroth Auto Pilot\\img\\"
 AAP_zones = "Interface\\AddOns\\Azeroth Auto Pilot\\Zones\\"
 
@@ -55,23 +57,25 @@ BINDING_NAME_AAP_MACRO = "Quest Item 1"
 function AAP_UpdateILVLGear()
 	AAP_GearIlvlList = nil
 	AAP_GearIlvlList = {}
-	for slots2 = 0,19 do
+	for slots2 = 0,18 do
 		local itemLink = GetInventoryItemLink("player", slots2)
 		if (itemLink) then
 			local _, _, _, _, _, _, _, _, SpotName = GetItemInfo(itemLink)
 			local ilvl = GetDetailedItemLevelInfo(itemLink)
-			if (SpotName == "INVTYPE_WEAPONOFFHAND") then
-				SpotName = "INVTYPE_WEAPON"
-			end
-			if (SpotName == "INVTYPE_WEAPONMAINHAND") then
-				SpotName = "INVTYPE_WEAPON"
-			end
-			if (AAP_GearIlvlList[SpotName]) then
-				if (AAP_GearIlvlList[SpotName] > ilvl) then
+			if (SpotName and ilvl) then
+				if (SpotName == "INVTYPE_WEAPONOFFHAND") then
+					SpotName = "INVTYPE_WEAPON"
+				end
+				if (SpotName == "INVTYPE_WEAPONMAINHAND") then
+					SpotName = "INVTYPE_WEAPON"
+				end
+				if (AAP_GearIlvlList[SpotName]) then
+					if (AAP_GearIlvlList[SpotName] > ilvl) then
+						AAP_GearIlvlList[SpotName] = ilvl
+					end
+				else
 					AAP_GearIlvlList[SpotName] = ilvl
 				end
-			else
-				AAP_GearIlvlList[SpotName] = ilvl
 			end
 		end
 	end
@@ -376,11 +380,11 @@ AAP_ArrowFrame.arrow = AAP_ArrowFrame:CreateTexture(nil, "OVERLAY")
 AAP_ArrowFrame.arrow:SetTexture("Interface\\Addons\\Azeroth Auto Pilot\\Img\\Arrow.blp")
 AAP_ArrowFrame.arrow:SetAllPoints()
 AAP_ArrowFrame.distance = AAP_ArrowFrame:CreateFontString("ARTWORK", "ChatFontNormal")
-AAP_ArrowFrame.distance:SetFont(AAP_Font, 10)
+AAP_ArrowFrame.distance:SetFontObject("GameFontNormalSmall")
 AAP_ArrowFrame.distance:SetPoint("TOP", AAP_ArrowFrame, "BOTTOM", 0, 0)
 AAP_ArrowFrame:Hide()
 AAP_ArrowFrame:SetScript("OnMouseDown", function(self, button)
-	if button == "LeftButton" and not AAP_ArrowFrameM.isMoving then
+	if button == "LeftButton" and not AAP_ArrowFrameM.isMoving and AAP1[AAP_Realm][AAP_Name]["Settings"]["LockArrow"] == 0 then
 		AAP_ArrowFrameM:StartMoving();
 		AAP_ArrowFrameM.isMoving = true;
 	end
@@ -389,18 +393,24 @@ AAP_ArrowFrame:SetScript("OnMouseUp", function(self, button)
 	if button == "LeftButton" and AAP_ArrowFrameM.isMoving then
 		AAP_ArrowFrameM:StopMovingOrSizing();
 		AAP_ArrowFrameM.isMoving = false;
+		AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowleft"] = AAP_ArrowFrameM:GetLeft()
+		AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowtop"] = AAP_ArrowFrameM:GetTop() - GetScreenHeight()
+		AAP_ArrowFrameM:SetPoint("TOPLEFT", UIParent, "TOPLEFT", AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowleft"], AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowtop"])
 	end
 end)
 AAP_ArrowFrame:SetScript("OnHide", function(self)
 	if ( AAP_ArrowFrameM.isMoving ) then
 		AAP_ArrowFrameM:StopMovingOrSizing();
 		AAP_ArrowFrameM.isMoving = false;
+		AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowleft"] = AAP_ArrowFrameM:GetLeft()
+		AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowtop"] = AAP_ArrowFrameM:GetTop() - GetScreenHeight()
+		AAP_ArrowFrameM:SetPoint("TOPLEFT", UIParent, "TOPLEFT", AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowleft"], AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowtop"])
 	end
 end)
 
 AAP_AfkFrame = CreateFrame("frame", "AAP_AFkFrames", UIParent)
-AAP_AfkFrame:SetWidth(150)
-AAP_AfkFrame:SetHeight(50)
+AAP_AfkFrame:SetWidth(120)
+AAP_AfkFrame:SetHeight(40)
 AAP_AfkFrame:SetPoint("CENTER", UIParent, "CENTER",0,150)
 AAP_AfkFrame:EnableMouse(true)
 AAP_AfkFrame:SetMovable(true)
@@ -438,7 +448,7 @@ AAP_RideFrame.arrow = AAP_RideFrame:CreateTexture(nil, "OVERLAY")
 AAP_RideFrame.arrow:SetTexture("Interface/Icons/achievement_doublerainbow.blp")
 AAP_RideFrame.arrow:SetAllPoints()
 AAP_RideFrame.distance = AAP_RideFrame:CreateFontString("ARTWORK", "ChatFontNormal")
-AAP_RideFrame.distance:SetFont(AAP_Font, 10)
+AAP_RideFrame.distance:SetFontObject("GameFontNormalSmall")
 AAP_RideFrame.distance:SetPoint("TOP", AAP_RideFrame, "BOTTOM", 0, 0)
 AAP_RideFrame:Hide()
 AAP_RideFrame:SetScript("OnMouseDown", function(self, button)
@@ -462,9 +472,7 @@ end)
 AAP_RideFrame.Fontstring = AAP_RideFrame:CreateFontString("CLaSettingsFS2212","OVERLAY", "ChatFontNormal")
 AAP_RideFrame.Fontstring:SetParent(AAP_RideFrame)
 AAP_RideFrame.Fontstring:SetPoint("CENTER", AAP_RideFrame, "CENTER", 0, 0)
-AAP_RideFrame.Fontstring:SetWidth(143)
-AAP_RideFrame.Fontstring:SetHeight(14)
-AAP_RideFrame.Fontstring:SetFont(AAP_Font, 28)
+AAP_RideFrame.Fontstring:SetFontObject("GameFontNormalSmall")
 AAP_RideFrame.Fontstring:SetText("testaaaaaaaaaaaaaaaaaaaaaaaaaa")
 AAP_RideFrame.Fontstring:SetJustifyH("CENTER")
 AAP_RideFrame.Fontstring:SetTextColor(1, 1, 0)
@@ -472,9 +480,7 @@ AAP_RideFrame.Fontstring:SetTextColor(1, 1, 0)
 AAP_RideFrame.Fontstring2 = AAP_RideFrame:CreateFontString("CLaSettingsFS21212","OVERLAY", "ChatFontNormal")
 AAP_RideFrame.Fontstring2:SetParent(AAP_RideFrame)
 AAP_RideFrame.Fontstring2:SetPoint("CENTER", AAP_RideFrame, "CENTER", 0, -35)
-AAP_RideFrame.Fontstring2:SetWidth(143)
-AAP_RideFrame.Fontstring2:SetHeight(14)
-AAP_RideFrame.Fontstring2:SetFont(AAP_Font, 24)
+AAP_RideFrame.Fontstring2:SetFontObject("GameFontNormalSmall")
 AAP_RideFrame.Fontstring2:SetText("x")
 AAP_RideFrame.Fontstring2:SetJustifyH("CENTER")
 AAP_RideFrame.Fontstring2:SetTextColor(1, 1, 0)
@@ -483,16 +489,14 @@ AAP_RideFrame.Fontstring2:SetTextColor(1, 1, 0)
 AAP_AfkFrame.Fontstring = AAP_AfkFrame:CreateFontString("AAPAFkFont","ARTWORK", "ChatFontNormal")
 AAP_AfkFrame.Fontstring:SetParent(AAP_AfkFrame)
 AAP_AfkFrame.Fontstring:SetPoint("LEFT", AAP_AfkFrame, "LEFT", 10, 0)
-AAP_AfkFrame.Fontstring:SetWidth(130)
-AAP_AfkFrame.Fontstring:SetHeight(34)
-AAP_AfkFrame.Fontstring:SetFont(AAP_Font, 20)
+AAP_AfkFrame.Fontstring:SetFontObject("GameFontNormalLarge")
 AAP_AfkFrame.Fontstring:SetText("AFK:")
 AAP_AfkFrame.Fontstring:SetJustifyH("LEFT")
 AAP_AfkFrame.Fontstring:SetTextColor(1, 1, 0)
 AAP_AfkFrame:Hide()
 
 AAP_ArrowFrame.Button = CreateFrame("Button", "AAP_ArrowActiveButton", AAP_ArrowFrame)
-AAP_ArrowFrame.Button:SetWidth(55)
+AAP_ArrowFrame.Button:SetWidth(85)
 AAP_ArrowFrame.Button:SetHeight(17)
 AAP_ArrowFrame.Button:SetPoint("BOTTOM", AAP_ArrowFrame, "BOTTOM", 0, -30)
 AAP_ArrowFrame.Button:SetScript("OnMouseDown", function(self, button)
@@ -502,7 +506,7 @@ AAP_ArrowFrame.Button:SetScript("OnMouseDown", function(self, button)
 	AAP_Reset = 0
 	AAP_ArrowActive_X = 0
 	AAP_ArrowActive_Y = 0
-	AAP_UPDQListV = 1
+	AAP_UPDQListV = AAP_UPDQListV2
 end)
 AAP_ArrowFrame.Button:SetBackdrop( { 
 	bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", 
@@ -513,9 +517,8 @@ AAP_ArrowFrame.Button:SetBackdrop( {
 AAP_ArrowFrame.Fontstring = AAP_ArrowFrame:CreateFontString("CLSettingsFS2212","ARTWORK", "ChatFontNormal")
 AAP_ArrowFrame.Fontstring:SetParent(AAP_ArrowFrame.Button)
 AAP_ArrowFrame.Fontstring:SetPoint("CENTER", AAP_ArrowFrame.Button, "CENTER", 0, 0)
-AAP_ArrowFrame.Fontstring:SetWidth(55)
-AAP_ArrowFrame.Fontstring:SetHeight(14)
-AAP_ArrowFrame.Fontstring:SetFont(AAP_Font, 6)
+
+AAP_ArrowFrame.Fontstring:SetFontObject("GameFontNormalSmall")
 AAP_ArrowFrame.Fontstring:SetText("Skip waypoint")
 AAP_ArrowFrame.Fontstring:SetTextColor(1, 1, 0)
 AAP_ArrowFrame.Button:Hide()
@@ -524,13 +527,34 @@ function AAP_SlashCmd(AAP_index)
 	if (AAP_index == "reset") then
 		print("AAP: Resetting Zone.")
 		AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] = 1
+		local ResetAz = true
+		local ResetAz2 = 0
+		local ResetAz3 = 0
+		while ResetAz do
+			ResetAz3 = ResetAz3 + 1
+			if (ResetAz2 ~= AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]) then
+				ResetAz2 = AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]
+				AAP_Plus()
+			else
+				ResetAz = nil
+			end
+			if (ResetAz3 > 2500) then
+				ResetAz = nil
+			end
+		end
+		AAP_UpdateQuestList()
 		AAP_ChangeZone()
-		AAP_UPDQListV = 1
+		AAP_UpdateQuestList()
 	elseif (AAP_index == "skip") then
 		print("AAP: Skipping QuestStep.")
 		AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] = AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] + 1
 		AAP_ChangeZone()
-		AAP_UPDQListV = 1
+		AAP_UpdateQuestList()
+	elseif (AAP_index == "skipcamp") then
+		print("AAP: Skipping CampStep.")
+		AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] = AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] + 14
+		AAP_ChangeZone()
+		AAP_UpdateQuestList()
 	else
 		AAP_SettingsOpen = 1
 		AAP.OptionsFrame.MainFrame:Show()
@@ -538,7 +562,7 @@ function AAP_SlashCmd(AAP_index)
 		AAP_ArrowActive_X = 1234
 		AAP_ArrowActive_Y = 1234
 		QNumberLocal = 99992
-		AAP_UPDQListV = 1
+		AAP_UpdateQuestList()
 	end
 end
 
@@ -597,7 +621,7 @@ function AAP_TestQListSkip()
 			else
 				AAP_TestSkipVar1 = 1
 			end
-			AAP_UPDPlus = 1
+			AAP_Plus()
 		end
 	end
 end
@@ -647,7 +671,7 @@ end
 function AAP_CombatTest()
 	if (AAP_CombatTestVar == 1) then
 		AAP_CombatTestVar = 0
-		AAP_UPDQListV = 1
+		AAP_UPDQListV = AAP_UPDQListV2
 	end
 end
 function AAP_InstanceTest()
@@ -666,6 +690,10 @@ function AAP_InstanceTest()
 	end
 end
 function AAP_PosTest()
+	if (AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowArrow"] == 0) then
+		AAP_ArrowActive = 0
+		AAP_ArrowFrame:Hide()
+	else
 	if (AAP_Quests and AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]] and AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["AreaTriggerZ"]) then
 		local d_y, d_x = UnitPosition("player")
 		x = AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["AreaTriggerZ"]["x"]
@@ -676,7 +704,7 @@ function AAP_PosTest()
 			AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] = AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] + 1
 			QNumberLocal = 0
 			AAP_Reset = 0
-			AAP_UPDPlus = 1
+			AAP_Plus()
 		end
 	end
 	if ((AAP_ArrowActive == 0) or (AAP_ArrowActive_X == 0) or (AAP_InstanceTest() == 1)) then
@@ -710,7 +738,7 @@ function AAP_PosTest()
 			local col = cell % 9
 			local row = floor(cell / 9)
 			AAP_ArrowFrame.arrow:SetTexCoord((col * 56) / 512,((col + 1) * 56) / 512,(row * 42) / 512,((row + 1) * 42) / 512)
-			AAP_ArrowFrame.distance:SetText(floor(distance + AAP_CheckDistance()) .. " yards")
+			AAP_ArrowFrame.distance:SetText(floor(distance + AAP_CheckDistance()) .. " "..AAP_Locals["Yards"])
 			AAP_ArrowActive_Distance = 0
 			if (AAP1 and AAP1[AAP_Realm] and AAP1[AAP_Realm][AAP_Name] and AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]) then
 				if (AAP_Quests and AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]] and AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["Trigger"]) then
@@ -720,6 +748,9 @@ function AAP_PosTest()
 					local deltaX, deltaY = d_x - AAP_ArrowActive_Trigger_X, AAP_ArrowActive_Trigger_Y - d_y
 					AAP_ArrowActive_Distance = (deltaX * deltaX + deltaY * deltaY)^0.5
 					AAP_ArrowActive_TrigDistance = AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["Range"]
+					if (AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["HIDEME"]) then
+						AAP_ArrowActive = 0
+					end
 				end
 			end
 			if (distance < 5 and AAP_ArrowActive_Distance == 0) then
@@ -735,12 +766,25 @@ function AAP_PosTest()
 			end
 		end
 	end
-
+	end
 end
 
+function AAP_AnimeUpdater()
+	if (AAP_UPDQListV > 0) then
+		AAP_5sec_thingy = 10
+		AAP_UPDQListV = AAP_UPDQListV - 1
+	end
+	if (AAP_UPDQListV == 0) then
+		AAP_5sec_thingy = 10
+		AAP_Plus()
+		AAP_UpdateQuestList()
+		AAP_extraTimer:Play()
+		AAP_UPDQListV = -1
+	end
+end
 
-
-
+AAP_AnimeUpdaters = CreateFrame("frame")
+AAP_AnimeUpdaters:SetScript("OnUpdate", AAP_AnimeUpdater)
 
 AAP_CoreEventFrame = CreateFrame("Frame")
 AAP_CoreEventFrame:RegisterEvent ("ADDON_LOADED")
@@ -757,6 +801,7 @@ AAP_CoreEventFrame:RegisterEvent ("CINEMATIC_START")
 
 
 AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
+
 	if (event=="PLAYER_EQUIPMENT_CHANGED" and AAP_DisableAddon == 0) then
 		AAP_UpdateILVLGear()
 	elseif (event=="UPDATE_MOUSEOVER_UNIT" and AAP_DisableAddon == 0) then
@@ -768,7 +813,7 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 					if (type == "Creature" and npc_id and name) then
 						if (AAP_NPCList and not AAP_NPCList[tonumber(npc_id)]) then
 							AAP_NPCList[tonumber(npc_id)] = name
-							AAP_UPDQListV = 1
+							AAP_UPDQListV = AAP_UPDQListV2
 						end
 					end
 				end
@@ -790,6 +835,7 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 	elseif (event=="ADDON_LOADED" and AAP_DisableAddon == 0) then
 		local arg1, arg2, arg3, arg4, arg5 = ...;
 		if (arg1 == "Azeroth Auto Pilot") then
+			AAP_CompletedQs = GetQuestsCompleted()
 			AAP_RegisterChat = C_ChatInfo.RegisterAddonMessagePrefix("AAPChat")
 			if (not AAP1) then
 				AAP1 = {}
@@ -826,6 +872,9 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 				AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowleft"] = GetScreenWidth() / 2.05
 				AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowtop"] = -(GetScreenHeight() / 1.5)
 			end
+			if (not AAP1[AAP_Realm][AAP_Name]["Settings"]["LockArrow"]) then
+				AAP1[AAP_Realm][AAP_Name]["Settings"]["LockArrow"] = 0
+			end
 			if (not AAP1[AAP_Realm][AAP_Name]["Settings"]["BannerScale"]) then
 				AAP1[AAP_Realm][AAP_Name]["Settings"]["BannerScale"] = UIParent:GetScale()
 			end
@@ -847,9 +896,7 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 			if (not AAP1[AAP_Realm][AAP_Name]["Settings"]["AutoHandIn"]) then
 				AAP1[AAP_Realm][AAP_Name]["Settings"]["AutoHandIn"] = 1
 			end
-			if (not AAP1[AAP_Realm][AAP_Name]["Settings"]["AutoShareQ"]) then
-				AAP1[AAP_Realm][AAP_Name]["Settings"]["AutoShareQ"] = 1
-			end
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["AutoShareQ"] = 0
 			if (not AAP1[AAP_Realm][AAP_Name]["Settings"]["ChooseQuests"]) then
 				AAP1[AAP_Realm][AAP_Name]["Settings"]["ChooseQuests"] = 0
 			end
@@ -871,6 +918,13 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 			if (not AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowGroup"]) then
 				AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowGroup"] = 1
 			end
+			if (not AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowArrow"]) then
+				AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowArrow"] = 1
+			end
+			if (not AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowQList"]) then
+				AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowQList"] = 1
+			end
+
 			if (not AAP1[AAP_Realm][AAP_Name][86]) then
 				AAP1[AAP_Realm][AAP_Name][86] = 1
 			end
@@ -1025,6 +1079,13 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 			if (not AAP1[AAP_Realm][AAP_Name]["A1021"]) then
 				AAP1[AAP_Realm][AAP_Name]["A1021"] = 1
 			end
+			if (not AAP1[AAP_Realm][AAP_Name][1233123991]) then
+				AAP1[AAP_Realm][AAP_Name][1233123991] = 1
+			end
+			if (not AAP1[AAP_Realm][AAP_Name]["AAP_DoWarCampaign"]) then
+				AAP1[AAP_Realm][AAP_Name]["AAP_DoWarCampaign"] = 0
+			end
+
 			if (not AAP1[AAP_Realm][AAP_Name]["WantedQuestList"]) then
 				AAP1[AAP_Realm][AAP_Name]["WantedQuestList"] = {}
 			end
@@ -1044,7 +1105,7 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 	
 			AAP_ArrowEventloop = AAP_CoreEventFrame:CreateAnimationGroup()
 			AAP_ArrowEventloop.anim = AAP_ArrowEventloop:CreateAnimation()
-			AAP_ArrowEventloop.anim:SetDuration(0.01)
+			AAP_ArrowEventloop.anim:SetDuration(0.03)
 			AAP_ArrowEventloop:SetLooping("REPEAT")
 			AAP_ArrowEventloop:SetScript("OnLoop", function(self, event, ...)
 				if (AAP_SendDelay > 0) then
@@ -1082,8 +1143,8 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 			AAP_QuestDelayUpdTimer.anim:SetDuration(6)
 			AAP_QuestDelayUpdTimer:SetLooping("REPEAT")
 			AAP_QuestDelayUpdTimer:SetScript("OnLoop", function(self, event, ...)
-				AAP_ChangeZone()
-				AAP_UPDQListV = 1
+				AAP_ZoneChangeTest()
+				AAP_UPDQListV = AAP_UPDQListV2
 				AAP_QuestDelayUpdTimer:Stop()
 			end)
 			AAP_QuestBuyUpdTimer = AAP_CoreEventFrame:CreateAnimationGroup()
@@ -1117,21 +1178,28 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 				AAP_HorseBuffTimerFunc()
 			end)
 
-			AAP_UpdateQuestListTimer = AAP_CoreEventFrame:CreateAnimationGroup()
-			AAP_UpdateQuestListTimer.anim = AAP_UpdateQuestListTimer:CreateAnimation()
-			AAP_UpdateQuestListTimer.anim:SetDuration(0.05)
-			AAP_UpdateQuestListTimer:SetLooping("REPEAT")
-			AAP_UpdateQuestListTimer:SetScript("OnLoop", function(self, event, ...)
-				if (AAP_UPDQListV == 1) then
+			AAP_Horse5sTimer = AAP_CoreEventFrame:CreateAnimationGroup()
+			AAP_Horse5sTimer.anim = AAP_Horse5sTimer:CreateAnimation()
+			AAP_Horse5sTimer.anim:SetDuration(0.5)
+			AAP_Horse5sTimer:SetLooping("REPEAT")
+			AAP_Horse5sTimer:SetScript("OnLoop", function(self, event, ...)
+				if (AAP_5sec_thingy == 0) then
 					AAP_UpdateQuestList()
-					AAP_UPDQListV = 0
-				end
-				if (AAP_UPDPlus == 1) then
-					AAP_Plus()
-					AAP_UPDPlus = 0
+					AAP_5sec_thingy = 10
+				else
+					AAP_5sec_thingy = AAP_5sec_thingy - 1
 				end
 			end)
-			AAP_UpdateQuestListTimer:Play()
+			AAP_Horse5sTimer:Play()
+			AAP_extraTimer = AAP_CoreEventFrame:CreateAnimationGroup()
+			AAP_extraTimer.anim = AAP_extraTimer:CreateAnimation()
+			AAP_extraTimer.anim:SetDuration(0.1)
+			AAP_extraTimer:SetLooping("REPEAT")
+			AAP_extraTimer:SetScript("OnLoop", function(self, event, ...)
+				AAP_UpdateQuestList()
+				AAP_extraTimer:Stop()
+			end)
+
 
 			AAP_EquipGearTimer = AAP_CoreEventFrame:CreateAnimationGroup()
 			AAP_EquipGearTimer.anim = AAP_EquipGearTimer:CreateAnimation()
@@ -1151,7 +1219,7 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 					AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] = AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] + 1
 					QNumberLocal = 0
 					AAP_Reset = 0
-					AAP_UPDPlus = 1
+					AAP_Plus()
 					AAP_TaxiTimer:Stop()
 				elseif (AAP_TaxiVar > 10) then
 					AAP_TaxiTimer:Stop()
@@ -1271,7 +1339,7 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 					AAP_ArrowEventAFkTimer2:Stop()
 					AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] = AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] + 1
 					AAP_Reset = 0
-					AAP_UPDPlus = 1
+					AAP_Plus()
 				end
 			end)
 			AAP_ArrowEventAFkTimer2412 = AAP_CoreEventFrame:CreateAnimationGroup()
@@ -1303,15 +1371,15 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 				AAP_CreateMacro()
 				AAP_UpdateILVLGear()
 				AAP_ArrowEventLoadinT:Stop()
+				AAP_ZoneChangeTest()
 			end)
 			AAP_ArrowEventLoadinT:Play()
 
-
+			AAP_UpdateILVLGear()
 			AAP_MakeGroupList()
-			AAP_UPDQListV = 1
-			AAP_ChangeZone()
+			AAP_UPDQListV = AAP_UPDQListV2
+			AAP_ZoneChangeTest()
 			AAP_Reset = 0
-			AAP_UPDQListV = 1
 			AAP_QuestDelayUpdTimer:Play()
 			LoadOptionsFrame()
 		end
@@ -1379,7 +1447,7 @@ end
 			end
 		end
 	elseif (event=="QUEST_DETAIL" and AAP_DisableAddon == 0) then
-		if (GetQuestID() and (AAP1[AAP_Realm][AAP_Name]["Settings"]["AutoAccept"] == 1) and (not IsControlKeyDown()) and (GetQuestID() ~= 50476) and (GetQuestID() ~= 52058)) then
+		if (GetQuestID() and (AAP1[AAP_Realm][AAP_Name]["Settings"]["AutoAccept"] == 1) and (not IsControlKeyDown()) and (GetQuestID() ~= 50476) and (GetQuestID() ~= 52058) and (53372 ~= GetQuestID()) and (52946 ~= GetQuestID())) then
 			AAP_QuestAcceptTimer:Play()
 		end
 	end

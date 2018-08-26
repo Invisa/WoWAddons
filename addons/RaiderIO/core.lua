@@ -203,13 +203,21 @@ local EGG = {
 		["Ravencrest"] = {
 			["Voidzone"] = "Raider.IO AddOn Author",
 		},
+		["Sargeras"] = {
+			["Isak"] = "Raider.IO Contributor"
+		}
 	},
 	["us"] = {
 		["Skullcrusher"] = {
-			["Aspyrform"] = "Raider.IO Creator",
-			["Ulsoga"] = "Immeasurable Greatness",
+			["Aspyrox"] = "Raider.IO Creator",
+			["Ulsoga"] = "Raider.IO Creator",
+			["Dynrai"] = "Raider.IO Contributor",
+			["Divyn"] = "Raider.IO Contributor",
 			["Pepsiblue"] = "#millennialthings",
 		},
+		["Thrall"] = {
+			["Firstclass"] = "Author of mythicpl.us"
+		}
 	},
 }
 
@@ -217,6 +225,7 @@ local EGG = {
 local addon = CreateFrame("Frame")
 
 -- utility functions
+local RoundNumber
 local CompareDungeon
 local GetDungeonWithData
 local GetTimezoneOffset
@@ -232,6 +241,12 @@ local GetAverageScore
 local GetStarsForUpgrades
 local GetGuildFullname
 do
+	-- bracket can be 10, 100, 0.1, 0.01, and so on
+	function RoundNumber(v, bracket)
+		bracket = bracket or 1
+		return math.floor(v/bracket + ((v >= 0 and 1) or -1 )* 0.5) * bracket
+	end
+
 	-- Find the dungeon in CONST_DUNGEONS corresponding to the data in argument
 	function GetDungeonWithData(dataName, dataValue)
 		for i = 1, #CONST_DUNGEONS do
@@ -1213,9 +1228,27 @@ do
 			keystoneFifteenPlus = payload.keystoneFifteenPlus,
 		}
 
+		-- BFA
+		cache.legionScore = RoundNumber(cache.allScore, 10)
+		cache.allScore = 0
+		cache.isPrevAllScore = false
+		cache.mainScore = 0
+		cache.dpsScore = 0
+		cache.healScore = 0
+		cache.tankScore = 0
+		cache.maxDungeonLevel = 0
+		cache.maxDungeonName = ''
+		cache.maxDungeonNameLocale = ''
+		cache.keystoneTenPlus = 0
+		cache.keystoneFifteenPlus = 0
+		for i = 1, #cache.dungeons do
+			cache.dungeons[i] = 0
+		end
+
 		-- if character exists in the clientCharacters list then override some data with higher precision
 		-- TODO: only do this if the clientCharacters data isn't too old compared to regular addon date?
-		if addonConfig.enableClientEnhancements then
+--		if addonConfig.enableClientEnhancements then
+		if false then -- DISABLED FOR BFA
 			local nameAndRealm = name .. "-" .. realm
 			if clientCharacters[nameAndRealm] then
 				local keystoneData = clientCharacters[nameAndRealm].mythic_keystone
@@ -1422,10 +1455,14 @@ do
 				tooltip:AddLine(profile.name .. " (" .. profile.realm .. ")", 1, 1, 1, false)
 			end
 
-			if profile.allScore > 0 then
+			if profile.allScore >= 0 then
 				tooltip:AddDoubleLine(L.RAIDERIO_MP_SCORE, GetFormattedScore(profile.allScore, profile.isPrevAllScore), 1, 0.85, 0, GetScoreColor(profile.allScore))
 			else
 				tooltip:AddDoubleLine(L.RAIDERIO_MP_SCORE, L.UNKNOWN_SCORE, 1, 0.85, 0, 1, 1, 1)
+			end
+
+			if profile.legionScore > 0 then
+				tooltip:AddDoubleLine(L.LEGION_SCORE, GetFormattedScore(profile.legionScore), 1, 1, 1, 1, 1, 1)
 			end
 
 			-- choose the best highlight to show:
@@ -1641,7 +1678,8 @@ do
 	end
 
 	function AppendAveragePlayerScore(tooltip, keystoneLevel, addBlankLine)
-		if addonConfig.showAverageScore then
+--		if addonConfig.showAverageScore then
+		if false then -- Wait that a certain amount of run is recorded before displaying it
 			local averageScore = GetAverageScore(keystoneLevel)
 			if averageScore then
 				if addBlankLine then
@@ -1703,6 +1741,10 @@ do
 		end
 
 		profileTooltip:AddDoubleLine(profile.name, GetFormattedScore(profile.allScore, profile.isPrevAllScore), 1, 1, 1, GetScoreColor(profile.allScore))
+
+		if profile.legionScore and profile.legionScore > 0 then
+			profileTooltip:AddDoubleLine(L.LEGION_SCORE, GetFormattedScore(profile.legionScore), 1, 1, 1, 1, 1, 1)
+		end
 
 		if profile.mainScore > profile.allScore then
 			profileTooltip:AddDoubleLine(L.MAINS_SCORE, profile.mainScore, 1, 1, 1, GetScoreColor(profile.mainScore))

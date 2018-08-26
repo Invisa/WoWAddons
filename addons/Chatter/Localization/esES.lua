@@ -9,20 +9,13 @@ if not L then return end
 --[[Translation missing --]]
 --[[ L["$EMPTY$"] = "$EMPTY$"--]] 
 L["%s said '%s' in %s"] = "%s dice '%s' en %s"
---[[Translation missing --]]
---[[ L["(|HBNplayer.-|h) whispers:"] = "(|HBNplayer.-|h) whispers:"--]] 
---[[Translation missing --]]
---[[ L["(|HBNplayer.-|h): whispers:"] = "(|HBNplayer.-|h): whispers:"--]] 
---[[Translation missing --]]
---[[ L["(|Hplayer.-|h) whispers:"] = "(|Hplayer.-|h) whispers:"--]] 
---[[Translation missing --]]
---[[ L["[%s] %s: %s"] = "[%s] %s: %s"--]] 
---[[Translation missing --]]
---[[ L["^(.-|h) whispers:"] = "^(.-|h) whispers:"--]] 
---[[Translation missing --]]
---[[ L["^To "] = "^To "--]] 
---[[Translation missing --]]
---[[ L["^To (.-|h):"] = "^To (.-|h):"--]] 
+L["(|HBNplayer.-|h) whispers:"] = "(|HBNplayer.-|h) susurros:"
+L["(|HBNplayer.-|h): whispers:"] = "(|HBNplayer.-|h): susurros:"
+L["(|Hplayer.-|h) whispers:"] = "(|Hplayer.-|h) susurros:"
+L["[%s] %s: %s"] = "[%s] %s: %s"
+L["^(.-|h) whispers:"] = "^(.-|h) susurros:"
+L["^To "] = "^Para"
+L["^To (.-|h):"] = "^Para (.-|h):"
 L["Add space after channels"] = "Añadir espacio después de los canales"
 L["Add surrounding brackets to own charname in messages."] = "Añadir corchetes alrededor del propio nombre del personaje en los mensajes"
 L["Add Word"] = "Añadir Palabra"
@@ -49,16 +42,14 @@ L["Alt-click name to invite"] = "Alt-click sobre el nombre para invitar."
 L["Are you sure you want to delete all your saved class/level data?"] = "¿Estás seguro de que quieres borrar todos los datos de clases/niveles salvados?"
 L["Attach edit box to..."] = "Colocar caja de texto en..."
 L["Attach to..."] = "Colocar en..."
---[[Translation missing --]]
---[[ L["Automatic Whisper Windows"] = "Automatic Whisper Windows"--]] 
+L["Automatic Whisper Windows"] = "Ventanas de susurro automática"
 --[[Translation missing --]]
 --[[ L["Automatically turns on chat logging."] = "Automatically turns on chat logging."--]] 
 L["Background color"] = "Color del fondo"
 L["Background Inset"] = "Márgen del fondo"
 L["Background texture"] = "Textura del fondo"
 L["Battleground"] = "CampoDeBatalla"
---[[Translation missing --]]
---[[ L["Battleground Leader"] = "Battleground Leader"--]] 
+L["Battleground Leader"] = "Líder de Campo de Batalla"
 L["Border color"] = "Color del borde"
 L["Border texture"] = "Textura del borde"
 L["Borders/Background"] = "Bordes/Fondo"
@@ -90,7 +81,7 @@ L["Color border by channel"] = "Colorear el borde dependiendo del canal"
 L["Color level by difficulty"] = "Colorear el nivel por dificultad"
 L["Color own charname in messages."] = "Colorear mi nombre en los mensajes."
 L["Color Player Names By..."] = "Colorear el nombre de los jugadores por..."
-L["Color self in messages"] = "Colorearme en mensajes"
+L["Color self in messages"] = "Colorear a mi mismo en los mensajes"
 L["Color timestamps the same as the channel they appear in."] = "Colorear las marcas de tiempo segun el canal en el que aparezcan."
 L["Combat Log Fix"] = "Mejora del historial de combate."
 L["Configure"] = "Configurar"
@@ -121,13 +112,11 @@ L["Enable"] = "Activar"
 L["Enable "] = "Activar "
 L["Enable borders on this frame"] = "Permitir bordes en este marco"
 L["Enable Scrollback length modification"] = "Permitir modificar la cantidad de lineas desplazadas."
---[[Translation missing --]]
---[[ L["Enable Tab Flashing"] = "Enable Tab Flashing"--]] 
+L["Enable Tab Flashing"] = "Activar parpadeo de pestaña"
 L["Enable text justification"] = "Permitir texto justificado"
 L["Enabled"] = "Permitido"
 L["Enables the /tt command to send a tell to your target."] = "Activar el comando /tt para enviar un mensaje a tu objetivo."
---[[Translation missing --]]
---[[ L["Enables the Tab to flash when you miss a message"] = "Enables the Tab to flash when you miss a message"--]] 
+L["Enables the Tab to flash when you miss a message"] = "Activa el parpadeo de la pestaña cuando no has leído un mensaje"
 L["Enables you to replace channel names with your own names. You can use '%s' to force an empty string."] = "Te permite remplazar los nombres de los canales. Puedes usar '%s' para forzar un nombre vacío."
 L["Enables you to right-click a person's name in chat and set a note on them to be displayed in chat, such as their main character's name. Can also scan guild notes for character names to display, if no note has been manually set."] = "Te permite hacer click derecho sobre el nombre de una persona en el chat y añadirle una nota para que se muestre en el chat, como por ejemplo el nombre de su personaje principal. También puede buscar nombres en las notas de hermandad, si no se pone uno a mano."
 L["Enables you to set a custom font and font size for your chat frames"] = "Te permite elegir una fuente personalizada y un tamaño de fuente para tus marcos de chat."
@@ -146,14 +135,10 @@ L["Gives you more flexibility in how you invite people to your group."] = "Te da
 L["Group"] = "Grupo"
 L["Group Say (/gr)"] = "Decir grupo (/gr)"
 L["Guild"] = "Hermandad"
---[[Translation missing --]]
---[[ L["HH:MM (12-hour)"] = "HH:MM (12-hour)"--]] 
---[[Translation missing --]]
---[[ L["HH:MM (24-hour)"] = "HH:MM (24-hour)"--]] 
---[[Translation missing --]]
---[[ L["HH:MM:SS (24-hour)"] = "HH:MM:SS (24-hour)"--]] 
---[[Translation missing --]]
---[[ L["HH:MM:SS AM (12-hour)"] = "HH:MM:SS AM (12-hour)"--]] 
+L["HH:MM (12-hour)"] = "HH:MM (12-horas)"
+L["HH:MM (24-hour)"] = "HH:MM (24-horas)"
+L["HH:MM:SS (24-hour)"] = "HH:MM:SS (24-horas)"
+L["HH:MM:SS AM (12-hour)"] = "HH:MM:SS AM (12-horas)"
 L["Hide Tabs"] = "Ocultar pestañas"
 L["Hides chat frame tabs"] = "Ocultar pestañas del marco de chat"
 L["Hides the buttons attached to the chat frame"] = "Ocultar los botones del marco de chat"
@@ -164,10 +149,8 @@ L["Hunter"] = "Cazador"
 --[[ L["If no name can be found for an 'alt' rank character, use entire note"] = "If no name can be found for an 'alt' rank character, use entire note"--]] 
 L["Include level"] = "Incluir nivel"
 L["Include the player's level"] = "Incluir nivel del jugador"
---[[Translation missing --]]
---[[ L["inv"] = "inv"--]] 
---[[Translation missing --]]
---[[ L["invite"] = "invite"--]] 
+L["inv"] = "inv"
+L["invite"] = "invitar"
 L["Invite Links"] = "Enlaces de invitación"
 L["Keeps your channel colors by name rather than by number."] = "Mantener el color de tus canales por nombre en lugar de por número."
 L["Left"] = "Izquierda"
@@ -215,8 +198,7 @@ L["Options"] = "Opciones"
 L["Other Channels"] = "Otros canales"
 L["Paladin"] = "Paladín"
 L["Party"] = "Grupo"
---[[Translation missing --]]
---[[ L["Party Leader"] = "Party Leader"--]] 
+L["Party Leader"] = "Líder de Grupo"
 --[[Translation missing --]]
 --[[ L["Per chat frame settings"] = "Per chat frame settings"--]] 
 L["Play a sound when a message is received in this channel"] = "Reproduce un sonido cuando se recibe un mensaje en este canal"
@@ -228,8 +210,7 @@ L["Provides a /gr slash command to let you speak in your group (raid, party, or 
 --[[Translation missing --]]
 --[[ L["Provides options to color player names, add player levels, and add tab completion of player names."] = "Provides options to color player names, add player levels, and add tab completion of player names."--]] 
 L["Raid"] = "Banda"
---[[Translation missing --]]
---[[ L["Raid Leader"] = "Raid Leader"--]] 
+L["Raid Leader"] = "Líder de Banda"
 L["Raid Warning"] = "Aviso de la banda"
 --[[Translation missing --]]
 --[[ L["RealID Brackets"] = "RealID Brackets"--]] 
@@ -319,8 +300,7 @@ L["Standalone Config"] = "Configuración independiente"
 --[[Translation missing --]]
 --[[ L["Target/Mouseover"] = "Target/Mouseover"--]] 
 L["Tell Target (/tt)"] = "Decir al objetivo (/tt)"
---[[Translation missing --]]
---[[ L["Test"] = "Test"--]] 
+L["Test"] = "Probar"
 L["Text Justification"] = "Texto justificado"
 --[[Translation missing --]]
 --[[ L["Tile Size"] = "Tile Size"--]] 
@@ -328,14 +308,10 @@ L["Timestamp color"] = "Color de la marca de tiempo"
 L["Timestamp format"] = "Formato de la marca de tiempo"
 L["Timestamps"] = "Marca de tiempo"
 L["Tiny Chat"] = "Chat pequeño"
---[[Translation missing --]]
---[[ L["To (|HBNplayer.-|h):"] = "To (|HBNplayer.-|h):"--]] 
---[[Translation missing --]]
---[[ L["To (|Hplayer.-|h):"] = "To (|Hplayer.-|h):"--]] 
---[[Translation missing --]]
---[[ L["To <Away>(|HBNplayer.-|h):"] = "To <Away>(|HBNplayer.-|h):"--]] 
---[[Translation missing --]]
---[[ L["To <Busy>(|HBNplayer.-|h):"] = "To <Busy>(|HBNplayer.-|h):"--]] 
+L["To (|HBNplayer.-|h):"] = "Para (|HBNplayer.-|h):"
+L["To (|Hplayer.-|h):"] = "Para (|Hplayer.-|h):"
+L["To <Away>(|HBNplayer.-|h):"] = "Para <Ausente>(|HBNplayer.-|h):"
+L["To <Busy>(|HBNplayer.-|h):"] = "Para <Ocupado>(|HBNplayer.-|h):"
 --[[Translation missing --]]
 --[[ L["Toast X offset"] = "Toast X offset"--]] 
 --[[Translation missing --]]

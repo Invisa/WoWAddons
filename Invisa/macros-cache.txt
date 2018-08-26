@@ -26,8 +26,7 @@ VER 3 0100000000000014 "." "INV_MISC_QUESTIONMARK"
 END
 VER 3 0100000000000011 "." "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [nomod:shift, @mouseover] Kidney Shot
-/cast [mod:shift] Kidney Shot
+/cast [@mouseover] Kidney Shot
 END
 VER 3 0100000000000019 "." "INV_MISC_QUESTIONMARK"
 /cast [@Cursor] Grappling Hook
@@ -46,19 +45,20 @@ VER 3 0100000000000016 "." "INV_MISC_QUESTIONMARK"
 /cast [nomod:shift, @mouseover] Between the Eyes
 /cast [mod:shift] Between the Eyes
 END
-VER 3 0100000000000001 "...." "INV_MISC_QUESTIONMARK"
+VER 3 0100000000000010 "." "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [talent:7/2] Marked for Death
-/cast [talent:7/3] Death from Above
+/cast [mod:shift, @mouseover] Shadowstep
+/cast [nomod:shift] Shadowstep
+END
+VER 3 0100000000000001 ".." "INV_MISC_QUESTIONMARK"
+#showtooltip 
+/cast [talent:3/1] Vigor
+/cast [talent:3/2] Deeper Stratagem
+/cast [talent:3/3] Marked for Death
 END
 VER 3 0100000000000015 "p1" "INV_MISC_QUESTIONMARK"
 /cast [@party1] Tricks of the Trade
 END
 VER 3 010000000000001A "p2" "INV_MISC_QUESTIONMARK"
 /cast [@party1] Tricks of the Trade
-END
-VER 3 0100000000000010 "step" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/cast [mod:shift, @mouseover] Shadowstep
-/cast [nomod:shift] Shadowstep
 END

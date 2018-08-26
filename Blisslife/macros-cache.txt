@@ -1,0 +1,12 @@
+VER 3 0100000000000001 "." "INV_MISC_QUESTIONMARK"
+/cast [@cursor] Solar Beam
+END
+VER 3 0100000000000002 "." "INV_MISC_QUESTIONMARK"
+/cast [@cursor] Starfall
+END
+VER 3 0100000000000003 "." "INV_MISC_QUESTIONMARK"
+/cast [@party1] Remove Corruption
+END
+VER 3 0100000000000004 "." "INV_MISC_QUESTIONMARK"
+/cast [@party2] Remove Corruption
+END

@@ -22,61 +22,60 @@ Quartz3DB = {
 				},
 			},
 		},
+		["EnemyCasts"] = {
+		},
 		["Player"] = {
 			["profiles"] = {
 				["Default"] = {
 					["w"] = 210,
-					["y"] = 221,
 					["hideicon"] = true,
-					["font"] = "Liberation Sans",
-					["fontsize"] = 13,
-					["hidetimetext"] = true,
-					["texture"] = "Flat",
 					["x"] = 573,
 					["border"] = "None",
+					["fontsize"] = 13,
 					["nametextposition"] = "centerback",
+					["y"] = 221,
+					["font"] = "Liberation Sans",
+					["texture"] = "Flat",
+					["hidetimetext"] = true,
 				},
 				["Veil"] = {
 					["w"] = 210,
 					["nametextposition"] = "centerback",
-					["hideicon"] = true,
+					["y"] = 221,
 					["font"] = "Liberation Sans",
 					["fontsize"] = 13,
-					["border"] = "None",
-					["x"] = 573,
-					["hidetimetext"] = true,
-					["y"] = 221,
+					["hideicon"] = true,
 					["texture"] = "Flat",
+					["x"] = 573,
+					["border"] = "None",
+					["hidetimetext"] = true,
 				},
 				["Invisa - Tichondrius"] = {
 					["w"] = 211,
 					["hideicon"] = true,
+					["y"] = 115,
 					["x"] = 572.5,
-					["border"] = "None",
 					["fontsize"] = 13,
+					["hidetimetext"] = true,
 					["texture"] = "Flat",
 					["font"] = "Liberation Sans",
-					["hidetimetext"] = true,
+					["border"] = "None",
 					["nametextposition"] = "centerback",
-					["y"] = 115,
 				},
 			},
-		},
-		["EnemyCasts"] = {
 		},
 		["GCD"] = {
 			["profiles"] = {
 				["Default"] = {
 					["gcdgap"] = 0,
 					["gcdposition"] = "top",
-					["gcdalpha"] = 1,
-					["gcdheight"] = 5,
 					["sparkcolor"] = {
 						nil, -- [1]
 						0.0666666666666667, -- [2]
 						0.0901960784313726, -- [3]
 						1, -- [4]
 					},
+					["gcdalpha"] = 1,
 				},
 				["Veil"] = {
 					["gcdgap"] = 0,
@@ -130,8 +129,6 @@ Quartz3DB = {
 				},
 			},
 		},
-		["Mirror"] = {
-		},
 		["Range"] = {
 			["profiles"] = {
 				["Default"] = {
@@ -160,47 +157,57 @@ Quartz3DB = {
 				},
 			},
 		},
+		["Mirror"] = {
+		},
 		["Latency"] = {
 		},
 	},
 	["profileKeys"] = {
 		["Mfgob - Bleeding Hollow"] = "Default",
 		["Blisskiss - Tichondrius"] = "Default",
+		["Samsara - Runetotem"] = "Default",
 		["Mfgob - Magtheridon"] = "Default",
 		["Tiehb - Crushridge"] = "Default",
 		["Jugarmitico - Ragnaros"] = "Default",
 		["Dsfsdfs - Magtheridon"] = "Default",
 		["Mfgob - Mal'Ganis"] = "Default",
-		["Peaceit - Tichondrius"] = "Default",
-		["Bloodz - Runetotem"] = "Default",
 		["Arcblood - Runetotem"] = "Default",
 		["Binky - Runetotem"] = "Default",
-		["Emmzz - Hyjal"] = "Default",
-		["Arcblood - Tichondrius"] = "Default",
-		["Sandtoes - Kil'jaeden"] = "Default",
-		["Mfgob - Illidan"] = "Default",
-		["Soothìngraìn - Hyjal"] = "Default",
-		["Popitlockit - Tichondrius"] = "Default",
-		["Felbloodx - Illidan"] = "Default",
-		["Playmythic - Aerie Peak"] = "Default",
-		["Lightblood - Runetotem"] = "Default",
-		["Dethnitsrgay - Crushridge"] = "Default",
-		["Invisa - Tichondrius"] = "Invisa - Tichondrius",
-		["Arcblood - Zul'jin"] = "Default",
+		["Bloodz - Runetotem"] = "Default",
 		["Purple - Runetotem"] = "Default",
+		["Blisslife - Tichondrius"] = "Default",
+		["Emmzz - Hyjal"] = "Default",
+		["Sandtoes - Kil'jaeden"] = "Default",
+		["Dethnitsrgay - Crushridge"] = "Default",
+		["Lightblood - Runetotem"] = "Default",
+		["Felbloodx - Illidan"] = "Default",
+		["Popitlockit - Tichondrius"] = "Default",
+		["Arcblood - Zul'jin"] = "Default",
+		["Soothìngraìn - Hyjal"] = "Default",
+		["Gizelmardyth - Moon Guard"] = "Default",
+		["Playmythic - Aerie Peak"] = "Default",
+		["Invisa - Tichondrius"] = "Invisa - Tichondrius",
+		["Mfgob - Illidan"] = "Default",
+		["Arcblood - Tichondrius"] = "Default",
 		["Moxil - Runetotem"] = "Default",
 		["Veil - Tichondrius"] = "Veil",
-		["Samsara - Runetotem"] = "Default",
+		["Peaceit - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
 			["channelingcolor"] = {
-				0.341176470588235, -- [1]
-				0.325490196078431, -- [2]
-				0.341176470588235, -- [3]
+				0.537254901960784, -- [1]
+				0.509803921568627, -- [2]
+				0.537254901960784, -- [3]
 				1, -- [4]
 			},
 			["borderalpha"] = 0,
+			["castingcolor"] = {
+				0, -- [1]
+				0, -- [2]
+				nil, -- [3]
+				1, -- [4]
+			},
 			["bordercolor"] = {
 				0.00392156862745098, -- [1]
 				0.00392156862745098, -- [2]
@@ -220,28 +227,22 @@ Quartz3DB = {
 				1, -- [4]
 			},
 			["modules"] = {
-				["Focus"] = false,
 				["Swing"] = false,
-				["Mirror"] = false,
 				["Buff"] = false,
 				["Interrupt"] = false,
-				["Target"] = false,
 				["Pet"] = false,
+				["Focus"] = false,
+				["Target"] = false,
+				["Mirror"] = false,
 				["Latency"] = false,
 			},
-			["castingcolor"] = {
-				0, -- [1]
-				0, -- [2]
-				nil, -- [3]
-				1, -- [4]
-			},
+			["backgroundalpha"] = 0,
 			["sparkcolor"] = {
 				0, -- [1]
 				0, -- [2]
 				0, -- [3]
 				1, -- [4]
 			},
-			["backgroundalpha"] = 0,
 		},
 		["Veil"] = {
 			["channelingcolor"] = {
@@ -270,13 +271,13 @@ Quartz3DB = {
 				1, -- [4]
 			},
 			["modules"] = {
-				["Buff"] = false,
-				["Swing"] = false,
-				["Mirror"] = false,
 				["Focus"] = false,
+				["Swing"] = false,
+				["Pet"] = false,
+				["Buff"] = false,
 				["Interrupt"] = false,
 				["Target"] = false,
-				["Pet"] = false,
+				["Mirror"] = false,
 				["Latency"] = false,
 			},
 			["castingcolor"] = {
@@ -301,7 +302,6 @@ Quartz3DB = {
 				1, -- [4]
 			},
 			["borderalpha"] = 0.8,
-			["backgroundalpha"] = 0,
 			["bordercolor"] = {
 				0.172549019607843, -- [1]
 				0.172549019607843, -- [2]
@@ -322,11 +322,11 @@ Quartz3DB = {
 			},
 			["modules"] = {
 				["Swing"] = false,
-				["Focus"] = false,
 				["Buff"] = false,
+				["Focus"] = false,
 				["Target"] = false,
-				["Mirror"] = false,
 				["Pet"] = false,
+				["Mirror"] = false,
 				["Latency"] = false,
 			},
 			["castingcolor"] = {
@@ -341,6 +341,7 @@ Quartz3DB = {
 				0, -- [3]
 				1, -- [4]
 			},
+			["backgroundalpha"] = 0,
 		},
 	},
 }

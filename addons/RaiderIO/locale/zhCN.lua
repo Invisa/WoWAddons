@@ -16,6 +16,8 @@ L["BEST_RUN"] = "最高记录"
 L["CHANGES_REQUIRES_UI_RELOAD"] = [=[您的改动已保存，但您必须重新加载（reload）才能生效。
 
 你需要现在这么做吗？]=]
+--[[Translation missing --]]
+--[[ L["CHECKBOX_DISPLAY_WEEKLY"] = ""--]] 
 L["COPY_RAIDERIO_PROFILE_URL"] = "复制 Raider.IO 人物简介链接"
 L["COPY_RAIDERIO_URL"] = "复制 Raider.IO 链接"
 L["DPS"] = "DPS"
@@ -49,6 +51,10 @@ L["ENABLE_NO_SCORE_COLORS_DESC"] = "关闭评分颜色。所有评分会显示�
 --[[ L["ENABLE_RAIDERIO_CLIENT_ENHANCEMENTS_DESC"] = ""--]] 
 L["ENABLE_SIMPLE_SCORE_COLORS"] = "使用简单评分颜色"
 L["ENABLE_SIMPLE_SCORE_COLORS_DESC"] = "将评分用基础装备等级颜色显示，这会让有色觉缺陷更简单的区分评分等级。"
+--[[Translation missing --]]
+--[[ L["GUILD_BEST_SEASON"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["GUILD_BEST_WEEKLY"] = ""--]] 
 L["HEALER"] = "治疗者"
 L["HEALER_SCORE"] = "治疗者评分"
 --[[Translation missing --]]
@@ -73,6 +79,8 @@ L["MAINS_SCORE_COLON"] = "当前的分数："
 --[[ L["MY_PROFILE_TITLE"] = ""--]] 
 L["MYTHIC_PLUS_DB_MODULES"] = "大秘境数据库模组"
 L["MYTHIC_PLUS_SCORES"] = "大秘境评分"
+--[[Translation missing --]]
+--[[ L["NO_GUILD_RECORD"] = ""--]] 
 L["OPEN_CONFIG"] = "开启选项"
 --[[Translation missing --]]
 --[[ L["OUT_OF_SYNC_DATABASE_S"] = ""--]] 
@@ -100,6 +108,10 @@ L["RELOAD_NOW"] = "现在重载（Reload）"
 --[[ L["SHOW_AVERAGE_PLAYER_SCORE_INFO"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["SHOW_AVERAGE_PLAYER_SCORE_INFO_DESC"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["SHOW_CLIENT_GUILD_BEST"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["SHOW_CLIENT_GUILD_BEST_DESC"] = ""--]] 
 L["SHOW_IN_FRIENDS"] = "显示在好友名单"
 L["SHOW_IN_FRIENDS_DESC"] = "当你鼠标悬停到好友时显示大秘境评分"
 L["SHOW_IN_LFD"] = "在地下城查找器中显示"

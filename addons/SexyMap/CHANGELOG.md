@@ -1,7 +1,6 @@
 # SexyMap
 
-## [v8.0.3](https://github.com/funkydude/SexyMap/tree/v8.0.3) (2018-07-21)
-[Full Changelog](https://github.com/funkydude/SexyMap/compare/v8.0.2...v8.0.3)
+## [v8.0.8](https://github.com/funkydude/SexyMap/tree/v8.0.8) (2018-08-15)
+[Full Changelog](https://github.com/funkydude/SexyMap/compare/v8.0.7...v8.0.8)
 
-- Update CallbackHandler embed.  
-- Set minimap strata to low (#19)  
+- Another fix to keep the missions button small.  

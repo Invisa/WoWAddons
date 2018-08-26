@@ -126,19 +126,19 @@ function mod:OnEnable()
 	self:RegisterEvent("CHAT_MSG_CHANNEL_NOTICE")
 	self:AddCustomChannels(GetChannelList())
 	self:AddCustomChannels(
-		"SAY", CHAT_MSG_SAY,
-		"GUILD", CHAT_MSG_GUILD,
-		"OFFICER", CHAT_MSG_OFFICER,
-		"INSTANCE_CHAT", INSTANCE_CHAT,
-		"INSTANCE_CHAT_LEADER", INSTANCE_CHAT_LEADER,
-		"PARTY", CHAT_MSG_PARTY,
-		"PARTY_LEADER", CHAT_MSG_PARTY_LEADER,
-		"RAID", CHAT_MSG_RAID,
-		"RAID_LEADER", CHAT_MSG_RAID_LEADER,
-		"RAID_WARNING", CHAT_MSG_RAID_WARNING,
-		"WHISPER", CHAT_MSG_WHISPER,
-		"BN_WHISPER", CHAT_MSG_BN_WHISPER,
-		"YELL", CHAT_MSG_YELL
+		"SAY", CHAT_MSG_SAY, nil,
+		"GUILD", CHAT_MSG_GUILD, nil,
+		"OFFICER", CHAT_MSG_OFFICER, nil,
+		"INSTANCE_CHAT", INSTANCE_CHAT, nil,
+		"INSTANCE_CHAT_LEADER", INSTANCE_CHAT_LEADER, nil,
+		"PARTY", CHAT_MSG_PARTY, nil,
+		"PARTY_LEADER", CHAT_MSG_PARTY_LEADER, nil,
+		"RAID", CHAT_MSG_RAID, nil,
+		"RAID_LEADER", CHAT_MSG_RAID_LEADER, nil,
+		"RAID_WARNING", CHAT_MSG_RAID_WARNING, nil,
+		"WHISPER", CHAT_MSG_WHISPER, nil,
+		"BN_WHISPER", CHAT_MSG_BN_WHISPER, nil,
+		"YELL", CHAT_MSG_YELL, nil
 	)
 	self.urlcopy = Chatter:GetModule("URL Copy")
 	mod.db.profile.useSink = true
@@ -150,7 +150,7 @@ end
 
 function mod:AddCustomChannels(...)
 	-- excludeChannels(EnumerateServerChannels())
-	for i = 1, select("#", ...), 2 do
+	for i = 1, select("#", ...), 3 do
 		local id, name = select(i, ...)
 		if not options[name:gsub(" ", "_")] then
 			options.config.args[name:gsub(" ", "_")] = {
@@ -200,14 +200,14 @@ function mod:ParseChat(evt, msg, sender, ...)
 		end
 	end
 
-	local msg = msg:lower()
+	msg = msg:lower()
 	for k, v in pairs(words) do
 		local found = false
 		for item in msg:gmatch("[^%s]+") do
 			if item == k then
 				found = true
 			end
-		end			
+		end
 		if found then
 			-- check to see if we need to highlight
 			if evt == "CHAT_MSG_CHANNEL" then

@@ -645,7 +645,7 @@ function DialogKey:HandleKey(key)			-- Run for every key hit ever; runs ClickBut
 			end
 			
 			-- If the frame isn't blank (blank frames are used to separate gossip and quests)
-			if frame:GetText() then
+			if frame:IsVisible() and frame:GetText() then
 				if tostring(num) == key then
 					DialogKey:ClickButton(frame)
 					self:SetPropagateKeyboardInput(false)
@@ -678,11 +678,53 @@ function DialogKey:HandleKey(key)			-- Run for every key hit ever; runs ClickBut
 		end
 	end
 	
+	-- If the dialog key was pressed (default space), try to hit a bound button and if one was found, don't propagate it
 	if key == DialogKey.db.global.keys[1] or key == DialogKey.db.global.keys[2] then
 		local success = DialogKey:ClickButtons()
 		self:SetPropagateKeyboardInput(not success)
 	else
 		self:SetPropagateKeyboardInput(true)
+	end
+end
+
+function DialogKey:debugdialog(key)
+	print("===== debugging =====")
+	key = tostring(key)
+	if key:find("^%d$") and (GossipFrameGreetingPanel:IsVisible() or QuestFrameGreetingPanel:IsVisible()) and DialogKey.db.global.numKeysForGossip then
+		local num = 1
+		for i=1,9 do
+			print("i="..i..", num="..num)
+			local frame = _G["GossipTitleButton"..i]
+			print("GossipTitleButton"..i)
+			
+			-- Try QuestTitleButton* instead if Gossip buttons aren't shown
+			if not frame:IsVisible() then
+				print("GossipTitleButton"..i.." not found, trying QuestTitleButton"..i)
+				frame = _G["QuestTitleButton"..i]
+			end
+			
+			-- If the frame isn't blank (blank frames are used to separate gossip and quests)
+			if frame:IsVisible() and frame:GetText() then
+				print(" - frame has text")
+				if tostring(num) == key then
+					print(" - tostring("..num..") == "..key..", clicking "..frame:GetName())
+					print("text is: "..frame:GetText())
+					--DialogKey:ClickButton(frame)
+					DialogKeyFrame:SetPropagateKeyboardInput(false)
+					return
+				else
+					print(" - tostring("..num..") != "..key..", skipping")
+				end
+				
+				num = num+1
+			else
+				print(" - frame has no text, skipping")
+			end
+			
+			print("------------------------")
+		end
+	else
+		print("no dialog found")
 	end
 end
 
@@ -767,7 +809,7 @@ function DialogKey:EnumerateGossips()		-- Prefixes 1., 2., etc. to NPC options
 			frame = _G["QuestTitleButton"..i]
 		end
 		
-		if frame:IsVisible() then
+		if frame:IsVisible() and frame:GetText() then
 			if not frame:GetText():find("^"..num.."\. ") then
 				frame:SetText(num .. ". " .. frame:GetText())
 			end

@@ -1,6 +1,6 @@
 local _, addonTable = ...;
 --@non-debug@
-local buildTimestamp = "r146";
+local buildTimestamp = "r147";
 --@end-non-debug@
 
 local VGUI = LibStub("LibRedDropdown-1.0");

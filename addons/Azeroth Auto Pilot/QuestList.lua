@@ -17,6 +17,7 @@ function AAP_MakeGroupList()
 	AAP.PartyList.PartyFrame:SetFrameStrata("LOW")
 	AAP.PartyList.PartyFrame:SetPoint("TOPLEFT", UIParent, "TOPLEFT", AAP1[AAP_Realm][AAP_Name]["Settings"]["Partyleft"], AAP1[AAP_Realm][AAP_Name]["Settings"]["Partytop"])
 
+
 	AAP.PartyList.PartyFrames = {}
 	AAP.PartyList.PartyFrames2 = {}
 	AAP.PartyList.PartyFramesFS1 = {}
@@ -35,7 +36,7 @@ function AAP_MakeGroupList()
 			tile = true, tileSize = 10, edgeSize = 10, insets = { left = 2, right = 2, top = 2, bottom = 2 }
 		});
 		AAP.PartyList.PartyFrames[CLi]:SetScript("OnMouseDown", function(self, button)
-			if button == "LeftButton" then
+			if button == "LeftButton" and AAP1[AAP_Realm][AAP_Name]["Settings"]["Lock"] == 0 then
 				AAP.PartyList.PartyFrame:StartMoving();
 				AAP.PartyList.PartyFrame.isMoving = true;
 			end
@@ -65,7 +66,7 @@ function AAP_MakeGroupList()
 		AAP.PartyList.PartyFramesFS1[CLi]:SetWidth(300)
 		AAP.PartyList.PartyFramesFS1[CLi]:SetHeight(38)
 		AAP.PartyList.PartyFramesFS1[CLi]:SetJustifyH("LEFT")
-		AAP.PartyList.PartyFramesFS1[CLi]:SetFont(AAP_Font, 18)
+		AAP.PartyList.PartyFramesFS1[CLi]:SetFontObject("GameFontNormalLarge")
 		AAP.PartyList.PartyFramesFS1[CLi]:SetText("Name")
 		AAP.PartyList.PartyFramesFS1[CLi]:SetTextColor(1, 1, 0)
 
@@ -82,7 +83,7 @@ function AAP_MakeGroupList()
 			tile = true, tileSize = 10, edgeSize = 10, insets = { left = 2, right = 2, top = 2, bottom = 2 }
 		});
 		AAP.PartyList.PartyFrames2[CLi]:SetScript("OnMouseDown", function(self, button)
-			if button == "LeftButton" then
+			if button == "LeftButton" and AAP1[AAP_Realm][AAP_Name]["Settings"]["Lock"] == 0 then
 				AAP.PartyList.PartyFrame:StartMoving();
 				AAP.PartyList.PartyFrame.isMoving = true;
 			end
@@ -112,7 +113,7 @@ function AAP_MakeGroupList()
 		AAP.PartyList.PartyFramesFS2[CLi]:SetWidth(40)
 		AAP.PartyList.PartyFramesFS2[CLi]:SetHeight(38)
 		AAP.PartyList.PartyFramesFS2[CLi]:SetJustifyH("CENTER")
-		AAP.PartyList.PartyFramesFS2[CLi]:SetFont(AAP_Font, 16)
+		AAP.PartyList.PartyFramesFS2[CLi]:SetFontObject("GameFontNormalLarge")
 		AAP.PartyList.PartyFramesFS2[CLi]:SetText("123")
 		AAP.PartyList.PartyFramesFS2[CLi]:SetTextColor(1, 1, 0)
 
@@ -184,13 +185,15 @@ function AAP_MakeQuestList()
 		end
 	end)
 	AAP.QuestList.SugQuestFrame:Hide()
+
+
 	AAP.QuestList.SugQuestFrameFS1 = AAP.QuestList.SugQuestFrame:CreateFontString("CLQaaFS1","ARTWORK", "ChatFontNormal")
 	AAP.QuestList.SugQuestFrameFS1:SetParent(AAP.QuestList.SugQuestFrame)
 	AAP.QuestList.SugQuestFrameFS1:SetPoint("TOPLEFT",AAP.QuestList.SugQuestFrame,"TOPLEFT",0,0)
 	AAP.QuestList.SugQuestFrameFS1:SetWidth(300)
 	AAP.QuestList.SugQuestFrameFS1:SetHeight(38)
 	AAP.QuestList.SugQuestFrameFS1:SetJustifyH("CENTER")
-	AAP.QuestList.SugQuestFrameFS1:SetFont(AAP_Font, 20)
+	AAP.QuestList.SugQuestFrameFS1:SetFontObject("GameFontNormalLarge")
 	AAP.QuestList.SugQuestFrameFS1:SetText("Quests Text")
 	AAP.QuestList.SugQuestFrameFS1:SetTextColor(1, 1, 0)
 	AAP.QuestList.SugQuestFrameFS2 = AAP.QuestList.SugQuestFrame:CreateFontString("CLQaaFS2","ARTWORK", "ChatFontNormal")
@@ -199,7 +202,7 @@ function AAP_MakeQuestList()
 	AAP.QuestList.SugQuestFrameFS2:SetWidth(300)
 	AAP.QuestList.SugQuestFrameFS2:SetHeight(38)
 	AAP.QuestList.SugQuestFrameFS2:SetJustifyH("CENTER")
-	AAP.QuestList.SugQuestFrameFS2:SetFont(AAP_Font, 15)
+	AAP.QuestList.SugQuestFrameFS2:SetFontObject("GameFontNormalLarge")
 	AAP.QuestList.SugQuestFrameFS2:SetText(AAP_Locals["Suggested Players"]..": ")
 	AAP.QuestList.SugQuestFrameFS2:SetTextColor(1, 1, 0)
 
@@ -315,7 +318,7 @@ function AAP_MakeQuestList()
 	AAP.QuestList.SugQuestFrame2FS1:SetWidth(300)
 	AAP.QuestList.SugQuestFrame2FS1:SetHeight(38)
 	AAP.QuestList.SugQuestFrame2FS1:SetJustifyH("CENTER")
-	AAP.QuestList.SugQuestFrame2FS1:SetFont(AAP_Font, 20)
+	AAP.QuestList.SugQuestFrame2FS1:SetFontObject("GameFontNormalLarge")
 	AAP.QuestList.SugQuestFrame2FS1:SetText(AAP_Locals["Optional"])
 	AAP.QuestList.SugQuestFrame2FS1:SetTextColor(1, 1, 0)
 	AAP.QuestList.SugQuestFrame2FS2 = AAP.QuestList.SugQuestFrame2:CreateFontString("CLQaaFS2","ARTWORK", "ChatFontNormal")
@@ -324,7 +327,7 @@ function AAP_MakeQuestList()
 	AAP.QuestList.SugQuestFrame2FS2:SetWidth(300)
 	AAP.QuestList.SugQuestFrame2FS2:SetHeight(38)
 	AAP.QuestList.SugQuestFrame2FS2:SetJustifyH("CENTER")
-	AAP.QuestList.SugQuestFrame2FS2:SetFont(AAP_Font, 15)
+	AAP.QuestList.SugQuestFrame2FS2:SetFontObject("GameFontNormalLarge")
 	AAP.QuestList.SugQuestFrame2FS2:SetText("Quests: ")
 	AAP.QuestList.SugQuestFrame2FS2:SetTextColor(1, 1, 0)
 
@@ -334,7 +337,7 @@ function AAP_MakeQuestList()
 	AAP.QuestList.SugQuestFrame2["Button1"]:SetHeight(22)
 	AAP.QuestList.SugQuestFrame2["Button1"]:SetText(AAP_Locals["Accept Quest"])
 	AAP.QuestList.SugQuestFrame2["Button1"]:SetParent(AAP.QuestList.SugQuestFrame2)
-	AAP.QuestList.SugQuestFrame2.Button1:SetNormalFontObject("GameFontNormal")
+	AAP.QuestList.SugQuestFrame2.Button1:SetNormalFontObject("GameFontNormalSmall")
 	AAP.QuestList.SugQuestFrame2.Button1ntex = AAP.QuestList.SugQuestFrame2.Button1:CreateTexture()
 	AAP.QuestList.SugQuestFrame2.Button1ntex:SetTexture("Interface/Buttons/UI-Panel-Button-Up")
 	AAP.QuestList.SugQuestFrame2.Button1ntex:SetTexCoord(0, 0.625, 0, 0.6875)
@@ -359,7 +362,7 @@ function AAP_MakeQuestList()
 	AAP.QuestList.SugQuestFrame2["Button2"]:SetHeight(22)
 	AAP.QuestList.SugQuestFrame2["Button2"]:SetText(AAP_Locals["Decline Quest"])
 	AAP.QuestList.SugQuestFrame2["Button2"]:SetParent(AAP.QuestList.SugQuestFrame2)
-	AAP.QuestList.SugQuestFrame2.Button2:SetNormalFontObject("GameFontNormal")
+	AAP.QuestList.SugQuestFrame2.Button2:SetNormalFontObject("GameFontNormalSmall")
 	AAP.QuestList.SugQuestFrame2.Button2ntex = AAP.QuestList.SugQuestFrame2.Button2:CreateTexture()
 	AAP.QuestList.SugQuestFrame2.Button2ntex:SetTexture("Interface/Buttons/UI-Panel-Button-Up")
 	AAP.QuestList.SugQuestFrame2.Button2ntex:SetTexCoord(0, 0.625, 0, 0.6875)
@@ -418,7 +421,7 @@ function AAP_MakeQuestList()
 	AAP.QuestList.Greetings2FS1:SetWidth(300)
 	AAP.QuestList.Greetings2FS1:SetHeight(38)
 	AAP.QuestList.Greetings2FS1:SetJustifyH("CENTER")
-	AAP.QuestList.Greetings2FS1:SetFont(AAP_Font, 20)
+	AAP.QuestList.Greetings2FS1:SetFontObject("GameFontNormalLarge")
 	AAP.QuestList.Greetings2FS1:SetText("Welcome to Azeroth Auto Pilot")
 	AAP.QuestList.Greetings2FS1:SetTextColor(1, 1, 0)
 
@@ -428,7 +431,7 @@ function AAP_MakeQuestList()
 	AAP.QuestList.Greetings2FS221:SetWidth(290)
 	AAP.QuestList.Greetings2FS221:SetHeight(72)
 	AAP.QuestList.Greetings2FS221:SetJustifyH("LEFT")
-	AAP.QuestList.Greetings2FS221:SetFont(AAP_Font, 14)
+	AAP.QuestList.Greetings2FS221:SetFontObject("GameFontNormalLarge")
 	AAP.QuestList.Greetings2FS221:SetText("Horde require 40+ Goblin Glider kits.")
 	AAP.QuestList.Greetings2FS221:SetTextColor(1, 1, 0)
 
@@ -438,7 +441,7 @@ function AAP_MakeQuestList()
 	AAP.QuestList.Greetings2FS2:SetWidth(290)
 	AAP.QuestList.Greetings2FS2:SetHeight(72)
 	AAP.QuestList.Greetings2FS2:SetJustifyH("LEFT")
-	AAP.QuestList.Greetings2FS2:SetFont(AAP_Font, 14)
+	AAP.QuestList.Greetings2FS2:SetFontObject("GameFontNormalLarge")
 	AAP.QuestList.Greetings2FS2:SetText("Special thanks to BrutallStatic for helping with the addon, catch him at:")
 	AAP.QuestList.Greetings2FS2:SetTextColor(1, 1, 0)
 
@@ -455,7 +458,7 @@ function AAP_MakeQuestList()
 	AAP.QuestList.GreetingsHideB:SetHeight(22)
 	AAP.QuestList.GreetingsHideB:SetText("Close")
 	AAP.QuestList.GreetingsHideB:SetParent(AAP.QuestList.Greetings)
-	AAP.QuestList.GreetingsHideB:SetNormalFontObject("GameFontNormal")
+	AAP.QuestList.GreetingsHideB:SetNormalFontObject("GameFontNormalLarge")
 	AAP.QuestList.GreetingsHideBntex = AAP.QuestList.GreetingsHideB:CreateTexture()
 	AAP.QuestList.GreetingsHideBntex:SetTexture("Interface/Buttons/UI-Panel-Button-Up")
 	AAP.QuestList.GreetingsHideBntex:SetTexCoord(0, 0.625, 0, 0.6875)
@@ -537,7 +540,7 @@ function AAP_MakeQuestList()
 	AAP.QuestList.QuestFrames = {}
 	AAP.QuestList2 = {}
 	local CLi
-	for CLi = 1, 25 do
+	for CLi = 1, 50 do
 		AAP.QuestList.QuestFrames[CLi] = CreateFrame("frame", "CLQListF"..CLi, AAP.QuestList.ListFrame)
 		AAP.QuestList.QuestFrames[CLi]:SetWidth(410)
 
@@ -578,7 +581,7 @@ function AAP_MakeQuestList()
 		AAP.QuestList.QuestFrames["FS"..CLi]:SetWidth(800)
 		AAP.QuestList.QuestFrames["FS"..CLi]:SetHeight(38)
 		AAP.QuestList.QuestFrames["FS"..CLi]:SetJustifyH("LEFT")
-		AAP.QuestList.QuestFrames["FS"..CLi]:SetFont(AAP_Font, 20)
+		AAP.QuestList.QuestFrames["FS"..CLi]:SetFontObject("GameFontNormalLarge")
 		AAP.QuestList.QuestFrames["FS"..CLi]:SetText("")
 		AAP.QuestList.QuestFrames["FS"..CLi]:SetTextColor(1, 1, 0)
 
@@ -600,7 +603,7 @@ function AAP_MakeQuestList()
 		AAP.QuestList.QuestFrames["FS"..CLi]["Fontstring1"]:SetPoint("CENTER", AAP.QuestList.QuestFrames["FS"..CLi]["Button"], "CENTER", 0, 0)
 		AAP.QuestList.QuestFrames["FS"..CLi]["Fontstring1"]:SetWidth(43)
 		AAP.QuestList.QuestFrames["FS"..CLi]["Fontstring1"]:SetHeight(14)
-		AAP.QuestList.QuestFrames["FS"..CLi]["Fontstring1"]:SetFont(AAP_Font, 10)
+		AAP.QuestList.QuestFrames["FS"..CLi]["Fontstring1"]:SetFontObject("GameFontNormalLarge")
 		AAP.QuestList.QuestFrames["FS"..CLi]["Fontstring1"]:SetText("Skip")
 		AAP.QuestList.QuestFrames["FS"..CLi]["Fontstring1"]:SetTextColor(1, 1, 0)
 		AAP.QuestList.QuestFrames["FS"..CLi]["Button"]:Hide()
@@ -618,7 +621,7 @@ function AAP_MakeQuestList()
 		AAP.QuestList2["BF"..CLi]["AAP_Button"]:SetHeight(38)
 		AAP.QuestList2["BF"..CLi]["AAP_Button"]:SetText("X")
 		AAP.QuestList2["BF"..CLi]["AAP_Button"]:SetPoint("LEFT",AAP.QuestList2["BF"..CLi],"RIGHT",0,0)
-		AAP.QuestList2["BF"..CLi]["AAP_Button"]:SetNormalFontObject("GameFontNormal")
+		AAP.QuestList2["BF"..CLi]["AAP_Button"]:SetNormalFontObject("GameFontNormalLarge")
 		AAP.QuestList2["BF"..CLi]["AAP_Buttonntex"] = AAP.QuestList2["BF"..CLi]["AAP_Button"]:CreateTexture()
 		AAP.QuestList2["BF"..CLi]["AAP_Buttonntex"]:SetTexture("Interface/Buttons/UI-Panel-Button-Highlight")
 		AAP.QuestList2["BF"..CLi]["AAP_Buttonntex"]:SetTexCoord(0, 0.625, 0, 0.6875)
@@ -653,5 +656,147 @@ function AAP_MakeQuestList()
 	if (AAP1[AAP_Realm][AAP_Name]["Settings"]["Hide"] == 1) then
 		AAP.QuestList.ListFrame:Hide()
 	end
+	AAP.QuestList.Warcamp2 = CreateFrame("frame", "AAP_Warcamp2", UIParent)
+	AAP.QuestList.Warcamp2:SetWidth(300)
+	AAP.QuestList.Warcamp2:SetHeight(100)
+	AAP.QuestList.Warcamp2:SetPoint("CENTER", UIParent, "CENTER",0,40)
+	AAP.QuestList.Warcamp2:SetMovable(true)
+	AAP.QuestList.Warcamp2:EnableMouse(true)
+	AAP.QuestList.Warcamp2:Hide()
+	AAP.QuestList.Warcamp2:SetBackdrop( { 
+		bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", 
+		edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+		tile = true, tileSize = 10, edgeSize = 10, insets = { left = 2, right = 2, top = 2, bottom = 2 }
+	});
+	AAP.QuestList.Warcamp2:SetScript("OnMouseDown", function(self, button)
+		if button == "LeftButton" then
+			AAP.QuestList.Warcamp2:StartMoving();
+			AAP.QuestList.Warcamp2.isMoving = true;
+		end
+	end)
+	AAP.QuestList.Warcamp2:SetScript("OnMouseUp", function(self, button)
+		if button == "LeftButton" and AAP.QuestList.Warcamp2.isMoving then
+			AAP.QuestList.Warcamp2:StopMovingOrSizing();
+			AAP.QuestList.Warcamp2.isMoving = false;
+		end
+	end)
+	AAP.QuestList.Warcamp2:SetScript("OnHide", function(self)
+		if ( AAP.QuestList.Warcamp2.isMoving ) then
+			AAP.QuestList.Warcamp2:StopMovingOrSizing();
+			AAP.QuestList.Warcamp2.isMoving = false;
+		end
+	end)
+	AAP.QuestList.WarcampFS2 = AAP.QuestList.Warcamp2:CreateFontString("AAP_WarcampFS2","ARTWORK", "ChatFontNormal")
+	AAP.QuestList.WarcampFS2:SetParent(AAP.QuestList.Warcamp2)
+	AAP.QuestList.WarcampFS2:SetPoint("TOP", AAP.QuestList.Warcamp2, "TOP", 0, 0)
+	AAP.QuestList.WarcampFS2:SetWidth(130)
+	AAP.QuestList.WarcampFS2:SetHeight(40)
+	AAP.QuestList.WarcampFS2:SetFontObject("GameFontNormalLarge")
+	AAP.QuestList.WarcampFS2:SetText(AAP_Locals["War Campaign"])
+	AAP.QuestList.WarcampFS2:SetTextColor(0, 1, 0)
+
+
+	AAP.QuestList.WarcampB1 = CreateFrame("Button", "AAP_WarCampB1", UIParent, "SecureActionButtonTemplate")
+	AAP.QuestList.WarcampB1:SetPoint("BOTTOMLEFT",AAP.QuestList.Warcamp2,"BOTTOMLEFT",15,5)
+	AAP.QuestList.WarcampB1:SetWidth(110)
+	AAP.QuestList.WarcampB1:SetHeight(30)
+	AAP.QuestList.WarcampB1:SetText(AAP_Locals["Accept Quest"])
+	AAP.QuestList.WarcampB1:SetParent(AAP.QuestList.Warcamp2)
+	AAP.QuestList.WarcampB1:SetNormalFontObject("GameFontNormal")
+	AAP.QuestList.WarcampB1ntex = AAP.QuestList.WarcampB1:CreateTexture()
+	AAP.QuestList.WarcampB1ntex:SetTexture("Interface/Buttons/UI-Panel-Button-Up")
+	AAP.QuestList.WarcampB1ntex:SetTexCoord(0, 0.625, 0, 0.6875)
+	AAP.QuestList.WarcampB1ntex:SetAllPoints()	
+	AAP.QuestList.WarcampB1:SetNormalTexture(AAP.QuestList.WarcampB1ntex)
+	AAP.QuestList.WarcampB1htex = AAP.QuestList.WarcampB1:CreateTexture()
+	AAP.QuestList.WarcampB1htex:SetTexture("Interface/Buttons/UI-Panel-Button-Highlight")
+	AAP.QuestList.WarcampB1htex:SetTexCoord(0, 0.625, 0, 0.6875)
+	AAP.QuestList.WarcampB1htex:SetAllPoints()
+	AAP.QuestList.WarcampB1:SetHighlightTexture(AAP.QuestList.WarcampB1htex)
+	AAP.QuestList.WarcampB1ptex = AAP.QuestList.WarcampB1:CreateTexture()
+	AAP.QuestList.WarcampB1ptex:SetTexture("Interface/Buttons/UI-Panel-Button-Down")
+	AAP.QuestList.WarcampB1ptex:SetTexCoord(0, 0.625, 0, 0.6875)
+	AAP.QuestList.WarcampB1ptex:SetAllPoints()
+	AAP.QuestList.WarcampB1:SetPushedTexture(AAP.QuestList.WarcampB1ptex)
+	AAP.QuestList.WarcampB1:SetScript("OnClick", function(self, arg1)
+		AAP1[AAP_Realm][AAP_Name]["AAP_DoWarCampaign"] = 1
+		AAP_ZoneChangeTest()
+		AAP_Plus()
+		AAP_UpdateQuestList()
+		AAP.QuestList.Warcamp2:Hide()
+	end)
+	AAP.QuestList.WarcampB2 = CreateFrame("Button", "AAP_WarCampB2", UIParent, "SecureActionButtonTemplate")
+	AAP.QuestList.WarcampB2:SetPoint("BOTTOMRIGHT",AAP.QuestList.Warcamp2,"BOTTOMRIGHT",-15,5)
+	AAP.QuestList.WarcampB2:SetWidth(110)
+	AAP.QuestList.WarcampB2:SetHeight(30)
+	AAP.QuestList.WarcampB2:SetText(AAP_Locals["Decline Quest"])
+	AAP.QuestList.WarcampB2:SetParent(AAP.QuestList.Warcamp2)
+	AAP.QuestList.WarcampB2:SetNormalFontObject("GameFontNormal")
+	AAP.QuestList.WarcampB2ntex = AAP.QuestList.WarcampB2:CreateTexture()
+	AAP.QuestList.WarcampB2ntex:SetTexture("Interface/Buttons/UI-Panel-Button-Up")
+	AAP.QuestList.WarcampB2ntex:SetTexCoord(0, 0.625, 0, 0.6875)
+	AAP.QuestList.WarcampB2ntex:SetAllPoints()	
+	AAP.QuestList.WarcampB2:SetNormalTexture(AAP.QuestList.WarcampB2ntex)
+	AAP.QuestList.WarcampB2htex = AAP.QuestList.WarcampB2:CreateTexture()
+	AAP.QuestList.WarcampB2htex:SetTexture("Interface/Buttons/UI-Panel-Button-Highlight")
+	AAP.QuestList.WarcampB2htex:SetTexCoord(0, 0.625, 0, 0.6875)
+	AAP.QuestList.WarcampB2htex:SetAllPoints()
+	AAP.QuestList.WarcampB2:SetHighlightTexture(AAP.QuestList.WarcampB2htex)
+	AAP.QuestList.WarcampB2ptex = AAP.QuestList.WarcampB2:CreateTexture()
+	AAP.QuestList.WarcampB2ptex:SetTexture("Interface/Buttons/UI-Panel-Button-Down")
+	AAP.QuestList.WarcampB2ptex:SetTexCoord(0, 0.625, 0, 0.6875)
+	AAP.QuestList.WarcampB2ptex:SetAllPoints()
+	AAP.QuestList.WarcampB2:SetPushedTexture(AAP.QuestList.WarcampB2ptex)
+	AAP.QuestList.WarcampB2:SetScript("OnClick", function(self, arg1)
+		AAP1[AAP_Realm][AAP_Name]["AAP_DoWarCampaign"] = 0
+		AAP_ChangeZone()
+		AAP_Plus()
+		AAP_UpdateQuestList()
+		AAP.QuestList.Warcamp2:Hide()
+	end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	AAP.QuestList.Warcamp = CreateFrame("frame", "AAP_Warcamp", AAP.QuestList.ListFrame)
+	AAP.QuestList.Warcamp:SetWidth(130)
+	AAP.QuestList.Warcamp:SetHeight(25)
+	AAP.QuestList.Warcamp:SetPoint("BOTTOMLEFT", AAP.QuestList.ListFrame, "BOTTOMLEFT",0,40)
+	AAP.QuestList.Warcamp:Hide()
+	AAP.QuestList.Warcamp:SetBackdrop( { 
+		bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", 
+		edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+		tile = true, tileSize = 10, edgeSize = 10, insets = { left = 2, right = 2, top = 2, bottom = 2 }
+	});
+
+	AAP.QuestList.WarcampFS = AAP.QuestList.Warcamp:CreateFontString("AAP_WarcampFS1","ARTWORK", "ChatFontNormal")
+	AAP.QuestList.WarcampFS:SetParent(AAP.QuestList.Warcamp)
+	AAP.QuestList.WarcampFS:SetPoint("CENTER", AAP.QuestList.Warcamp, "CENTER", 0, 0)
+	AAP.QuestList.WarcampFS:SetWidth(130)
+	AAP.QuestList.WarcampFS:SetHeight(25)
+	AAP.QuestList.WarcampFS:SetFontObject("GameFontNormalLarge")
+	AAP.QuestList.WarcampFS:SetText(AAP_Locals["War Campaign"])
+	AAP.QuestList.WarcampFS:SetTextColor(0, 1, 0)
+	AAP.QuestList.Warcamp:SetScript("OnMouseDown", function(self, button)
+		if button == "LeftButton" then
+			AAP.QuestList.Warcamp2:Show()
+		end
+	end)
+	AAP.QuestList.Warcamp:SetScript("OnEnter", function(self, button)
+		AAP.QuestList.WarcampFS:SetTextColor(1, 0, 0)
+	end)
+	AAP.QuestList.Warcamp:SetScript("OnLeave", function(self, button)
+		AAP.QuestList.WarcampFS:SetTextColor(0, 1, 0)
+	end)
 end
 

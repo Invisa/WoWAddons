@@ -20,6 +20,9 @@ L["titles"] = {
 	["absorb_enable"] = "顯示吸收",
 	["absorb_striped"] = "條紋吸收材質",
 	["auras_centre"] = "置中對齊圖示",
+	["auras_colour_long"] = "長時間",
+	["auras_colour_medium"] = "中等時間",
+	["auras_colour_short"] = "短時間",
 	["auras_enabled"] = "啟用",
 	["auras_filtering_sep"] = "過濾",
 	["auras_hide_all_other"] = "隱藏他人施放的所有光環",
@@ -44,6 +47,10 @@ L["titles"] = {
 	["bossmod_x_offset"] = "水平位置",
 	["bossmod_y_offset"] = "垂直位置",
 	["bot_vertical_offset"] = "等級血量垂直偏移",
+--[[Translation missing --]]
+	["castbar_animate"] = "Animate",
+--[[Translation missing --]]
+	["castbar_animate_change_colour"] = "Change colour",
 	["castbar_colour"] = "施法條顏色",
 	["castbar_enable"] = "啟用",
 	["castbar_height"] = "施法條高度",
@@ -89,6 +96,8 @@ L["titles"] = {
 	["copy_profile_title"] = "複製設定檔",
 	["cvar_clamp_bottom"] = "底部鎖定距離",
 	["cvar_clamp_top"] = "頂部鎖定距離",
+--[[Translation missing --]]
+	["cvar_disable_scale"] = "Disable default scaling",
 	["cvar_enable"] = "允許Kui姓名版修改CVars參數",
 	["cvar_max_distance"] = "最大可視距離",
 	["cvar_name_only"] = "隱藏預設生命條",
@@ -124,7 +133,6 @@ L["titles"] = {
 	["execute_percent"] = "斬殺閾值",
 	["execute_sep"] = "斬殺階段",
 	["fade_all"] = "預設淡出",
-	["fade_alpha"] = "淡出透明度",
 	["fade_avoid_casting_friendly"] = "避開施法中友方",
 	["fade_avoid_casting_hostile"] = "避開施法中敵方",
 	["fade_avoid_casting_interruptible"] = "可中斷的",
@@ -139,7 +147,6 @@ L["titles"] = {
 	["fade_friendly_npc"] = "淡出友方NPC",
 	["fade_neutral_enemy"] = "淡出中立單位",
 	["fade_non_target_alpha"] = "非目標透明度",
-	["fade_rules_sep"] = "框架淡出",
 	["fade_speed"] = "淡出動畫速度",
 	["fade_untracked"] = "淡出非追蹤單位",
 	["font_face"] = "文字字型",
@@ -183,7 +190,6 @@ L["titles"] = {
 	["nameonly_in_combat"] = "正在交戰的單位",
 	["nameonly_neutral"] = "在中立單位",
 	["nameonly_no_font_style"] = "無字型描邊",
-	["nameonly_on_default"] = "暴雪名條名字模式",
 	["nameonly_target"] = "使用在目標",
 	["nameonly_text_sep"] = "文字",
 	["nameonly_visibility_sep"] = "可視性",
@@ -239,6 +245,12 @@ L["tooltips"] = {
 	["bossmod_x_offset"] = "首領光環圖示位置的水平偏移量",
 	["bossmod_y_offset"] = "首領光環圖示位置的垂直偏移量",
 	["bot_vertical_offset"] = "等級血量位置的垂直偏移量",
+--[[Translation missing --]]
+	["castbar_animate"] = "Fade out the cast bar when a cast ends.",
+--[[Translation missing --]]
+	["castbar_animate_change_colour"] = "Change the colour of the cast bar when a cast ends, making it easier to tell the difference between successful, stopped, and interrupted casts.",
+--[[Translation missing --]]
+	["castbar_colour"] = "Colour of the cast bar.|n|nAlso used to indicate a successful cast if animation is enabled.",
 	["castbar_enable"] = "啟用施法條",
 	["castbar_name_vertical_offset"] = "法術名稱文字的垂直偏移量",
 	["castbar_shield"] = "在免疫打斷的施法條上顯示盾牌圖示",
@@ -266,26 +278,23 @@ L["tooltips"] = {
 	["colour_self_class"] = "以職業顏色著色個人資源",
 	["combat_friendly"] = "進入與離開戰鬥時在友方框架上採取的動作。",
 	["combat_hostile"] = "進入與離開戰鬥時在敵方框架上採取的動作。",
---[[Translation missing --]]
 	["cvar_clamp_bottom"] = "|cffffcc00nameplate{Other,Large}BottomInset|r",
 	["cvar_clamp_top"] = "|cffffcc00nameplate{Other,Large}TopInset|r|n|n姓名板與螢幕頂部邊緣會有多靠近，當設置為0代表靠緊邊緣，設置為-0.1代表取消鎖定在螢幕頂部。|n|n鎖定只影響你當前目標。",
+--[[Translation missing --]]
+	["cvar_disable_scale"] = "|cffffcc00nameplate{Min,Max}Scale|r|n|nDisable the nameplate distance scaling CVars which would otherwise only be affecting the clickbox.",
 	["cvar_enable"] = "啟用後，Kui姓名版將嘗試將此頁面上的CVar參數鎖定到設置的值。|n|n取消此選項，停用KNP，或是移除KNP都不會重設CVars參數回預設值。",
 	["cvar_max_distance"] = "|cffffcc00nameplateMaxDistance|r|n|n姓名版最大可視的距離（不包含當前目標）。",
 	["cvar_name_only"] = "|cffffcc00nameplateShowOnlyNames|r|n|n在友方姓名板無法被插件修改的情形下，隱藏預設姓名版的生命條。",
 	["cvar_overlap_v"] = "|cffffcc00nameplateOverlapV|r|n|n名條彼此之間的垂直距離（只有在預設介面選項中將排列類型設定為堆疊才有效）。",
---[[Translation missing --]]
 	["cvar_personal_show_always"] = "|cffffcc00nameplatePersonalShowAlways|r",
---[[Translation missing --]]
 	["cvar_personal_show_combat"] = "|cffffcc00nameplatePersonalShowInCombat|r",
 	["cvar_personal_show_target"] = "|cffffcc00nameplatePersonalShowWithTarget|r|n|n如果你有可攻擊目標則顯示個人姓名板。",
---[[Translation missing --]]
 	["cvar_show_friendly_npcs"] = "|cffffcc00nameplateShowFriendlyNPCs|r",
 	["execute_auto"] = "自動偵測你的天賦專精所需的斬殺閾值，對於無斬殺的角色預設為20%",
 	["execute_colour"] = "斬殺階段使用的顏色",
 	["execute_enabled"] = "當單位進入斬殺階段時，重新著色血條",
 	["execute_percent"] = "手動設定斬殺階段血量閾值",
 	["fade_all"] = "預設狀態下淡出所有框架",
-	["fade_alpha"] = "淡出框架的透明度。請注意：如果設為0（即框架不可見），不可見的名條仍然可以點擊。插件不能任意禁用名條的點擊框。",
 	["fade_avoid_casting_friendly"] = "不淡出施法中的友方名條",
 	["fade_avoid_casting_hostile"] = "不淡出施法中的敵方名條",
 	["fade_avoid_combat"] = "不淡出與你戰鬥中的名條",
@@ -329,7 +338,6 @@ L["tooltips"] = {
 	["nameonly_in_combat"] = "啟用此選項，會強制使用名字模式，即便該單位正在與你戰鬥。|n|n注意，這也作用於敵方玩家單位，但不適用於訓練假人或其他沒有威脅值列表的單位。",
 	["nameonly_neutral"] = "在可攻擊的中立單位使用名字模式",
 	["nameonly_no_font_style"] = "使用名字模式時，不使用字體描邊（將字型樣式設為空）",
-	["nameonly_on_default"] = "當插件無法美化友方名條（如處於副本地城內）而只能顯示暴雪原生名條時，隱藏其血條，只顯示名字。|n|n這個選項會修改CVar |cffffff88nameplateShowOnlyNames|r。",
 	["nameonly_target"] = "也在當前目標使用名字模式",
 	["powerbar_height"] = "能量條的高度。不能超過名條框架高度",
 	["state_icons"] = "在首領與精英單位上顯示圖示（啟用「顯示等級文字」時隱藏）",

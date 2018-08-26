@@ -45,6 +45,9 @@ VER 3 010000000000001C "." "INV_MISC_QUESTIONMARK"
 /petattack
 /dismount
 END
+VER 3 010000000000001D "." "INV_MISC_QUESTIONMARK"
+/cast [@cursor] living bomb
+END
 VER 3 0100000000000001 "..." "INV_MISC_QUESTIONMARK"
 #showtooltip counterspell
 /cast [nomod:shift, @mouseover, exists] Counterspell

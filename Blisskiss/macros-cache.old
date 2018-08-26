@@ -2,6 +2,8 @@ VER 3 0100000000000004 "." "INV_MISC_QUESTIONMARK"
 #showtooltip Polymorph
 /cast [nomod:shift] Polymorph
 /cast [mod:shift, @mouseover] Polymorph
+/petfollow
+/petpassive
 END
 VER 3 0100000000000006 "." "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -36,6 +38,12 @@ END
 VER 3 010000000000000E "." "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [talent:4/2] Charged Up; [talent:4/3] Supernova
+END
+VER 3 010000000000001C "." "INV_MISC_QUESTIONMARK"
+#showtooltip Summon Water Elemental
+/cast [nopet][target=pet, dead] Summon Water Elemental
+/petattack
+/dismount
 END
 VER 3 0100000000000001 "..." "INV_MISC_QUESTIONMARK"
 #showtooltip counterspell

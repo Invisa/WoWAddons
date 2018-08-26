@@ -1,4 +1,3 @@
-
 local AddonName, MethodDungeonTools = ...
 
 
@@ -1252,7 +1251,7 @@ end
 ---SetCurrentSubLevel
 ---Sets the sublevel of the currently active preset, need to UpdateMap to reflect the change in UI
 function MethodDungeonTools:SetCurrentSubLevel(sublevel)
-    db.presets[db.currentDungeonIdx][db.currentPreset[db.currentDungeonIdx]].value.currentSublevel = sublevel
+    MethodDungeonTools:GetCurrentPreset().value.currentSublevel = sublevel
 end
 
 ---GetCurrentPull
@@ -1264,7 +1263,7 @@ end
 ---GetCurrentSubLevel
 ---Returns the sublevel of the currently active preset
 function MethodDungeonTools:GetCurrentSubLevel()
-	return db.presets[db.currentDungeonIdx][db.currentPreset[db.currentDungeonIdx]].value.currentSublevel
+	return MethodDungeonTools:GetCurrentPreset().value.currentSublevel
 end
 
 ---GetCurrentPreset
@@ -1361,7 +1360,7 @@ function MethodDungeonTools:CalculateEnemyHealth(boss,fortified,tyrannical,baseH
 	local mult = 1
 	if boss == false and fortified == true then mult = 1.2 end
 	if boss == true and tyrannical == true then mult = 1.4 end
-	mult = round((1.1^(level-1))*mult,2)
+	mult = round((1.08^(level-2))*mult,2)
 	return round(mult*baseHealth,0)
 end
 
@@ -1468,7 +1467,7 @@ function MethodDungeonTools:CreateDungeonSelectDropdown(frame)
 	group:SetWidth(200);
 	group:SetHeight(50);
 	group:SetPoint("TOPLEFT",frame.topPanel,"BOTTOMLEFT",0,2)
-	group:SetLayout("List")
+    group:SetLayout("List")
 
     MethodDungeonTools:FixAceGUIShowHide(group)
 
@@ -2389,44 +2388,51 @@ function MethodDungeonTools:DrawAllPresetObjects()
 	local color = {}
     for objectIndex,obj in pairs(currentPreset.objects) do
         if obj.d[3] == currentSublevel and obj.d[4] then
-			color.r,color.g,color.b = MethodDungeonTools:HexToRGB(obj.d[5])
-            --lines
-            local x1,y1,x2,y2
-			local lastx,lasty
-            for _,coord in pairs(obj.l) do
-				if not x1 then x1 = coord
-				elseif not y1 then y1 = coord
-				elseif not x2 then
-					x2 = coord
-					lastx = coord
-				elseif not y2 then
-					y2 = coord
-					lasty = coord
-				end
-				if x1 and y1 and x2 and y2 then
-					MethodDungeonTools:DrawLine(x1,y1,x2,y2,obj.d[1]*0.3,color,obj.d[7],nil,obj.d[6],obj.d[2],nil,objectIndex)
-					--circles if smooth
-					if obj.d[7] then
-						MethodDungeonTools:DrawCircle(x1,y1,obj.d[1]*0.3,color,nil,obj.d[6],nil,objectIndex)
-						MethodDungeonTools:DrawCircle(x2,y2,obj.d[1]*0.3,color,nil,obj.d[6],nil,objectIndex)
-					end
-					x1,y1,x2,y2 = nil,nil,nil,nil
-				end
+            if obj.n then
+                local x = obj.d[1]
+                local y = obj.d[2]
+                local text = obj.d[5]
+                MethodDungeonTools:DrawNote(x,y,text,objectIndex)
+            else
+                color.r,color.g,color.b = MethodDungeonTools:HexToRGB(obj.d[5])
+                --lines
+                local x1,y1,x2,y2
+                local lastx,lasty
+                for _,coord in pairs(obj.l) do
+                    if not x1 then x1 = coord
+                    elseif not y1 then y1 = coord
+                    elseif not x2 then
+                        x2 = coord
+                        lastx = coord
+                    elseif not y2 then
+                        y2 = coord
+                        lasty = coord
+                    end
+                    if x1 and y1 and x2 and y2 then
+                        MethodDungeonTools:DrawLine(x1,y1,x2,y2,obj.d[1]*0.3,color,obj.d[7],nil,obj.d[6],obj.d[2],nil,objectIndex)
+                        --circles if smooth
+                        if obj.d[7] then
+                            MethodDungeonTools:DrawCircle(x1,y1,obj.d[1]*0.3,color,nil,obj.d[6],nil,objectIndex)
+                            MethodDungeonTools:DrawCircle(x2,y2,obj.d[1]*0.3,color,nil,obj.d[6],nil,objectIndex)
+                        end
+                        x1,y1,x2,y2 = nil,nil,nil,nil
+                    end
+                end
+                --triangle
+                if obj.t and lastx and lasty then
+                    MethodDungeonTools:DrawTriangle(lastx,lasty,obj.t[1],obj.d[1],color,nil,obj.d[6],nil,objectIndex)
+                end
+                --remove empty objects leftover from erasing
+                if obj.l then
+                    local lineCount = 0
+                    for _,_ in pairs(obj.l) do
+                        lineCount = lineCount +1
+                    end
+                    if lineCount == 0 then
+                        currentPreset.objects[objectIndex] = nil
+                    end
+                end
             end
-            --triangle
-            if obj.t and lastx and lasty then
-                MethodDungeonTools:DrawTriangle(lastx,lasty,obj.t[1],obj.d[1],color,nil,obj.d[6],nil,objectIndex)
-            end
-			--remove empty objects leftover from erasing
-			if obj.l then
-				local lineCount = 0
-				for _,_ in pairs(obj.l) do
-					lineCount = lineCount +1
-				end
-				if lineCount == 0 then
-					currentPreset.objects[objectIndex] = nil
-				end
-			end
         end
     end
 end
@@ -2484,19 +2490,20 @@ function MethodDungeonTools:PresetObjectStepForward()
     end
 end
 
-function MethodDungeonTools:FixAceGUIShowHide(widget,frame,isFrame)
+function MethodDungeonTools:FixAceGUIShowHide(widget,frame,isFrame,hideOnly)
     frame = frame or MethodDungeonTools.main_frame
     local originalShow,originalHide = frame.Show,frame.Hide
     if not isFrame then
         widget = widget.frame
     end
-    function frame:Show(...)
-        widget:Show()
-        return originalShow(self, ...);
-    end
     function frame:Hide(...)
         widget:Hide()
         return originalHide(self, ...);
+    end
+    if hideOnly then return end
+    function frame:Show(...)
+        widget:Show()
+        return originalShow(self, ...);
     end
 end
 

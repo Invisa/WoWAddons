@@ -7,7 +7,7 @@ BigWigs:AddSounds("Taloc", {
 	[271895] = "alert",
 	[271965] = "long",
 	[275270] = "warning",
-	[275432] = "alarm",
+	[275432] = {"alarm","long"},
 })
 
 BigWigs:AddSounds("MOTHER", {
@@ -80,6 +80,7 @@ BigWigs:AddSounds("Mythrax the Unraveler", {
 BigWigs:AddSounds("G'huun", {
 	[263235] = "warning",
 	[263307] = "alert",
+	[263321] = "alarm",
 	[263482] = "long",
 	[267409] = "alert",
 	[267412] = "alarm",
